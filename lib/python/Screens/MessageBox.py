@@ -63,6 +63,8 @@ class MessageBox(Screen, HelpableScreen):
 		self["InfoPixmap"].hide()
 		self["ErrorPixmap"] = Pixmap()
 		self["ErrorPixmap"].hide()
+		self["WarningPixmap"] = Pixmap()
+		self["WarningPixmap"].hide()
 		self["icon"] = MultiPixmap()
 		self["icon"].hide()
 		self.picon = picon
@@ -74,6 +76,8 @@ class MessageBox(Screen, HelpableScreen):
 				self["InfoPixmap"].show()
 			elif self.type == self.TYPE_ERROR:
 				self["ErrorPixmap"].show()
+			elif self.type == self.TYPE_WARNING:
+				self["WarningPixmap"].show()
 			self["icon"].show()
 		self.skinName = ["MessageBox"]
 		if simple:
@@ -176,6 +180,7 @@ class MessageBox(Screen, HelpableScreen):
 			return self["ErrorPixmap"].visible and hasattr(self["ErrorPixmap"], 'getSize') and isinstance(self["ErrorPixmap"].getSize(), tuple) and len(self["ErrorPixmap"].getSize()) and self["ErrorPixmap"].getSize()[0] or \
 				self["QuestionPixmap"].visible and hasattr(self["QuestionPixmap"], 'getSize') and isinstance(self["QuestionPixmap"].getSize(), tuple) and len(self["QuestionPixmap"].getSize()) and self["QuestionPixmap"].getSize()[0] or \
 				self["InfoPixmap"].visible and hasattr(self["InfoPixmap"], 'getSize') and isinstance(self["InfoPixmap"].getSize(), tuple) and len(self["InfoPixmap"].getSize()) and self["InfoPixmap"].getSize()[0] or \
+				self["WarningPixmap"].visible and hasattr(self["WarningPixmap"], 'getSize') and isinstance(self["WarningPixmap"].getSize(), tuple) and len(self["WarningPixmap"].getSize()) and self["WarningPixmap"].getSize()[0] or \
 				defaultPixmapWidth
 		except Exception as err:
 			print("[MessageBox] defaultPixmapWidth, %s: '%s'" % (type(err).__name__, err))
