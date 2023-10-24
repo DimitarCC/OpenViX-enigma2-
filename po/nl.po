@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ViX\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-21 00:52+0000\n"
+"POT-Creation-Date: 2023-10-22 13:36+0000\n"
 "PO-Revision-Date: 2023-09-21 12:39+0200\n"
 "Last-Translator: Rob van der Does <RobvanderDoes@Gmail.com>\n"
 "Language-Team: Andy Blackburn, Rob van der Does\n"
@@ -4167,14 +4167,14 @@ msgstr "Verbinden"
 msgid "Connect to a wireless network"
 msgstr "Verbind met een draadloos netwerk"
 
-msgid "Connected"
-msgstr "Verbonden"
-
 msgid "Connected clients"
 msgstr "Verbonden klanten"
 
 msgid "Connected satellites"
 msgstr "Verbonden satellieten"
+
+msgid "Connected through another tuner"
+msgstr ""
 
 msgid "Connected to"
 msgstr "Verbonden met"
@@ -5134,24 +5134,24 @@ msgstr "Map"
 msgid "Directory %s does not exist."
 msgstr "Map %s bestaat niet."
 
-#, python-format
-msgid "Directory '%s' does not exist!"
+#, fuzzy, python-format
+msgid "Directory '%s' does not exist."
 msgstr "Map '%s' bestaat niet!"
 
-#, python-format
-msgid "Directory '%s' is not hard links capable!"
+#, fuzzy, python-format
+msgid "Directory '%s' is not hard links capable."
 msgstr "In map '%s' kunnen geen harde links worden geschreven!"
 
-#, python-format
-msgid "Directory '%s' not valid. Partition must be ext or nfs"
+#, fuzzy, python-format
+msgid "Directory '%s' not valid. Partition must be ext or nfs."
 msgstr "Map '%s' is niet geldig. Partities moeten EXT of NFS geformatteerd zijn"
 
-#, python-format
-msgid "Directory '%s' not writable!"
+#, fuzzy, python-format
+msgid "Directory '%s' not writable."
 msgstr "In map '%s' kan niet worden geschreven!"
 
-#, python-format
-msgid "Directory '%s' not writeable!"
+#, fuzzy, python-format
+msgid "Directory '%s' not writeable."
 msgstr "In map '%s' kan niet worden geschreven!"
 
 msgid "Directory browser"
@@ -6254,6 +6254,10 @@ msgstr "Extensies"
 
 msgid "Extensions management"
 msgstr "Applicatiebeheer"
+
+#, fuzzy
+msgid "Extensions menu"
+msgstr "Extensies"
 
 msgid "Extensive search"
 msgstr "Uitgebreid zoeken"
@@ -10402,6 +10406,12 @@ msgstr "Speel vorige"
 msgid "Play recorded movies"
 msgstr "Speel opnames af"
 
+msgid "Play service with streamrelay"
+msgstr ""
+
+msgid "Play service without streamrelay"
+msgstr ""
+
 #, python-format
 msgid "Play the %d marked recordings"
 msgstr "Speel de %d geselecteerde opnames af"
@@ -10437,6 +10447,10 @@ msgstr "Wijzig de eindtijd van de opname"
 msgid "Please choose an extension"
 msgstr "Kies een extensie"
 
+#, fuzzy
+msgid "Please choose an extension..."
+msgstr "Kies een extensie"
+
 msgid ""
 "Please configure or verify your Nameservers by filling out the required values.\n"
 "When you are ready press OK to continue."
@@ -10456,9 +10470,6 @@ msgstr "Verbind uw ontvanger met het internet"
 
 msgid "Please do not change any values unless you know what you are doing!"
 msgstr "Wijzig hier geen instellingen tenzij u precies weet wat u doet!"
-
-msgid "Please enter a folder that contains some packages."
-msgstr "Kies een folder die plugins bevat."
 
 msgid "Please enter a name for the new bouquet"
 msgstr "Voer de naam voor uw nieuwe favorietenlijst in"
@@ -10529,11 +10540,16 @@ msgstr "Selecteer een subkanaal voor opname..."
 msgid "Please select a subservice..."
 msgstr "Selecteer een subkanaal..."
 
-msgid "Please select an acceptable directory."
+#, fuzzy
+msgid "Please select a valid directory."
 msgstr "Kies een bruikbare map."
 
 msgid "Please select device to use as SWAP file location."
 msgstr "Kies het medium voor het SWAP-bestand."
+
+#, fuzzy
+msgid "Please select folder that contains .ipk packages."
+msgstr "Kies een folder die plugins bevat."
 
 msgid "Please select medium to be scanned"
 msgstr "Selecteer het te scannen medium"
@@ -12650,7 +12666,8 @@ msgstr "Kies bestanden/mappen voor de back-up"
 msgid "Select first service in bouquet"
 msgstr "Selecteer eerste kanaal in boeket"
 
-msgid "Select folder that contains plugins"
+#, fuzzy
+msgid "Select folder containing plugins(.ipk) and Save"
 msgstr "Kies de folder met plugins"
 
 msgid "Select horizontal resolution:"
@@ -14409,6 +14426,14 @@ msgstr "Stream-klanten"
 msgid "Streaming Clients Info"
 msgstr "Stream-klanten info"
 
+#, fuzzy
+msgid "Streamrelay port"
+msgstr "uShare poort"
+
+#, fuzzy
+msgid "Streamrelay url"
+msgstr "Stream-verzoek"
+
 msgid "Strict DLNA"
 msgstr "Strict DLNA"
 
@@ -14872,6 +14897,9 @@ msgstr ""
 "De IMDb-plugin is niet geïnstalleerd!\n"
 "Installeer die."
 
+msgid "The IP address of the streamrelay server that is used to descramble services that can only be decrypted via streamrelay"
+msgstr ""
+
 msgid ""
 "The Linux kernel has changed, an update is not permitted. \n"
 "Install latest image using USB stick or Image Manager."
@@ -14975,6 +15003,9 @@ msgstr "Het pad %s bestaat al."
 
 msgid "The pin code you entered is wrong."
 msgstr "De ingevoerde pincode is onjuist."
+
+msgid "The port of the streamrelay server that is used to descramble services that can only be decrypted via streamrelay"
+msgstr ""
 
 #, python-format
 msgid "The results have been written to %s."
@@ -15976,9 +16007,6 @@ msgid "Updatefeed not available."
 msgstr "Updatefeed niet beschikbaar."
 
 msgid "Updating Cache"
-msgstr "Bezig cache te updaten"
-
-msgid "Updating cache"
 msgstr "Bezig cache te updaten"
 
 msgid "Updating cache, please wait..."
@@ -19128,6 +19156,9 @@ msgstr "| aparte lijst van voorvoegsels die u van namen wil verwijderen, geschei
 #~ msgid "Configure the speed of the background deletion process. Lower speed will consume less hard disk drive performance."
 #~ msgstr "Bepaal de snelheid waarmee bestanden op de achtergrond worden verwijderd. Een lage snelheid vergt minder prestaties van de schijf."
 
+#~ msgid "Connected"
+#~ msgstr "Verbonden"
+
 #~ msgid "Current CEC address"
 #~ msgstr "Huidig CEC adres"
 
@@ -19421,6 +19452,9 @@ msgstr "| aparte lijst van voorvoegsels die u van namen wil verwijderen, geschei
 
 #~ msgid "Update Interval"
 #~ msgstr "Updateinterval"
+
+#~ msgid "Updating cache"
+#~ msgstr "Bezig cache te updaten"
 
 #~ msgid "Use the cursor keys to select an installed image and then Erase button."
 #~ msgstr "Gebruik de pijlthestoetsen om een geinstalleerd image te kiezen en vervolgens de 'wis-toets'."
