@@ -219,7 +219,9 @@ class PictureInPicture(Screen):
 		if service is None:
 			return False
 		from Screens.InfoBarGenerics import streamrelayChecker
+		from Plugins.Extensions.IPTV.IPTVProviders import processService
 		ref = streamrelayChecker(self.resolveAlternatePipService(service))
+		ref, old_ref, is_dynamic = processService(ref, None)
 		if ref:
 			if SystemInfo["CanNotDoSimultaneousTranscodeAndPIP"] and StreamServiceList:
 				self.pipservice = None

@@ -150,6 +150,7 @@ class MultiPixmap(Pixmap):
 			skin_path_prefix = getattr(screen, "skin_path", path)
 			pixmap = None
 			attribs = []
+			w, h = self.skinAttributes["size"].split(",")
 			for (attrib, value) in self.skinAttributes:
 				if attrib == "pixmaps":
 					pixmaps = value.split(',')
@@ -162,7 +163,8 @@ class MultiPixmap(Pixmap):
 						elif fileExists(resolveFilename(SCOPE_ACTIVE_LCDSKIN, p, path_prefix=skin_path_prefix)):
 							pngfile = resolveFilename(SCOPE_ACTIVE_LCDSKIN, p, path_prefix=skin_path_prefix)
 						if path.exists(pngfile):
-							self.pixmaps.append(loadPixmap(pngfile, desktop))
+							isSvg = pngfile.endswith(".svg")
+							self.pixmaps.append(loadPixmap(pngfile, desktop, int(w)))
 					if not pixmap:
 						if fileExists(resolveFilename(SCOPE_CURRENT_SKIN, pixmaps[0], path_prefix=skin_path_prefix)):
 							pixmap = resolveFilename(SCOPE_CURRENT_SKIN, pixmaps[0], path_prefix=skin_path_prefix)
