@@ -25,6 +25,7 @@ from Screens.HelpMenu import HelpableScreen
 from Screens import ScreenSaver
 from Screens.ChannelSelection import ChannelSelection, PiPZapSelection, BouquetSelector, EpgBouquetSelector, service_types_tv
 from Screens.ChoiceBox import ChoiceBox
+from Screens.ClockScreen import ClockScreen
 from Screens.Dish import Dish
 from Screens.EventView import EventViewEPGSelect, EventViewSimple
 from Screens.EpgSelectionGrid import EPGSelectionGrid
@@ -189,9 +190,9 @@ def streamrelayChecker(playref):
 	if '%3a//' not in playrefstring and playrefstring in whitelist.streamrelay:
 		url = "http://%s:%s/" % (config.misc.softcam_streamrelay_url.getHTML(), config.misc.softcam_streamrelay_port.value)
 		if "127.0.0.1" in url:
-			playrefmod = ":".join([("%x" % (int(x[1], 16) + 1)).upper() if x[0] == 6 else x[1] for x in enumerate(playrefstring.split(':'))])
+				playrefmod = ":".join([("%x" % (int(x[1], 16) + 1)).upper() if x[0] == 6 else x[1] for x in enumerate(playrefstring.split(':'))])
 		else:
-			playrefmod = playrefstring
+				playrefmod = playrefstring
 		playref = eServiceReference("%s%s%s:%s" % (playrefmod, url.replace(":", "%3a"), playrefstring.replace(":", "%3a"), ServiceReference(playref).getServiceName()))
 		print("[Whitelist_StreamRelay] Play service via streamrelay as it is whitelisted as such", playref.toString())
 	return playref
@@ -255,6 +256,9 @@ class InfoBarDish:
 			self.dishDialog.doClose()
 			self.dishDialog = None
 
+class InfoBarClock:
+	def __init__(self):
+		self.clockScreen = self.session.instantiateDialog(ClockScreen)
 
 class InfoBarLongKeyDetection:
 	def __init__(self):
@@ -274,6 +278,8 @@ class InfoBarUnhandledKey:
 		self.unhandledKeyDialog.setAnimationMode(0)
 		self.hideUnhandledKeySymbolTimer = eTimer()
 		self.hideUnhandledKeySymbolTimer.callback.append(self.unhandledKeyDialog.hide)
+		self.showUnhandledKeySymbolTimer = eTimer()
+		self.showUnhandledKeySymbolTimer.callback.append(self.showUnhandledKeyIcon)
 		self.checkUnusedTimer = eTimer()
 		self.checkUnusedTimer.callback.append(self.checkUnused)
 		self.onLayoutFinish.append(self.unhandledKeyDialog.hide)
@@ -285,8 +291,8 @@ class InfoBarUnhandledKey:
 			KEYIDS["KEY_VOLUMEDOWN"], KEYIDS["KEY_VOLUMEUP"],
 			KEYIDS["KEY_OK"], KEYIDS["KEY_UP"], KEYIDS["KEY_DOWN"],
 			KEYIDS["KEY_CHANNELUP"], KEYIDS["KEY_CHANNELDOWN"],
-			KEYIDS["KEY_NEXT"], KEYIDS["KEY_PREVIOUS"]
-		)
+			KEYIDS["KEY_NEXT"], KEYIDS["KEY_PREVIOUS"], KEYIDS["KEY_EXIT"],
+			KEYIDS["KEY_LEFT"], KEYIDS["KEY_RIGHT"])
 		self.onClose.append(self.__onClose)
 
 	def __onClose(self):
@@ -298,7 +304,11 @@ class InfoBarUnhandledKey:
 
 	def actionA(self, key, flag):  # This function is called on every keypress!
 		print("[InfoBarGenerics] Key: %s (%s) KeyID='%s' Binding='%s'." % (key, KEYFLAGS.get(flag, _("Unknown")), KEYIDNAMES.get(key, _("Unknown")), getKeyDescription(key)))
-		if flag != 2:  # don't hide on repeat
+		#if flag != 2:  # don't hide on repeat
+		if key in self.sibIgnoreKeys:
+			self.unhandledKeyDialog.hide()
+			return 0
+		if flag != 2:
 			self.unhandledKeyDialog.hide()
 			if self.closeSIB(key) and self.secondInfoBarScreen and self.secondInfoBarScreen.shown:
 				self.secondInfoBarScreen.hide()
@@ -308,6 +318,7 @@ class InfoBarUnhandledKey:
 				self.flags = self.uflags = 0
 			self.flags |= (1 << flag)
 			if flag == 1 or flag == 3:  # Break and Long
+				#self.checkUnusedTimer.stop()
 				self.checkUnusedTimer.start(0, True)
 		return 0
 
@@ -317,11 +328,17 @@ class InfoBarUnhandledKey:
 	def actionB(self, key, flag):  # This function is only called when no other action has handled this key.
 		if flag != 4:
 			self.uflags |= (1 << flag)
+			
+	def showUnhandledKeyIcon(self):
+		self.unhandledKeyDialog.show()
+		self.hideUnhandledKeySymbolTimer.start(2000, True)
 
 	def checkUnused(self):
 		if self.flags == self.uflags:
-			self.unhandledKeyDialog.show()
-			self.hideUnhandledKeySymbolTimer.start(2000, True)
+			self.showUnhandledKeyIcon()
+		else:
+			#self.showUnhandledKeySymbolTimer.stop()
+			self.unhandledKeyDialog.hide()
 
 
 class InfoBarScreenSaver:
@@ -390,10 +407,9 @@ class SecondInfoBar(Screen, HelpableScreen):
 	ADD_TIMER = 0
 	REMOVE_TIMER = 1
 
-	def __init__(self, session):
+	def __init__(self, session, skinName="SecondInfoBar"):
 		Screen.__init__(self, session)
-		if config.usage.second_infobar_simple.value:
-			self.skinName = ["SecondInfoBarSimple", "SecondInfoBar"]
+		self.skinName = skinName
 		HelpableScreen.__init__(self)
 		self["epg_description"] = ScrollLabel()
 		self["channel"] = Label()
@@ -409,7 +425,7 @@ class SecondInfoBar(Screen, HelpableScreen):
 				"nextEvent": (self.nextEvent, _("Show description for next event)")),
 				"timerAdd": (self.timerAdd, _("Add timer")),
 				"openSimilarList": (self.openSimilarList, _("Show list of similar programs")),
-			}, prio=-1, description=_("Second infobar"))  # noqa: E123
+			}, prio=-1, description=_("Second infobar"))
 
 		self.__event_tracker = ServiceEventTracker(screen=self,
 			eventmap={
@@ -614,7 +630,7 @@ class InfoBarShowHide(InfoBarScreenSaver):
 				"LongOKPressed": (self.toggleShowLong, self._helpToggleShowLong),
 				"toggleShow": (self.toggleShow, _("Cycle through infobar displays")),
 				"hide": (self.keyHide, self._helpKeyHide),
-			}, prio=1, description=_("Show/hide infobar"))    # noqa: E123   lower prio to make it possible to override ok and cancel..
+			}, prio=1, description=_("Show/hide infobar"))  # lower prio to make it possible to override ok and cancel..
 
 		self.__event_tracker = ServiceEventTracker(screen=self,
 			eventmap={
@@ -646,8 +662,12 @@ class InfoBarShowHide(InfoBarScreenSaver):
 		self.lastResetAlpha = True
 		self.secondInfoBarScreen = ""
 		if isStandardInfoBar(self):
-			self.secondInfoBarScreen = self.session.instantiateDialog(SecondInfoBar)
-			self.secondInfoBarScreen.show()
+			self.secondInfoBarScreenStandard = self.session.instantiateDialog(SecondInfoBar)
+			self.secondInfoBarScreenStandard.show()
+			self.secondInfoBarScreenSimple = self.session.instantiateDialog(SecondInfoBar, "SecondInfoBarSimple")
+			self.secondInfoBarScreenSimple.show()
+			self.secondInfoBarScreen = config.usage.second_infobar_simple.value and self.secondInfoBarScreenSimple.skinAttributes and self.secondInfoBarScreenSimple or self.secondInfoBarScreenStandard
+
 
 		from Screens.InfoBar import InfoBar
 		InfoBarInstance = InfoBar.instance
@@ -670,7 +690,8 @@ class InfoBarShowHide(InfoBarScreenSaver):
 
 	def __layoutFinished(self):
 		if self.secondInfoBarScreen:
-			self.secondInfoBarScreen.hide()
+			self.secondInfoBarScreenStandard.hide()
+			self.secondInfoBarScreenSimple.hide()
 			self.standardInfoBar = True
 		self.secondInfoBarWasShown = False
 		self.hideVBILineScreen.hide()
@@ -840,7 +861,7 @@ class InfoBarShowHide(InfoBarScreenSaver):
 				self.show()
 			if self.secondInfoBarScreen:
 				self.secondInfoBarScreen.hide()
-				self.secondInfoBarWasShown = False
+			self.secondInfoBarWasShown = False
 			self.EventViewIsShown = False
 		elif isStandardInfoBar(self) and config.usage.show_second_infobar.value == "EPG":
 			self.showDefaultEPG()
@@ -860,23 +881,38 @@ class InfoBarShowHide(InfoBarScreenSaver):
 			self.EventViewIsShown = True
 			self.startHideTimer()
 		else:
-			self.hide()
-			if self.secondInfoBarScreen and self.secondInfoBarScreen.shown:
-				self.secondInfoBarScreen.hide()
-			elif self.EventViewIsShown:
-				try:
-					self.eventView.close()
-				except:
-					pass
-				self.EventViewIsShown = False
+			self.hideAll()
+	
+	def hideAll(self):
+		self.hide()
+		if self.secondInfoBarScreen and self.secondInfoBarScreen.shown:
+			self.secondInfoBarScreen.hide()
+		elif self.EventViewIsShown:
+			try:
+				self.eventView.close()
+			except:
+				pass
+			self.EventViewIsShown = False
 
 	def _helpToggleShowLong(self):
-		return isinstance(self, InfoBarEPG) and config.vixsettings.InfoBarEpg_mode.value == "1" and _("Open infobar EPG") or None
+		return isinstance(self, InfoBarEPG) and config.vixsettings.InfoBarEpg_mode.value == "1" and _("Open infobar EPG") or _("Toggle SecondInfoBar type, simple or standard")
 
 	def toggleShowLong(self):
-		if isinstance(self, InfoBarEPG):
+		if isinstance(self, InfoBarEPG) and config.vixsettings.InfoBarEpg_mode.value == "1":
 			if config.vixsettings.InfoBarEpg_mode.value == "1":
 				self.openInfoBarEPG()
+		else:
+			self.toggleSecondInfoBarType()
+
+	def toggleSecondInfoBarType(self):
+		if config.usage.show_second_infobar.value.isnumeric():
+			if self.secondInfoBarScreen and self.shown and self.secondInfoBarScreenSimple.skinAttributes and self.secondInfoBarScreenStandard.skinAttributes:
+				self.hideAll()
+				config.usage.second_infobar_simple.value = not config.usage.second_infobar_simple.value
+				config.usage.second_infobar_simple.save()
+				self.secondInfoBarScreen = config.usage.second_infobar_simple.value and self.secondInfoBarScreenSimple or self.secondInfoBarScreenStandard
+				self.toggleShow()  # FIB
+				self.toggleShow()  # SIB
 
 	def lockShow(self):
 		self.__locked += 1
@@ -941,9 +977,8 @@ class InfoBarShowHide(InfoBarScreenSaver):
 				whitelist.streamrelay.remove(servicestring)
 			else:
 				whitelist.streamrelay.append(servicestring)
-			if self.session.nav.getCurrentlyPlayingServiceReference() == service:
-				self.session.nav.restartService()
-			whitelist.streamrelay.sort(key=lambda ref: (int((x := ref.split(":"))[6], 16), int(x[5], 16), int(x[4], 16), int(x[3], 16)))
+				if self.session.nav.getCurrentlyPlayingServiceReference() == service:
+					self.session.nav.restartService()
 			open('/etc/enigma2/whitelist_streamrelay', 'w').write('\n'.join(whitelist.streamrelay))
 
 	def queueChange(self):
@@ -952,7 +987,9 @@ class InfoBarShowHide(InfoBarScreenSaver):
 
 	def avChange(self):
 		service = self.session.nav.getCurrentService()
-		ref_p = self.session.nav.getCurrentlyPlayingServiceReference()
+		info = service and service.info()
+		ref_p = info and info.getInfoString(iServiceInformation.sServiceref)
+		ref_p = ref_p and eServiceReference(ref_p)
 		isStream = isIPTV(ref_p)
 		x = ref_p and ref_p.toString().split(":")
 		x_play = x and ":".join(x[:10]) or ""
@@ -1111,7 +1148,7 @@ class NumberZap(Screen):
 				"8": self.keyNumberGlobal,
 				"9": self.keyNumberGlobal,
 				"0": self.keyNumberGlobal
-			})  # noqa: E123
+			})
 
 		self.Timer = eTimer()
 		self.Timer.callback.append(self.keyOK)
@@ -1135,7 +1172,7 @@ class InfoBarNumberZap:
 				"8": (self.keyNumberGlobal, _("Zap to channel number")),
 				"9": (self.keyNumberGlobal, _("Zap to channel number")),
 				"0": (self.keyNumberGlobal, self._helpKeyNumberGlobal0),
-			}, description=_("Recall channel, panic button & number zap"))  # noqa: E123
+			}, description=_("Recall channel, panic button & number zap"))
 
 	def _helpKeyNumberGlobal0(self):
 		if isinstance(self, InfoBarPiP) and self.pipHandles0Action():
@@ -1291,6 +1328,7 @@ class InfoBarChannelSelection:
 		self.servicelist = self.session.instantiateDialog(ChannelSelection)
 		self.servicelist2 = self.session.instantiateDialog(PiPZapSelection)
 		self.tscallback = None
+		self.servicelist.onZapping.append(self.serviceStarted)
 
 		self["ChannelSelectActions"] = HelpableActionMap(self, "InfobarChannelSelection",
 			{
@@ -1313,6 +1351,9 @@ class InfoBarChannelSelection:
 				"ChannelMinusPressedLong": (self.zapUpPip, _("Switch the PiP to the previous channel")),
 			}, description=_("Channel selection"))
 		self.onClose.append(self.__onClose)
+		
+	def newService(self, ref):
+		self["Service"].newService(ref)
 
 	def __onClose(self):
 		if self.servicelist:
@@ -1532,22 +1573,26 @@ class InfoBarMenu:
 		self.session.open(MessageBox, _("AV aspect is %s." % ASPECT_MSG[config.av.aspect.value]), MessageBox.TYPE_INFO, timeout=5, simple=True)
 
 	def showSystemMenu(self):
-		menulist = mdom.getroot().findall("menu")
-		for menuItem in menulist:
-			if menuItem.get("key") == "setup":
-				menulist2 = menuItem.findall("menu")
-				for menuItems in menulist2:
-					if menuItems.get('key') == "system":
-						self.session.openWithCallback(self.mainMenuClosed, Menu, menuItems)
+		menulist = mdom.getroot().findall('menu')
+		for item in menulist:
+			if item.attrib['entryID'] == 'setup_selection':
+				menulist = item.findall('menu')
+				for item in menulist:
+					if item.attrib['entryID'] == 'system_selection':
+						menu = item
+		assert menu.tag == "menu", "root element in menu must be 'menu'!"
+		self.session.openWithCallback(self.mainMenuClosed, Menu, menu)
 
 	def showNetworkMounts(self):
 		menulist = mdom.getroot().findall('menu')
-		for menuItem in menulist:
-			if menuItem.get('key') == "setup":
-				menulist2 = menuItem.findall('menu')
-				for menuItems in menulist2:
-					if menuItems.get('key') == "network":
-						self.session.openWithCallback(self.mainMenuClosed, Menu, menuItems)
+		for item in menulist:
+			if item.attrib['entryID'] == 'setup_selection':
+				menulist = item.findall('menu')
+				for item in menulist:
+					if item.attrib['entryID'] == 'network_menu':
+						menu = item
+		assert menu.tag == "menu", "root element in menu must be 'menu'!"
+		self.session.openWithCallback(self.mainMenuClosed, Menu, menu)
 
 	def showRFSetup(self):
 		self.session.openWithCallback(self.mainMenuClosed, Setup, 'RFmod')
@@ -1608,8 +1653,8 @@ class InfoBarEPG:
 		self.defaultEPGType = self.getDefaultEPGtype()
 		self.defaultINFOType = self.getDefaultINFOtype()
 		self.__event_tracker = ServiceEventTracker(screen=self, eventmap={
-			iPlayableService.evUpdatedEventInfo: self.__evEventInfoChanged,
-		})
+				iPlayableService.evUpdatedEventInfo: self.__evEventInfoChanged,
+			})
 
 		# Note regarding INFO button on the RCU. Some RCUs do not have an INFO button, but to make matters
 		# more complicated they have an EPG button that sends KEY_INFO instead of KEY_EPG. To deal with
@@ -1945,9 +1990,9 @@ class InfoBarRdsDecoder:
 		self.rass_interactive = None
 
 		self.__event_tracker = ServiceEventTracker(screen=self, eventmap={
-			iPlayableService.evEnd: self.__serviceStopped,
-			iPlayableService.evUpdatedRassSlidePic: self.RassSlidePicChanged
-		})
+				iPlayableService.evEnd: self.__serviceStopped,
+				iPlayableService.evUpdatedRassSlidePic: self.RassSlidePicChanged
+			})
 
 		self["RdsActions"] = HelpableActionMap(self, ["InfobarRdsActions"],
 		{
@@ -3388,7 +3433,7 @@ class InfoBarInstantRecord:
 
 		# print("[InfoBarGenerics]test1")
 		if answer is None or answer[1] == "no":
-			# print(["InfoBarGenerics]test2")
+			# print([InfoBarGenerics]"test2")
 			return
 		list = []
 		recording = self.recording[:]
@@ -3796,8 +3841,8 @@ class VideoMode(Screen):
 
 		self["actions"] = NumberActionMap(["InfobarVmodeButtonActions"],
 			{
-			"vmodeSelection": self.selectVMode
-			})  # noqa: E123
+				"vmodeSelection": self.selectVMode
+			})
 
 		self.Timer = eTimer()
 		self.Timer.callback.append(self.quit)
@@ -3930,10 +3975,13 @@ class InfoBarCueSheetSupport:
 		self.resume_point = None
 		self.force_next_resume = False
 		self.__event_tracker = ServiceEventTracker(screen=self,
-		eventmap={
-			iPlayableService.evStart: self.__serviceStarted,
-			iPlayableService.evCuesheetChanged: self.downloadCuesheet,
-			iPlayableService.evStopped: self.__evStopped, })
+			eventmap={
+				iPlayableService.evStart: self.__serviceStarted,
+				iPlayableService.evCuesheetChanged: self.downloadCuesheet,
+			iPlayableService.evStopped: self.__evStopped,
+			}
+		)
+
 		self.__blockDownloadCuesheet = False
 		self.__recording = None
 		self.__recordingCuts = []
@@ -4135,7 +4183,7 @@ class InfoBarCueSheetSupport:
 	def toggleMark(self, onlyremove=False, onlyadd=False, tolerance=5 * 90000, onlyreturn=False):
 		current_pos = self.cueGetCurrentPosition()
 		if current_pos is None:
-			# print("[InfoBarGenerics]not seekable")
+		# print("[InfoBarGenerics]not seekable")
 			return
 
 		nearest_cutpoint = self.getNearestCutPoint(current_pos)
@@ -4239,10 +4287,10 @@ class InfoBarSummary(Screen):
 		</widget>
 	</screen>"""
 
-	# for picon:  (path="piconlcd" will use LCD picons)
-	# <widget source="session.CurrentService" render="Picon" position="6,0" size="120,64" path="piconlcd" >
-	# <convert type="ServiceName">Reference</convert>
-	# </widget>
+# for picon:  (path="piconlcd" will use LCD picons)
+#		<widget source="session.CurrentService" render="Picon" position="6,0" size="120,64" path="piconlcd" >
+#			<convert type="ServiceName">Reference</convert>
+#		</widget>
 
 
 class InfoBarSummarySupport:
@@ -4428,10 +4476,10 @@ class InfoBarSubtitleSupport:
 class InfoBarServiceErrorPopupSupport:
 	def __init__(self):
 		self.__event_tracker = ServiceEventTracker(screen=self, eventmap={
-			iPlayableService.evTuneFailed: self.__tuneFailed,
-			iPlayableService.evTunedIn: self.__serviceStarted,
-			iPlayableService.evStart: self.__serviceStarted
-		})
+				iPlayableService.evTuneFailed: self.__tuneFailed,
+				iPlayableService.evTunedIn: self.__serviceStarted,
+				iPlayableService.evStart: self.__serviceStarted
+			})
 		self.__serviceStarted()
 
 	def __serviceStarted(self):
