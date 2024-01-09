@@ -5,7 +5,7 @@ import struct
 from enigma import eRCInput
 from keyids import KEYIDNAMES
 
-from boxbranding import getBrandOEM
+from Components.SystemInfo import SystemInfo
 from Components.config import config, ConfigInteger, ConfigSlider, ConfigSubsection, ConfigText, ConfigYesNo
 from Screens.Rc import RcPositions
 
@@ -141,7 +141,7 @@ class InitInputDevices:
 		for device in sorted(iter(iInputDevices.Devices.keys())):
 			# print("[InputDevice][createConfig]", sorted(iter(iInputDevices.Devices.keys())))
 			self.currentDevice = device
-			#print("[InputDevice] creating config entry for device: %s -> %s  " % (self.currentDevice, iInputDevices.Devices[device]["name"]))
+			# print("[InputDevice] creating config entry for device: %s -> %s  " % (self.currentDevice, iInputDevices.Devices[device]["name"]))
 			self.setupConfigEntries(self.currentDevice)
 			self.remapRemoteControl(self.currentDevice)
 			self.currentDevice = ""
@@ -215,7 +215,7 @@ config.plugins.remotecontroltype.rctype = ConfigInteger(default=0)
 class RcTypeControl():
 	def __init__(self):
 		self.boxType = "Default"
-		if path.exists('/proc/stb/ir/rc/type') and path.exists('/proc/stb/info/boxtype') and getBrandOEM() != 'gigablue':
+		if path.exists('/proc/stb/ir/rc/type') and path.exists('/proc/stb/info/boxtype') and SystemInfo["brand"] != 'gigablue':
 			self.isSupported = True
 			with open("/proc/stb/info/boxtype", "r") as fd:
 				self.boxType = fd.read().strip()

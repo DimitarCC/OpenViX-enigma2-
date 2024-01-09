@@ -8,7 +8,7 @@ from Components.Button import Button
 from Components.Label import Label
 from Components.UsageConfig import showrotorpositionChoicesUpdate, preferredTunerChoicesUpdate
 from Components.SelectionList import SelectionList, SelectionEntryComponent
-from Components.config import getConfigListEntry, config, ConfigNothing, ConfigBoolean, configfile, NoSave, ConfigSelection
+from Components.config import getConfigListEntry, config, ConfigNothing, ConfigBoolean, configfile, ConfigSelection
 from Components.Sources.List import List
 from Components.Sources.StaticText import StaticText
 from Screens.MessageBox import MessageBox
@@ -18,7 +18,6 @@ from Screens.AutoDiseqc import AutoDiseqc
 from Tools.BoundFunction import boundFunction
 from Tools.Directories import fileExists
 
-from boxbranding import getImageType
 from time import mktime, localtime, time
 from datetime import datetime
 
@@ -832,7 +831,7 @@ class NimSelection(Screen):
 		recordings = self.session.nav.getRecordings()
 		next_rec_time = self.session.nav.RecordTimer.getNextRecordingTime()
 		if recordings or (next_rec_time and next_rec_time > 0 and (next_rec_time - time()) < 360):
-			if getImageType() == 'release':
+			if SystemInfo["imagetype"] == 'release':
 				self.session.open(MessageBox, _("Recording(s) are in progress or coming up in few seconds!"), MessageBox.TYPE_INFO, timeout=5, enable_input=False)
 			else:
 				message = _("Recording(s) are in progress or coming up in few seconds!")

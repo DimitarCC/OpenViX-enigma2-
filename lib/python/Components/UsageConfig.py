@@ -1,8 +1,7 @@
+import io
 import locale
 import os
 import skin
-from time import time
-from boxbranding import getBrandOEM, getDisplayType
 
 from enigma import eDVBDB, eEPGCache, setTunerTypePriorityOrder, setPreferredTuner, setSpinnerOnOff, setEnableTtCachingOnOff, eEnv, Misc_Options, eServiceEvent
 
@@ -18,7 +17,6 @@ from Components.SystemInfo import SystemInfo
 # getting a time-stamp prepended.
 # stderr expect unicode, not str, so we decode as utf-8
 #
-import io
 
 
 def raw_stderr_print(text):
@@ -32,7 +30,7 @@ visuallyImpairedCommentary = "NAR qad"
 
 def InitUsageConfig():
 	config.version = ConfigNumber(default=0)
-	if getBrandOEM() in ('vuplus', 'ini'):
+	if SystemInfo["brand"] in ('vuplus', 'ini'):
 		config.misc.remotecontrol_text_support = ConfigYesNo(default=True)
 	else:
 		config.misc.remotecontrol_text_support = ConfigYesNo(default=False)
@@ -54,27 +52,27 @@ def InitUsageConfig():
 		refreshServiceList()
 	config.usage.alternative_number_mode.addNotifier(alternativeNumberModeChange)
 
-	config.usage.servicelist_twolines = ConfigSelection(default="0", choices=[("0", _("None")), ("1", _("two lines")), ("2", _("two lines and next event"))])
-	config.usage.servicelist_twolines.addNotifier(refreshServiceList)
+	config.usage.servicelist_twolines = ConfigSelection(default="0", choices=[("0", _("None")), ("1", _("two lines")), ("2", _("two lines+next event"))])
+	config.usage.servicelist_twolines.addNotifier(refreshServiceList, initial_call=False, immediate_feedback=False)
 
 	config.usage.hide_number_markers = ConfigYesNo(default=True)
-	config.usage.hide_number_markers.addNotifier(refreshServiceList)
+	config.usage.hide_number_markers.addNotifier(refreshServiceList, initial_call=False, immediate_feedback=False)
 
-	config.usage.servicetype_icon_mode = ConfigSelection(default="0", choices=[("0", _("None")), ("1", _("Left from servicename")), ("2", _("Right from servicename"))])
-	config.usage.servicetype_icon_mode.addNotifier(refreshServiceList)
-	config.usage.crypto_icon_mode = ConfigSelection(default="0", choices=[("0", _("None")), ("1", _("Left from servicename")), ("2", _("Right from servicename"))])
-	config.usage.crypto_icon_mode.addNotifier(refreshServiceList)
-	config.usage.record_indicator_mode = ConfigSelection(default="3", choices=[("0", _("None")), ("1", _("Left from servicename")), ("2", _("Right from servicename")), ("3", _("Red colored"))])
-	config.usage.record_indicator_mode.addNotifier(refreshServiceList)
+	config.usage.servicetype_icon_mode = ConfigSelection(default="0", choices=[("0", _("None")), ("1", _("Left from servicename (only available in single line mode)")), ("2", _("Right from servicename"))])
+	config.usage.servicetype_icon_mode.addNotifier(refreshServiceList, initial_call=False, immediate_feedback=False)
+	config.usage.crypto_icon_mode = ConfigSelection(default="0", choices=[("0", _("None")), ("1", _("Left from servicename (only available in single line mode)")), ("2", _("Right from servicename"))])
+	config.usage.crypto_icon_mode.addNotifier(refreshServiceList, initial_call=False, immediate_feedback=False)
+	config.usage.record_indicator_mode = ConfigSelection(default="3", choices=[("0", _("None")), ("1", _("Left from servicename (only available in single line mode)")), ("2", _("Right from servicename")), ("3", _("Red colored"))])
+	config.usage.record_indicator_mode.addNotifier(refreshServiceList, initial_call=False, immediate_feedback=False)
 
 	choicelist = [("-1", _("Disable"))]
 	for i in range(0, 1300, 25):
 		choicelist.append((str(i), ngettext("%d pixel wide", "%d pixels wide", i) % i))
 	config.usage.servicelist_column = ConfigSelection(default="-1", choices=choicelist)
-	config.usage.servicelist_column.addNotifier(refreshServiceList)
+	config.usage.servicelist_column.addNotifier(refreshServiceList, initial_call=False, immediate_feedback=False)
 
 	config.usage.service_icon_enable = ConfigYesNo(default=False)
-	config.usage.service_icon_enable.addNotifier(refreshServiceList)
+	config.usage.service_icon_enable.addNotifier(refreshServiceList, initial_call=False, immediate_feedback=False)
 	config.usage.servicelist_cursor_behavior = ConfigSelection(default="keep", choices=[
 		("standard", _("Standard")),
 		("keep", _("Keep service")),
@@ -108,11 +106,6 @@ def InitUsageConfig():
 			SystemInfo["InfoBarEpg"] = False
 	config.usage.show_second_infobar.addNotifier(showsecondinfobarChanged)
 
-	try:
-		SystemInfo["SecondInfoBarSimple"] = skin.parameters.get("SecondInfoBarSimple", 0) > 0
-	except Exception as err:
-		print("[UsageConfig] Error loading 'SecondInfoBarSimple' skin parameter! (%s)" % err)
-		SystemInfo["SecondInfoBarSimple"] = False
 	config.usage.second_infobar_simple = ConfigBoolean(descriptions={False: _("Standard"), True: _("Simple")}, graphic=False)
 
 	config.usage.infobar_frontend_source = ConfigSelection(default="tuner", choices=[("settings", _("Settings")), ("tuner", _("Tuner"))])
@@ -137,6 +130,7 @@ def InitUsageConfig():
 		print("[UserConfig] DEBUG: The 'show_menupath' setting of '%s' has been transferred to 'showScreenPath'." % config.usage.showScreenPath.value)
 	# End of temporary code.
 	config.usage.show_spinner = ConfigYesNo(default=True)
+	config.usage.enable_blinking = ConfigYesNo(default=True)
 	config.usage.enable_tt_caching = ConfigYesNo(default=True)
 	config.usage.sort_settings = ConfigYesNo(default=False)
 	config.usage.sort_pluginlist = ConfigYesNo(default=True)
@@ -322,9 +316,9 @@ def InitUsageConfig():
 	config.usage.show_bouquetalways = ConfigYesNo(default=False)
 	config.usage.show_event_progress_in_servicelist = ConfigSelection(default='barright', choices=[
 		('barleft', _("Progress bar left")),
-		('barright', _("Progress bar right")),
+		('barright', _("Progress bar right (only available in single line mode)")),
 		('percleft', _("Percentage left")),
-		('percright', _("Percentage right")),
+		('percright', _("Percentage right (only available in single line mode)")),
 		('no', _("No"))])
 	config.usage.show_channel_numbers_in_servicelist = ConfigYesNo(default=True)
 	config.usage.show_channel_jump_in_servicelist = ConfigSelection(default="alpha", choices=[
@@ -332,8 +326,8 @@ def InitUsageConfig():
 		("alpha", _("Alpha")),
 		("number", _("Number"))])
 
-	config.usage.show_event_progress_in_servicelist.addNotifier(refreshServiceList)
-	config.usage.show_channel_numbers_in_servicelist.addNotifier(refreshServiceList)
+	config.usage.show_event_progress_in_servicelist.addNotifier(refreshServiceList, initial_call=False, immediate_feedback=False)
+	config.usage.show_channel_numbers_in_servicelist.addNotifier(refreshServiceList, initial_call=False, immediate_feedback=False)
 
 	if SystemInfo["WakeOnLAN"]:
 		def wakeOnLANChanged(configElement):
@@ -344,8 +338,8 @@ def InitUsageConfig():
 		config.usage.wakeOnLAN = ConfigYesNo(default=False)
 		config.usage.wakeOnLAN.addNotifier(wakeOnLANChanged)
 
-	#standby
-	if getDisplayType() in ("textlcd7segment"):
+	# standby
+	if SystemInfo["displaytype"] in ("textlcd7segment"):
 		config.usage.blinking_display_clock_during_recording = ConfigSelection(default="Rec", choices=[
 			("Rec", _("REC")),
 			("RecBlink", _("Blinking REC")),
@@ -353,13 +347,13 @@ def InitUsageConfig():
 	else:
 		config.usage.blinking_display_clock_during_recording = ConfigYesNo(default=False)
 
-	#in use
-	if getDisplayType() in ("textlcd"):
+	# in use
+	if SystemInfo["displaytype"] in ("textlcd"):
 		config.usage.blinking_rec_symbol_during_recording = ConfigSelection(default="Channel", choices=[
 			("Rec", _("REC Symbol")),
 			("RecBlink", _("Blinking REC Symbol")),
 			("Channel", _("Channelname"))])
-	if getDisplayType() in ("textlcd7segment"):
+	if SystemInfo["displaytype"] in ("textlcd7segment"):
 		config.usage.blinking_rec_symbol_during_recording = ConfigSelection(default="Rec", choices=[
 			("Rec", _("REC")),
 			("RecBlink", _("Blinking REC")),
@@ -367,7 +361,7 @@ def InitUsageConfig():
 	else:
 		config.usage.blinking_rec_symbol_during_recording = ConfigYesNo(default=True)
 
-	if getDisplayType() in ("textlcd7segment"):
+	if SystemInfo["displaytype"] in ("textlcd7segment"):
 		config.usage.show_in_standby = ConfigSelection(default="time", choices=[
 			("time", _("Time")),
 			("nothing", _("Nothing"))])
@@ -1138,6 +1132,7 @@ def InitUsageConfig():
 		("s", _("Restart softcam"))])
 	config.misc.softcam_streamrelay_url = ConfigIP(default=[127, 0, 0, 1], auto_jump=True)
 	config.misc.softcam_streamrelay_port = ConfigInteger(default=17999, limits=(0, 65535))
+	config.misc.softcam_streamrelay_delay = ConfigSelectionNumber(min=0, max=2000, stepwidth=50, default=100, wraparound=True)
 	SystemInfo["OScamInstalled"] = False
 
 	config.cccaminfo = ConfigSubsection()
@@ -1161,7 +1156,7 @@ def InitUsageConfig():
 		if softcam.lower().startswith("cccam"):
 			config.cccaminfo.showInExtensions = ConfigYesNo(default=True)
 			SystemInfo["CCcamInstalled"] = True
-		elif softcam.lower().startswith('oscam') or softcam.lower().startswith('ncam'):
+		elif softcam.lower().startswith(('oscam', 'ncam')):
 			config.oscaminfo.showInExtensions = ConfigYesNo(default=True)
 			SystemInfo["OScamInstalled"] = True
 

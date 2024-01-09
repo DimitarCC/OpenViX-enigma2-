@@ -126,7 +126,7 @@ class TimerList(GUIComponent):
 		orbposWidth = getTextBoundarySize(self.instance, self.font, self.l.getItemSize(), orbpos).width()
 		res.append((eListboxPythonMultiContent.TYPE_TEXT, colX + self.sidesMargin + self.satPosLeft, self.rowSplit, orbposWidth, self.itemHeight - self.rowSplit, 1, RT_HALIGN_LEFT | RT_VALIGN_TOP, orbpos))
 		res.append((eListboxPythonMultiContent.TYPE_TEXT, colX + self.sidesMargin + self.iconWidth + self.iconMargin, self.rowSplit, self.satPosLeft - self.iconWidth - self.iconMargin, self.itemHeight - self.rowSplit, 1, RT_HALIGN_LEFT | RT_VALIGN_TOP, state))
-		res.append((eListboxPythonMultiContent.TYPE_TEXT, colX + self.sidesMargin + self.satPosLeft + orbposWidth, self.rowSplit, width - self.satPosLeft - orbposWidth - colX - self.sidesMargin*2, self.itemHeight - self.rowSplit, 1, RT_HALIGN_RIGHT | RT_VALIGN_TOP, text))
+		res.append((eListboxPythonMultiContent.TYPE_TEXT, colX + self.sidesMargin + self.satPosLeft + orbposWidth, self.rowSplit, width - self.satPosLeft - orbposWidth - colX - self.sidesMargin * 2, self.itemHeight - self.rowSplit, 1, RT_HALIGN_RIGHT | RT_VALIGN_TOP, text))
 
 		if self.sepLinePixmap:
 			res.append((eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, 0, height - 2, width, 2, self.sepLinePixmap))
@@ -136,7 +136,7 @@ class TimerList(GUIComponent):
 	def __init__(self, list):
 		GUIComponent.__init__(self)
 		self.onSelectionChanged = []
-		self.l = eListboxPythonMultiContent()
+		self.l = eListboxPythonMultiContent()  # noqa: E741
 		self.l.setBuildFunc(self.buildTimerEntry)
 		self.serviceNameFont = gFont("Regular", 20)
 		self.font = gFont("Regular", 18)
@@ -151,7 +151,7 @@ class TimerList(GUIComponent):
 		self.satPosLeft = 160
 		self.sepLinePixmap = None
 		self.iconWait = LoadPixmap(resolveFilename(SCOPE_GUISKIN, "icons/timer_wait.png"))
-		#currently intended that all icons have the same size
+		# currently intended that all icons have the same size
 		self.iconWidth = self.iconWait.size().width()
 		self.iconHeight = self.iconWait.size().height()
 		self.iconRecording = LoadPixmap(resolveFilename(SCOPE_GUISKIN, "icons/timer_rec.png"))
@@ -193,6 +193,12 @@ class TimerList(GUIComponent):
 		def sidesMargin(value):
 			self.sidesMargin = parseScale(value)
 		
+		def sepLinePixmap(value):
+			self.sepLinePixmap = LoadPixmap(resolveFilename(SCOPE_GUISKIN, value))
+
+		def sidesMargin(value):
+			self.sidesMargin = parseScale(value)
+
 		def sepLinePixmap(value):
 			self.sepLinePixmap = LoadPixmap(resolveFilename(SCOPE_GUISKIN, value))
 

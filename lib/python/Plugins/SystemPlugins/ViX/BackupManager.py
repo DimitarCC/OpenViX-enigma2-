@@ -5,7 +5,6 @@ import tarfile
 import glob
 from enigma import eTimer, eEnv, eDVBDB, quitMainloop
 
-from boxbranding import getImageType, getImageDistro, getImageVersion, getImageBuild, getImageDevBuild, getMachineBrand, getMachineMake, getMachineName
 from Components.About import about
 from Components.ActionMap import ActionMap
 from Components.Button import Button
@@ -16,6 +15,7 @@ from Components.Harddisk import harddiskmanager
 from Components.Label import Label
 from Components.MenuList import MenuList
 from Components.Sources.StaticText import StaticText
+from Components.SystemInfo import SystemInfo
 import Components.Task
 from Screens.MessageBox import MessageBox
 from Screens.Screen import Screen
@@ -27,7 +27,7 @@ autoBackupManagerTimer = None
 SETTINGSRESTOREQUESTIONID = "RestoreSettingsNotification"
 PLUGINRESTOREQUESTIONID = "RestorePluginsNotification"
 NOPLUGINS = "NoPluginsNotification"
-defaultprefix = getImageDistro()[4:]
+defaultprefix = SystemInfo["distro"][4:]
 
 
 def getMountChoices():
@@ -167,7 +167,7 @@ class VIXBackupManager(Screen):
 		10, 105, 540, 260, 20,  # list
 		10, 370, 400, 30, 20,  # backupstatus
 		26,
-	]
+			]  # noqa: E124
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
@@ -581,7 +581,7 @@ class VIXBackupManager(Screen):
 			self.kernelcheck = False
 			AddPopupWithCallback(
 				self.Stage6,
-				_("Your %s %s is not connected to a network. Please check your network settings and try again.") % (getMachineBrand(), getMachineName()),
+				_("Your %s %s is not connected to a network. Please check your network settings and try again.") % (SystemInfo["displaybrand"], SystemInfo["machinename"]),
 				MessageBox.TYPE_INFO,
 				15,
 				NOPLUGINS
@@ -601,7 +601,7 @@ class VIXBackupManager(Screen):
 			self.kernelcheck = False
 			AddPopupWithCallback(
 				self.Stage6,
-				_("Your %s %s is not connected to the Internet. Please check your network settings and try again.") % (getMachineBrand(), getMachineName()),
+				_("Your %s %s is not connected to the Internet. Please check your network settings and try again.") % (SystemInfo["displaybrand"], SystemInfo["machinename"]),
 				MessageBox.TYPE_INFO,
 				15,
 				NOPLUGINS
@@ -657,7 +657,7 @@ class VIXBackupManager(Screen):
 							self.plugfile = self.plugfiles[3]
 							# print("[BackupManager] self.plugfile, self.plugfiles", self.plugfile, self.plugfiles)
 							for dir in ["/media/%s/%s" % (media, self.plugfile) for media in listdir("/media/") if path.isdir(path.join("/media/", media)) and path.exists("/media/%s/%s" % (media, self.plugfile))]:
-								if media not in ("autofs", "net"):
+								if media not in ("autofs", "net"):  # noqa: F821
 									devmounts.append(dir)
 							if len(devmounts):
 								for x in devmounts:
@@ -776,7 +776,7 @@ class BackupSelection(Screen):
 			140, 0, 140, 40, 20,
 			280, 0, 140, 40, 20,
 			5, 50, 550, 250, 25, 19,
-	]
+			]  # noqa: E124
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
@@ -815,7 +815,10 @@ class BackupSelection(Screen):
 		self.selectionChanged()
 
 	def selectionChanged(self):
-		current = self["checkList"].getCurrent()[0]
+		cursor = self["checkList"].getCurrent()
+		if not cursor:
+			return
+		current = cursor[0]
 		if current[2] is True:
 			self["key_yellow"].setText(_("Deselect"))
 		else:
@@ -944,43 +947,9 @@ class XtraPluginsSelection(Screen):
 
 
 class VIXBackupManagerMenu(Setup):
-	skin = ["""
-	<screen name="VIXBackupManagerMenu" position="center,center" size="%d,%d">
-		<ePixmap pixmap="skin_default/buttons/red.png" position="%d,%d" size="%d,%d" alphatest="blend" scale="1"/>
-		<ePixmap pixmap="skin_default/buttons/green.png" position="%d,%d" size="%d,%d" alphatest="blend" scale="1"/>
-		<ePixmap pixmap="skin_default/buttons/yellow.png" position="%d,%d" size="%d,%d" alphatest="blend" scale="1"/>
-		<ePixmap pixmap="skin_default/buttons/blue.png" position="%d,%d" size="%d,%d" alphatest="blend" scale="1"/>
-		<widget name="key_red" position="%d,%d" zPosition="1" size="%d,%d" font="Regular;%d" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="key_green" position="%d,%d" zPosition="1" size="%d,%d" font="Regular;%d" halign="center" valign="center" backgroundColor="#1f771f" transparent="1"/>
-		<widget name="key_yellow" position="%d,%d" zPosition="1" size="%d,%d" font="Regular;%d" halign="center" valign="center" backgroundColor="#a08500" transparent="1"/>
-		<widget name="key_blue" position="%d,%d" zPosition="1" size="%d,%d" font="Regular;%d" halign="center" valign="center" backgroundColor="#18188b" transparent="1"/>
-		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="%d,%d" zPosition="1" size="1,1" transparent="1" alphatest="blend" scale="1"/>
-		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" position="%d,%d" zPosition="1" size="%d,%d" transparent="1" scale="1" alphatest="blend">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget name="footnote" position="%d,%d" size="%d,%d" zPosition="1" font="Regular;%d" halign="left" transparent="1" valign="top"/>
-		<widget name="config" position="%d,%d" size="%d,%d" itemHeight="%d" font="Regular;%d" transparent="0" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget name="description" position="%d,e-%d" size="%d,%d" font="Regular;%d" halign="center" valign="top" transparent="0" zPosition="1"/>
-	</screen>""",
-		560, 550,  # screen
-		0, 0, 140, 40,  # colors
-		140, 0, 140, 40,
-		280, 0, 140, 40,
-		420, 0, 140, 40,
-		0, 0, 140, 40, 20,
-		140, 0, 140, 40, 20,
-		280, 0, 140, 40, 20,
-		420, 0, 140, 40, 20,
-		450, 510,  # HelpWindow
-		0, 500, 35, 25,  # VKeyIcon
-		0, 50, 300, 20, 20,  # footnote
-		0, 90, 560, 375, 25, 19,  # config
-		0, 75, 560, 75, 18,  # description
-	]
-
 	def __init__(self, session, setup, plugin=None, PluginLanguageDomain=None):
-		Setup.__init__(self, session, setup, plugin, PluginLanguageDomain)
 		self.skinName = "VIXBackupManagerMenu"
+		Setup.__init__(self, session, setup, plugin, PluginLanguageDomain)
 
 		self["actions2"] = ActionMap(
 			["SetupActions", "ColorActions", "VirtualKeyboardActions", "MenuActions"],
@@ -1014,7 +983,7 @@ class VIXBackupManagerLogView(TextBox):
 </screen>""",
 		560, 400,
 		0, 0, 560, 400, 16,
-	]
+			]  # noqa: E124
 
 	def __init__(self, session, filename):
 		TextBox.__init__(self, session, label="list")
@@ -1094,12 +1063,12 @@ class AutoBackupManagerTimer:
 		self.backuptimer.stop()
 		now = int(time())
 		wake = self.getBackupTime()
-		atLeast = 0							# If we're close enough, we're okay...
+		atLeast = 0  # noqa: F841 if we're close enough, we're okay...
 		if wake - now < 60:
 			print("[BackupManager] Backup onTimer occured at", strftime("%c", localtime(now)))
 			from Screens.Standby import inStandby
 			if not inStandby and config.backupmanager.query.value:  # Check for querying enabled
-				message = _("Your %s %s is about to run a backup of your settings and to detect your plugins.\nDo you want to allow this?") % (getMachineBrand(), getMachineName())
+				message = _("Your %s %s is about to run a backup of your settings and to detect your plugins.\nDo you want to allow this?") % (SystemInfo["displaybrand"], SystemInfo["machinename"])
 				ybox = self.session.openWithCallback(self.doBackup, MessageBox, message, MessageBox.TYPE_YESNO, timeout=30)
 				ybox.setTitle("Scheduled backup.")
 			else:
@@ -1374,12 +1343,12 @@ class BackupFiles(Screen):
 		elif self.backuptype == self.TYPE_FACTORYRESET:
 			backupType = "-FR-"
 		imageSubBuild = ""
-		if getImageType() != "release":
-			imageSubBuild = ".%s" % getImageDevBuild()
+		if SystemInfo["imagetype"] != "release":
+			imageSubBuild = ".%s" % SystemInfo["imagedevbuild"]
 		boxname = ""
 		if config.backupmanager.showboxname.value:
-			boxname = "-" + getMachineMake()
-		self.Backupfile = self.BackupDirectory + config.backupmanager.folderprefix.value + boxname + "-" + getImageType()[0:3] + backupType + getImageVersion() + "." + getImageBuild() + imageSubBuild + "-" + backupdate.strftime("%Y%m%d-%H%M") + ".tar.gz"
+			boxname = "-" + SystemInfo["machinebuild"]
+		self.Backupfile = self.BackupDirectory + config.backupmanager.folderprefix.value + boxname + "-" + SystemInfo["imagetype"][0:3] + backupType + SystemInfo["imageversion"] + "." + SystemInfo["imagebuild"] + imageSubBuild + "-" + backupdate.strftime("%Y%m%d-%H%M") + ".tar.gz"
 		with open(BackupFiles.tar_flist, "w") as tfl:			# Need to create a list of what to backup, so that spaces and special characters don't get lost on, or mangle, the command line
 			for fn in tmplist:
 				tfl.write(fn + "\n")

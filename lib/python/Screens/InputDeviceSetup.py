@@ -7,9 +7,9 @@ from Components.Sources.List import List
 from Components.config import config, ConfigYesNo, getConfigListEntry, ConfigSelection
 from Components.ConfigList import ConfigListScreen
 from Components.ActionMap import ActionMap, HelpableActionMap
+from Components.SystemInfo import SystemInfo
 from Tools.Directories import resolveFilename, SCOPE_CURRENT_SKIN
 from Tools.LoadPixmap import LoadPixmap
-from boxbranding import getBoxType, getMachineBrand, getMachineName, getMachineBuild
 
 
 class InputDeviceSelection(Screen, HelpableScreen):
@@ -28,16 +28,16 @@ class InputDeviceSelection(Screen, HelpableScreen):
 		print(("[InputDeviceSetup] found devices :->", len(self.devices), self.devices))
 
 		self["OkCancelActions"] = HelpableActionMap(self, "OkCancelActions",
-			{
-				"cancel": (self.close, _("Exit input device selection.")),
-				"ok": (self.okbuttonClick, _("Select input device.")),
-			}, -2)
+		{
+		"cancel": (self.close, _("Exit input device selection.")),  # noqa: E122
+		"ok": (self.okbuttonClick, _("Select input device.")),  # noqa: E122
+		}, -2)
 
 		self["ColorActions"] = HelpableActionMap(self, "ColorActions",
-			{
-				"red": (self.close, _("Exit input device selection.")),
-				"green": (self.okbuttonClick, _("Select input device.")),
-			}, -2)
+		{
+		"red": (self.close, _("Exit input device selection.")),  # noqa: E122
+		"green": (self.okbuttonClick, _("Select input device.")),  # noqa: E122
+		}, -2)
 
 		self.currentIndex = 0
 		self.list = []
@@ -56,16 +56,16 @@ class InputDeviceSelection(Screen, HelpableScreen):
 		if type is None:
 			devicepng = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/input_rcold-configured.png"))
 		elif type == 'remote':
-			if config.misc.rcused.value == 0:
-				if enabled:
-					devicepng = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/input_rcnew-configured.png"))
-				else:
-					devicepng = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/input_rcnew.png"))
-			else:
+			if config.misc.rcused.value == 1:  # default is 1
 				if enabled:
 					devicepng = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/input_rcold-configured.png"))
 				else:
 					devicepng = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/input_rcold.png"))
+			else:
+				if enabled:
+					devicepng = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/input_rcnew-configured.png"))
+				else:
+					devicepng = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/input_rcnew.png"))
 		elif type == 'keyboard':
 			if enabled:
 				devicepng = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/input_keyboard-configured.png"))
@@ -128,7 +128,7 @@ class InputDeviceSetup(ConfigListScreen, Screen):
 		self["introduction"] = StaticText()
 
 		# for generating strings into .po only
-		devicenames = [_("%s %s front panel") % (getMachineBrand(), getMachineName()), _("%s %s remote control (native)") % (getMachineBrand(), getMachineName()), _("%s %s advanced remote control (native)") % (getMachineBrand(), getMachineName()), _("%s %s ir keyboard") % (getMachineBrand(), getMachineName()), _("%s %s ir mouse") % (getMachineBrand(), getMachineName())]  # noqa: F841
+		devicenames = [_("%s %s front panel") % (SystemInfo["MachineBrand"], SystemInfo["MachineName"]), _("%s %s remote control (native)") % (SystemInfo["MachineBrand"], SystemInfo["MachineName"]), _("%s %s advanced remote control (native)") % (SystemInfo["MachineBrand"], SystemInfo["MachineName"]), _("%s %s ir keyboard") % (SystemInfo["MachineBrand"], SystemInfo["MachineName"]), _("%s %s ir mouse") % (SystemInfo["MachineBrand"], SystemInfo["MachineName"])]  # noqa: F841
 
 		self.createSetup()
 		self.onLayoutFinish.append(self.layoutFinished)
@@ -190,6 +190,10 @@ class InputDeviceSetup(ConfigListScreen, Screen):
 		ConfigListScreen.keyRight(self)
 		self.newConfig()
 
+	def keySelect(self):
+		ConfigListScreen.keySelect(self)
+		self.newConfig()
+
 	def confirm(self, confirmed):
 		if not confirmed:
 			print("[InputDeviceSetup] not confirmed")
@@ -213,7 +217,7 @@ class InputDeviceSetup(ConfigListScreen, Screen):
 
 class RemoteControlType(ConfigListScreen, Screen):
 	odinRemote = "OdinM9"
-	if getBoxType() == "maram9":
+	if SystemInfo["boxtype"] == "maram9":
 		odinRemote = "MaraM9"
 
 	rcList = [
@@ -310,8 +314,8 @@ class RemoteControlType(ConfigListScreen, Screen):
 		self.getDefaultRcType()
 
 	def getDefaultRcType(self):
-		boxtype = getMachineBuild()
-		procBoxtype = iRcTypeControl.getBoxType()
+		boxtype = SystemInfo["model"]
+		procBoxtype = iRcTypeControl.SystemInfo["boxtype"]
 		print("[InputDevice] procBoxtype = %s, self.boxType = %s" % (procBoxtype, boxtype))
 		for x in self.defaultRcList:
 			if x[0] in boxtype or x[0] in procBoxtype:

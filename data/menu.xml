@@ -120,7 +120,7 @@ self.session.openWithCallback(msgClosed, EpgDeleteMsg)
 			<item key="device_setup" level="0" text="Device" weight="1"><screen module="NetworkSetup" screen="NetworkAdapterSelection" /></item>
 			<item key="netmounts_setup" level="1" text="Mounts" weight="2"><screen module="NetworkSetup" screen="NetworkMountsMenu" /></item>
 			<menu key="netservices" level="0" text="Utilities" weight="3">
-				<item key="netafp_setup" level="2" text="AFP"><screen module="NetworkSetup" screen="NetworkAfp" /></item>
+				<!-- <item key="netafp_setup" level="2" text="AFP"><screen module="NetworkSetup" screen="NetworkAfp" /></item> not currently built -->
 				<item key="netftp_setup" level="2" text="FTP"><screen module="NetworkSetup" screen="NetworkFtp" /></item>
 				<item key="Inadyn_setup" level="2" text="Inadyn"><screen module="NetworkSetup" screen="NetworkInadyn" /></item>
 				<item key="netdlna_setup" level="2" text="MiniDLNA"><screen module="NetworkSetup" screen="NetworkMiniDLNA" /></item>
@@ -144,15 +144,14 @@ self.session.open(SABnzbdSetupScreen)
 			<item key="ci_setup" level="1" text="Common Interface" weight="10"><screen module="Ci" screen="CiSelection" /></item>
 		</menu>
 
-		<!-- Menu / Setup / SoftcamManager -->
-		<menu key="cam" level="0" text="SoftcamManager" weight="8">
+		<!-- Menu / Setup / Softcam Management -->
+		<menu key="cam" level="0" text="Softcam Management" weight="8">
 			<item key="softcam_setup" level="2" text="Settings" weight="1"><setup id="softcamsetup" /></item>
 			<item key="cccaminfo" level="2" text="CCcam Info" weight="90" requires="CCcamInstalled"><screen module="CCcamInfo" screen="CCcamInfoMain" /></item>
 			<item key="oscam/Ncaminfo" level="2" text="OScam/Ncam Info" weight="91" requires="OScamInstalled"><screen module="OScamInfo" screen="OscamInfoMenu" /></item>
+			<item key="streamrelay_settings" level="2" text="Stream Relay Settings" weight="100" requires="HasInitCam"><screen module="StreamRelaySetup" screen="StreamRelaySetup" /></item>
+			<item key="softcam_initD" level="2" text="Softcam Script" weight="110" requires="HasInitCam"><screen module="SoftcamScript" /></item>				
 		</menu>
-
-		<!-- Menu / Setup / SoftcamScript -->
-		<item key="softcam_initD" level="0" text="Softcam Script" weight="9" requires="HasInitCam"><screen module="SoftcamScript" /></item>
 
 		<!-- Menu / Setup / Storage -->
 		<menu key="harddisk" level="0" text="Storage" weight="10" requires="Harddisk">
@@ -163,7 +162,8 @@ self.session.open(SABnzbdSetupScreen)
 
 		<!-- Menu / Setup / Recordings, Playback & Timeshift -->
 		<menu key="rec" level="1" text="Recordings, Playback &amp; Timeshift" weight="11">
-			<item key="recording_setup" level="0" text="Recording &amp; Playback" weight="10"><screen module="Recordings" screen="RecordingSettings" /></item>
+			<item key="recording_setup" level="0" text="Recording" weight="10"><screen module="Recordings" screen="RecordingSettings" /></item>
+			<item key="playback_setup" level="0" text="Playback" weight="12"><setup id="playback" /></item>
 			<item key="timshift_setup" level="0" text="Timeshift" weight="15"><screen module="Timeshift" screen="TimeshiftSettings" /></item>
 		</menu>
 

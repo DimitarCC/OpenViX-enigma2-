@@ -73,7 +73,7 @@ def spinnerSkin(skinName):
 	</screen>""",
 		484, 150,
 		460, 60, 20,
-	]
+			]  # noqa: E124
 
 
 class VIXSoftcamManager(Screen):
@@ -113,7 +113,7 @@ class VIXSoftcamManager(Screen):
 		40, 215, 170, 30, 22,  # lab2
 		225, 216, 240, 100, 20,  # activecam
 		25,
-	]
+				]  # noqa: E124
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
@@ -191,7 +191,7 @@ class VIXSoftcamManager(Screen):
 			else:
 				self["key_green"].setText(_("Stop"))
 			if self.currentactivecam.find(selcam) < 0:
-				self["key_yellow"].setText(" ")
+				self["key_yellow"].setText("")
 			else:
 				self["key_yellow"].setText(_("Restart"))
 
@@ -357,7 +357,7 @@ class VIXSoftcamManager(Screen):
 					self.session.open(MessageBox, _("MGcamd can't run whilst CCcam is running."), MessageBox.TYPE_INFO, timeout=10, close_on_any_key=True)
 			elif selectedcam.lower().startswith("scam"):
 				self.session.openWithCallback(self.showActivecam, VIXStartCam, self.sel[0])
-			elif not selectedcam.lower().startswith("cccam") or selectedcam.lower().startswith("oscam") or selectedcam.lower().startswith("ncam") or selectedcam.lower().startswith("mgcamd"):
+			elif not selectedcam.lower().startswith(("cccam", "oscam", "ncam", "mgcamd")):
 				self.session.open(MessageBox, _("Found non-standard softcam, trying to start, this may fail."), MessageBox.TYPE_INFO, timeout=10, close_on_any_key=True)
 				self.session.openWithCallback(self.showActivecam, VIXStartCam, self.sel[0])
 
@@ -570,7 +570,7 @@ class VIXSoftcamLog(Screen):
 </screen>""",
 	560, 400,
 	0, 0, 560, 400, 14,
-	]
+			]  # noqa: E124
 
 	def __init__(self, session):
 		self.session = session
@@ -584,14 +584,13 @@ class VIXSoftcamLog(Screen):
 		else:
 			softcamlog = ""
 		self["list"] = ScrollLabel(str(softcamlog))
-		self["setupActions"] = ActionMap(
-		["SetupActions", "ColorActions", "DirectionActions"],
-		{
+		self["setupActions"] = ActionMap(["SetupActions", "ColorActions", "DirectionActions"],
+			{
 			"cancel": self.cancel,
 			"ok": self.cancel,
 			"up": self["list"].pageUp,
 			"down": self["list"].pageDown
-		}, -2)
+			}, -2)  # noqa: E123
 
 	def cancel(self):
 		self.close()
@@ -752,7 +751,7 @@ class SoftcamAutoPoller:
 						now = datetime.now()
 						output.write(now.strftime("%Y-%m-%d %H:%M") + ": " + softcamcheck + " running OK\n")
 						output.close()
-						if softcamcheck.lower().startswith("oscam") or softcamcheck.lower().startswith("ncam"):
+						if softcamcheck.lower().startswith(("oscam", "ncam")):
 							if path.exists("/tmp/status.html"):
 								remove("/tmp/status.html")
 							camconf = port = ""
@@ -889,7 +888,7 @@ class SoftcamAutoPoller:
 						now = datetime.now()
 						output.write(now.strftime("%Y-%m-%d %H:%M") + ": Couldn't find " + softcamcheck + " running, Starting " + softcamcheck + "\n")
 						output.close()
-						if softcamcheck.lower().startswith("oscam") or softcamcheck.lower().startswith("ncam"):
+						if softcamcheck.lower().startswith(("oscam", "ncam")):
 							self.Console.ePopen("ps.procps | grep softcams | grep -v grep | awk 'NR==1' | awk '{print $5}'| awk  -F'[/]' '{print $4}' > /tmp/softcamRuningCheck.tmp")
 							sleep(2)
 							file = open("/tmp/softcamRuningCheck.tmp")
