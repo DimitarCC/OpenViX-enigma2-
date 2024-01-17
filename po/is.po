@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-22 13:36+0000\n"
+"POT-Creation-Date: 2024-01-09 11:41+0000\n"
 "PO-Revision-Date: 2014-01-22 23:31+0100\n"
 "Last-Translator: Andy Blackburn <andyblac@icloud.com>\n"
 "Language-Team: Polar Team/LT Team <baddi@oreind.is>\n"
@@ -29,43 +29,8 @@ msgstr ""
 
 msgid ""
 "\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Auka sérfræði stillingar."
-
-msgid ""
-"\n"
-"After pressing OK, please wait!"
-msgstr ""
-"\n"
-"Bíðið eftir að hafa ýtt á OK!"
-
-#, fuzzy, python-format
-msgid ""
-"\n"
-"Backup your %s %s settings."
-msgstr "Afrita kerfis stillingar"
-
-msgid ""
-"\n"
-"Edit the upgrade source address."
-msgstr ""
-"\n"
-"Breyta veffangi uppfærslu uppruna."
-
-msgid ""
-"\n"
 "It contains other items."
 msgstr ""
-
-#, fuzzy, python-format
-msgid ""
-"\n"
-"Manage extensions or plugins for your %s %s"
-msgstr ""
-"\n"
-"Umsýsla á viðbótum eða íforritum fyrir móttakarann þinn"
 
 msgid ""
 "\n"
@@ -77,83 +42,17 @@ msgstr[0] ""
 msgstr[1] ""
 
 #
-#, fuzzy, python-format
-msgid ""
-"\n"
-"Online update of your %s %s software."
-msgstr ""
-"\n"
-"Uppfærsla hugbúnaðar beint af neti."
-
-#
-msgid ""
-"\n"
-"Press OK on your remote control to continue."
-msgstr ""
-"\n"
-"Ýtið á OK á fjarstýringunni til að halda áfram."
-
-#
 #, fuzzy
 msgid ""
 "\n"
 "Recording in progress."
 msgstr "Framganga keyrslu:"
 
-#
-#, fuzzy, python-format
-msgid ""
-"\n"
-"Restore your %s %s settings."
-msgstr "Setja inn kerfis stillingar"
-
-#
-#, fuzzy, python-format
-msgid ""
-"\n"
-"Restore your %s %s with a new firmware."
-msgstr ""
-"\n"
-"Setja inn nýtt stýrikerfi í %s %sið þitt."
-
-#
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Setja inn stilligar eftir dagsetningu."
-
-msgid ""
-"\n"
-"Scan for local extensions and install them."
-msgstr ""
-"\n"
-"Leita að viðbótum á móttakara og setja þær upp."
-
-#
-msgid ""
-"\n"
-"Select your backup device.\n"
-"Current device: "
-msgstr ""
-"\n"
-"Veldu afritunar tæki.\n"
-"Núverandi tæki:"
-
 #, python-format
 msgid ""
 "\n"
 "Timer '%s' disabled!"
 msgstr ""
-
-#
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Skoða, setja inn og taka út hugbúnaðar pakka."
 
 msgid " "
 msgstr ""
@@ -1222,11 +1121,6 @@ msgstr "Ýttu á OK á fjarstýringunni til að halda áfram."
 
 #
 #, fuzzy, python-format
-msgid "%s %s software because updates are available."
-msgstr "Hugbúnaður uppfærslur eru tiltækar fyrir %s %sið."
-
-#
-#, fuzzy, python-format
 msgid "%s ( %s Cards )"
 msgstr "%s (%s)\n"
 
@@ -1902,9 +1796,6 @@ msgstr ""
 msgid "A required tool (%s) was not found."
 msgstr "Nauðsynlegt tól (%s) fannst ekki."
 
-msgid "A search for available updates is currently in progress."
-msgstr "Leit að tiltækum uppfærslum í gangi."
-
 msgid ""
 "A second configured interface has been found.\n"
 "\n"
@@ -1931,10 +1822,6 @@ msgid ""
 msgstr ""
 "Tímastilling vill slökkva á %s %sinu.\n"
 "Viltu gera það núna?"
-
-#
-msgid "A small overview of the available icon states and actions."
-msgstr "Einfalt yfirlit yfir stöðu smámynda og aðgerða."
 
 msgid ""
 "A timer failed to record!\n"
@@ -2317,17 +2204,6 @@ msgstr "meiri stillingar"
 msgid "Advanced options"
 msgstr "Sérfræði stillingar"
 
-msgid "Advanced restore"
-msgstr "Sérfræði innsetning afrita"
-
-#, fuzzy
-msgid "Advanced software"
-msgstr "Hugbúnaður sérfræðinga"
-
-#, fuzzy
-msgid "Advanced software plugin"
-msgstr "Sérfræði íforrit"
-
 #, fuzzy
 msgid "Advanced video enhancement setup"
 msgstr "Myndstillingar fyrir lengra komna"
@@ -2549,9 +2425,6 @@ msgstr ""
 msgid "Alternative services tuner priority"
 msgstr "Móttakara forgangur við rásaval"
 
-msgid "Always ask"
-msgstr "Spyrja alltaf"
-
 msgid "Always hide infobar"
 msgstr ""
 
@@ -2573,9 +2446,6 @@ msgstr ""
 
 msgid "An empty filename is illegal."
 msgstr "Það þarf að vera skráarnafn."
-
-msgid "An error occurred while downloading the packetlist. Please try again."
-msgstr ""
 
 #, fuzzy
 msgid "An unknown error occurred!"
@@ -2655,11 +2525,6 @@ msgstr ""
 "Ertu viss um að þú viljir virkja þessa net stillingu?\n"
 "\n"
 
-msgid ""
-"Are you sure you want to delete\n"
-"the following backup:\n"
-msgstr ""
-
 #, fuzzy
 msgid "Are you sure you want to delete all the selected logs:\n"
 msgstr "Ertu viss um að þú viljir hætta í ráðgjafanum?"
@@ -2680,6 +2545,14 @@ msgid ""
 "Are you sure you want to delete this:\n"
 " "
 msgstr "Ertu viss um að þú viljir hætta í ráðgjafanum?"
+
+#, fuzzy
+msgid ""
+"Are you sure you want to disable this network configuration?\n"
+"\n"
+msgstr ""
+"Ertu viss um að þú viljir virkja þessa net stillingu?\n"
+"\n"
 
 msgid ""
 "Are you sure you want to download this image:\n"
@@ -2724,19 +2597,6 @@ msgid ""
 msgstr ""
 "Ertu viss um að þú viljir endurræsa netkortið?\n"
 "\n"
-
-#, python-format
-msgid ""
-"Are you sure you want to restore\n"
-"the following backup:\n"
-"%s\n"
-"Your receiver will restart after the backup has been restored!"
-msgstr ""
-
-msgid ""
-"Are you sure you want to restore the backup?\n"
-"Your receiver will restart after the backup has been restored!"
-msgstr ""
 
 msgid ""
 "Are you sure you want to restore this backup:\n"
@@ -2873,9 +2733,6 @@ msgstr "Ítalska"
 
 msgid "Austria"
 msgstr ""
-
-msgid "Author: "
-msgstr "Höfundur:"
 
 msgid "Authoring mode"
 msgstr "Höfunda hamur"
@@ -3103,9 +2960,6 @@ msgstr ""
 msgid "Backup complete..."
 msgstr ""
 
-msgid "Backup completed."
-msgstr ""
-
 msgid "Backup confirmation"
 msgstr ""
 
@@ -3115,16 +2969,10 @@ msgstr ""
 msgid "Backup failed - e. g. wrong backup destination or no space left on backup device."
 msgstr ""
 
-msgid "Backup failed."
-msgstr "Afritun tókst ekki."
-
 msgid ""
 "Backup in progress,\n"
 "Please wait for it to finish, before trying again."
 msgstr ""
-
-msgid "Backup is running..."
-msgstr "Afritun í vinnslu..."
 
 msgid "Backup location"
 msgstr ""
@@ -3139,9 +2987,6 @@ msgstr ""
 
 msgid "Backup prefix"
 msgstr ""
-
-msgid "Backup system settings"
-msgstr "Afrita kerfis stillingar"
 
 msgid "Backup/Flash/ReBoot system image."
 msgstr ""
@@ -4235,9 +4080,6 @@ msgstr "Stillingar afruglara tengis"
 msgid "Common options"
 msgstr "Sérfræði stillingar"
 
-msgid "Communication"
-msgstr "Samskipti"
-
 msgid "Comoros"
 msgstr ""
 
@@ -4328,13 +4170,13 @@ msgstr ""
 msgid "Configure how recording filenames are constructed."
 msgstr ""
 
-msgid "Configure if and how crypto icons will be shown in the channel selection list."
+msgid "Configure if and how crypto icons will be shown in the channel selection list (left alignment only available in single line mode)."
 msgstr ""
 
-msgid "Configure if and how service type icons will be shown."
+msgid "Configure if and how service type icons will be shown (left alignment only available in single line mode)."
 msgstr ""
 
-msgid "Configure if and how the record indicator will be shown in the channel selection list."
+msgid "Configure if and how the record indicator will be shown in the channel selection list (left alignment only available in single line mode)."
 msgstr ""
 
 msgid "Configure if and how wide the service name column will be shown in the channel selection list."
@@ -4649,10 +4491,6 @@ msgstr "Innihald passar ekki á DVD!"
 #
 #, fuzzy
 msgid "Context"
-msgstr "Áfram"
-
-#
-msgid "Continue"
 msgstr "Áfram"
 
 msgid "Continue playback"
@@ -5332,11 +5170,6 @@ msgid "Default recording type"
 msgstr "þessi upptaka"
 
 #
-#, fuzzy
-msgid "Default settings"
-msgstr "Upphafs stillingar"
-
-#
 #, fuzzy, python-format
 msgid "Default: '%s'."
 msgstr "Venjulegt"
@@ -5415,6 +5248,9 @@ msgstr ""
 #, fuzzy
 msgid "Delay time"
 msgstr "Byrjunar tími"
+
+msgid "Delay when closing a stream relay service before reallocating the tuner for another service. Using '0' is only recommended for boxes with multiple satellite tuners."
+msgstr ""
 
 msgid "Delay:"
 msgstr ""
@@ -5557,9 +5393,6 @@ msgstr "Lýsing"
 #
 msgid "Deselect"
 msgstr "Ekki velja"
-
-msgid "Details for plugin: "
-msgstr "Upplýsingar um íforrit:"
 
 msgid "Detect next boxes before standby"
 msgstr ""
@@ -5788,11 +5621,6 @@ msgstr "Sýna >16:9 efni sem"
 msgid "Display Skin"
 msgstr ""
 
-#
-#, fuzzy
-msgid "Display and user interface"
-msgstr "Skjár og notenda viðmót"
-
 msgid "Display message before playing next movie"
 msgstr ""
 
@@ -5964,10 +5792,6 @@ msgid "Do you want to install plugins"
 msgstr "Viltu setja inn pakkann:\n"
 
 #
-msgid "Do you want to install the package:\n"
-msgstr "Viltu setja inn pakkann:\n"
-
-#
 msgid "Do you want to play DVD in drive?"
 msgstr "Viltu spila DVD diskinn sem er í spilaranum?"
 
@@ -5979,13 +5803,6 @@ msgstr "Viltu forskoða þennan DVD disk fyrir brennslu?"
 #, fuzzy, python-format
 msgid "Do you want to reboot your %s %s"
 msgstr "Viltu setja inn stillingarnar þínar aftur?"
-
-msgid "Do you want to reboot your receiver?"
-msgstr ""
-
-#
-msgid "Do you want to remove the package:\n"
-msgstr "Viltu taka út pakkann:\n"
 
 msgid "Do you want to restart GUI now ?"
 msgstr ""
@@ -6012,10 +5829,6 @@ msgstr "Viltu halda áfram að spila þetta?"
 #, fuzzy, python-format
 msgid "Do you want to update your %s %s?"
 msgstr "Viltu setja inn stillingarnar þínar aftur?"
-
-#
-msgid "Do you want to upgrade the package:\n"
-msgstr "Viltu uppfæra pakkann:\n"
 
 msgid "Documentary"
 msgstr ""
@@ -6347,9 +6160,6 @@ msgstr "Breyta stillingum netkorts í %s %sinu.\n"
 msgid "Edit title"
 msgstr "Breyta titili"
 
-msgid "Edit upgrade source url."
-msgstr "Breyta uppfærslu uppruna slóð."
-
 #
 #, fuzzy
 msgid "Education"
@@ -6377,10 +6187,6 @@ msgstr ""
 
 msgid "Elapsed & Remaining"
 msgstr ""
-
-#
-msgid "Electronic Program Guide"
-msgstr "Rafrænn dagskrárstjóri (EPG)"
 
 msgid "Empty slot"
 msgstr ""
@@ -6465,6 +6271,14 @@ msgstr ""
 #, fuzzy
 msgid "Enable automatic collections"
 msgstr "Virkja foreldra stýringu"
+
+#
+#, fuzzy
+msgid "Enable blinking"
+msgstr "virkja færlsu stöðu"
+
+msgid "Enable blinking for ui elements. For example for recording icon"
+msgstr ""
 
 msgid "Enable blinking rec symbol on the LCD Display"
 msgstr ""
@@ -6654,6 +6468,9 @@ msgid "Enter PIN Code"
 msgstr "Sláðu aftur inn nýtt PIN"
 
 msgid "Enter a number to jump to a service/channel"
+msgstr ""
+
+msgid "Enter adapter settings or disable adapter, then Save to action changed setup."
 msgstr ""
 
 msgid "Enter if you are in the east or west hemisphere."
@@ -6998,12 +6815,6 @@ msgstr "Viðbótar stillingar..."
 msgid "Extended Shares"
 msgstr ""
 
-msgid "Extended Software"
-msgstr "Viðbótar forrit"
-
-msgid "Extended Software Plugin"
-msgstr "Viðbótar hugbúnaðar íforrit"
-
 #, fuzzy
 msgid "Extended info"
 msgstr "Viðbótar stillingar..."
@@ -7019,9 +6830,6 @@ msgstr "Viðbótar stillingar..."
 #
 msgid "Extensions"
 msgstr "Viðbætur"
-
-msgid "Extensions management"
-msgstr "Viðbóta umsýsla"
 
 #
 #, fuzzy
@@ -7434,9 +7242,6 @@ msgstr ""
 
 msgid "Folkloric"
 msgstr ""
-
-msgid "Following tasks will be done after you press OK!"
-msgstr "Eftirfarandi aðgerðir verða framkvæmdar eftir að þú ýtir á OK!"
 
 #, fuzzy
 msgid "Font size"
@@ -8866,23 +8671,11 @@ msgstr ""
 msgid "Install Plugins"
 msgstr "Set inn"
 
-#
-msgid "Install a new image with a USB stick"
-msgstr "Setja inn nýtt stýrikerfi með USB staut"
-
-#
-msgid "Install a new image with your web browser"
-msgstr "Setja inn nýtt stýrikerfi með vafra"
-
 msgid "Install channel list"
 msgstr ""
 
 msgid "Install confirmation"
 msgstr ""
-
-#, fuzzy
-msgid "Install extensions"
-msgstr "Setja inn viðbót."
 
 msgid "Install extensions."
 msgstr "Setja inn viðbót."
@@ -8893,16 +8686,8 @@ msgstr ""
 msgid "Install local extension"
 msgstr "Setja inn viðbót af %s %si"
 
-#
-msgid "Install or remove finished."
-msgstr "Innsetning eða fjarlæging tókst."
-
 msgid "Install picons on"
 msgstr ""
-
-#
-msgid "Installation finished."
-msgstr "Uppsetning búin."
 
 #
 #, fuzzy, python-format
@@ -9390,10 +9175,8 @@ msgstr ""
 msgid "Left"
 msgstr "Vinstri"
 
-#
-#, fuzzy
-msgid "Left from servicename"
-msgstr "Leita að rásum"
+msgid "Left from servicename (only available in single line mode)"
+msgstr ""
 
 #
 #, fuzzy
@@ -9772,16 +9555,8 @@ msgstr ""
 msgid "Malta"
 msgstr ""
 
-msgid "Manage extensions"
-msgstr "Sýsla með íforrit"
-
 msgid "Manage settings backup."
 msgstr ""
-
-#
-#, fuzzy, python-format
-msgid "Manage your %s %s's software"
-msgstr "Stjórna hugbúnaði móttakarans"
 
 msgid "Manage your devices mount points."
 msgstr ""
@@ -10426,10 +10201,6 @@ msgid "Multiboot only able to restore this backup to mmc slot1"
 msgstr ""
 
 #
-msgid "Multimedia"
-msgstr "Margmiðlun"
-
-#
 msgid "Multiple service support"
 msgstr "Styður margar rásir"
 
@@ -10809,10 +10580,6 @@ msgstr "%d rásir fundnar!"
 msgid "No age block"
 msgstr ""
 
-#
-msgid "No backup needed"
-msgstr "Afritun óþörf"
-
 msgid "No card inserted!"
 msgstr ""
 
@@ -10880,10 +10647,6 @@ msgid "No delay"
 msgstr ""
 
 #
-msgid "No description available."
-msgstr "Engin lýsing tiltæk."
-
-#
 msgid "No displayable files on this medium found!"
 msgstr "Engar skrár fundust á þessu tæki!"
 
@@ -10915,9 +10678,6 @@ msgstr ""
 #, fuzzy
 msgid "No module found"
 msgstr "fann ekki einingu"
-
-msgid "No network connection available."
-msgstr "Engin nettenging virk."
 
 #
 msgid "No networks found"
@@ -11019,17 +10779,6 @@ msgstr ""
 #, fuzzy
 msgid "No, but restart from the beginning"
 msgstr "Nei, en byrja frá byrjun"
-
-#
-msgid "No, do nothing."
-msgstr "Nei, ekki gera neitt."
-
-#
-msgid "No, just start my %s %s"
-msgstr "Nei, ræstu bara %s %sið mitt"
-
-msgid "No, never"
-msgstr "Nei, aldrei"
 
 #
 msgid "No, scan later manually"
@@ -11186,10 +10935,6 @@ msgstr ""
 msgid "OK button (short)"
 msgstr ""
 
-#
-msgid "OK, guide me through the upgrade process"
-msgstr "Leiðbeindu mér með uppfærsluna"
-
 msgid "OK, to perform a restore"
 msgstr ""
 
@@ -11292,9 +11037,6 @@ msgstr ""
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
-
-msgid "Only extensions."
-msgstr "Bara viðbætur."
 
 #
 #, fuzzy
@@ -11466,12 +11208,6 @@ msgstr ""
 msgid "Overwrite Recovery"
 msgstr ""
 
-msgid "Overwrite configuration files during software upgrade?"
-msgstr "Skrifa yfir stillinga skrár við hugbúnaðar uppfærslu?"
-
-msgid "Overwrite configuration files?"
-msgstr ""
-
 msgid "PAGE UP/DOWN"
 msgstr ""
 
@@ -11571,14 +11307,6 @@ msgstr "Listi uppfærðra pakka"
 
 msgid "Packages"
 msgstr ""
-
-#
-msgid "Packet management"
-msgstr "Pakka meðhöndlun"
-
-#
-msgid "Packet manager"
-msgstr "Hugbúnaðarpakka stjóri"
 
 msgid "Page down"
 msgstr ""
@@ -11729,9 +11457,8 @@ msgstr ""
 msgid "Percentage left"
 msgstr ""
 
-#, fuzzy
-msgid "Percentage right"
-msgstr "Hringpólun hægri"
+msgid "Percentage right (only available in single line mode)"
+msgstr ""
 
 msgid "Perform a complete image backup before updating."
 msgstr ""
@@ -11888,7 +11615,13 @@ msgstr ""
 msgid "Play recorded movies"
 msgstr "Spila uppteknar bíómyndir..."
 
+msgid "Play service with Stream Relay"
+msgstr ""
+
 msgid "Play service with streamrelay"
+msgstr ""
+
+msgid "Play service without Stream Relay"
 msgstr ""
 
 msgid "Play service without streamrelay"
@@ -11907,6 +11640,11 @@ msgstr "þessi upptaka"
 #, fuzzy
 msgid "Play the selected recording"
 msgstr "þessi upptaka"
+
+#
+#, fuzzy
+msgid "Playback"
+msgstr "Spila"
 
 msgid ""
 "Playback information missing\n"
@@ -12056,11 +11794,6 @@ msgstr "Velja undirrás til að taka upp..."
 msgid "Please select a subservice..."
 msgstr "Vinsamlega veldu undirrás..."
 
-#
-#, fuzzy
-msgid "Please select a valid directory."
-msgstr "Vinsamlega veldu spilunarlista..."
-
 msgid "Please select device to use as SWAP file location."
 msgstr ""
 
@@ -12070,10 +11803,6 @@ msgstr ""
 #, fuzzy
 msgid "Please select medium to be scanned"
 msgstr "Vinsamlega veljið tæki sem á að leita"
-
-#
-msgid "Please select medium to use as backup location"
-msgstr "Vinsamlega veljið tæki til að nota sem afritunar stað"
 
 #
 #, fuzzy
@@ -12275,6 +12004,11 @@ msgstr "Vinsamlega bíðið á meðan við prufum net tengingu..."
 msgid "Please wait while your network configuration is activated..."
 msgstr "Vinsamlega bíðið á meðan netkerfið er endurræst..."
 
+#
+#, fuzzy
+msgid "Please wait while your network configuration is deactivated..."
+msgstr "Vinsamlega bíðið á meðan netkerfið er endurræst..."
+
 #, fuzzy, python-format
 msgid "Please wait, initialising %s."
 msgstr "Vinsamlega bíðið.. les inn lista..."
@@ -12300,21 +12034,12 @@ msgstr "Íforrit"
 msgid "Plugin browser settings"
 msgstr "Íforrit"
 
-msgid "Plugin details"
-msgstr ""
-
 #, fuzzy
 msgid "Plugin install"
 msgstr "Taka út"
 
 msgid "Plugin listing failed - e. g. wrong backup destination or no space left on backup device."
 msgstr ""
-
-msgid "Plugin manager activity information"
-msgstr "Íforritstjóra aðgerða upplýsingar"
-
-msgid "Plugin manager help"
-msgstr "Íforritsstjóra hjálp"
 
 msgid "Plugins"
 msgstr "Íforrit"
@@ -12581,12 +12306,6 @@ msgstr ""
 msgid "Press GREEN (Reboot) to switch images, YELLOW (Delete) to erase an image or BLUE (Restore) to restore all deleted images."
 msgstr ""
 
-msgid "Press INFO on your remote control for additional information."
-msgstr "Ýttu á INFO á fjarstýringunni fyrir nánari upplýsingar."
-
-msgid "Press MENU on your remote control for additional options."
-msgstr "Ýttu á MENU á fjarstýringunni til að sjá meiri möguleika."
-
 msgid "Press OK"
 msgstr ""
 
@@ -12598,10 +12317,6 @@ msgstr "Ýttu á OK á fjarstýringunni til að halda áfram."
 #, fuzzy, python-format
 msgid "Press OK to activate the selected%s skin."
 msgstr "Ýttu á OK til að velja valið skinn."
-
-#
-msgid "Press OK to activate the settings."
-msgstr "Ýtið á OK til að virkja stillingar."
 
 #
 msgid "Press OK to edit the settings."
@@ -12709,10 +12424,6 @@ msgid ""
 "If this issue persists please check/report on forum"
 msgstr ""
 
-#
-msgid "Process"
-msgstr "Verk"
-
 #, python-format
 msgid "Processor temp:\t%s"
 msgstr ""
@@ -12729,7 +12440,7 @@ msgstr ""
 msgid "Progress bar left"
 msgstr ""
 
-msgid "Progress bar right"
+msgid "Progress bar right (only available in single line mode)"
 msgstr ""
 
 msgid "Prominent"
@@ -13112,6 +12823,11 @@ msgstr "Upptaka"
 
 #
 #, fuzzy
+msgid "Record icon match"
+msgstr "Upptaka"
+
+#
+#, fuzzy
 msgid "Record next"
 msgstr "Upptaka"
 
@@ -13132,11 +12848,6 @@ msgstr "Upptöku tími takmarkaður vegna annarar tímastillingar, %s"
 msgid "Recording"
 msgstr "Upptaka"
 
-#
-#, fuzzy
-msgid "Recording & Playback"
-msgstr "Held áfram spilun"
-
 msgid "Recording 4097, 5001 and 5002 streams not possible with external players, so convert recordings to servicetype 1."
 msgstr ""
 
@@ -13148,11 +12859,6 @@ msgid ""
 msgstr ""
 "Tímastillingar ná yfir hvorn annan!\n"
 "Vinsamlega athugið það!"
-
-#
-#, fuzzy
-msgid "Recording and playback"
-msgstr "Held áfram spilun"
 
 msgid "Recording and playback settings"
 msgstr ""
@@ -13275,10 +12981,6 @@ msgstr ""
 
 msgid "Religion"
 msgstr ""
-
-#
-msgid "Reload"
-msgstr "Endurlesa"
 
 #, fuzzy
 msgid "Reload blacklists"
@@ -13438,10 +13140,6 @@ msgstr ""
 
 msgid "Remove finished timers after (days)"
 msgstr ""
-
-#
-msgid "Remove finished."
-msgstr "Eyðingu lokið."
 
 #
 #, fuzzy
@@ -13689,10 +13387,6 @@ msgid "Restore Confirmation"
 msgstr ""
 
 #
-msgid "Restore backups"
-msgstr "Setja inn afrit"
-
-#
 #, fuzzy
 msgid "Restore confirmation"
 msgstr "Stilling móttakara"
@@ -13710,10 +13404,6 @@ msgstr "Venjulegt"
 msgid "Restore deleted user bouquets"
 msgstr ""
 
-#
-msgid "Restore system settings"
-msgstr "Setja inn kerfis stillingar"
-
 msgid "Restore wizard"
 msgstr ""
 
@@ -13724,9 +13414,6 @@ msgid "Restoring plugins, this can take a long time..."
 msgstr ""
 
 msgid "Restoring plugins..."
-msgstr ""
-
-msgid "Restoring..."
 msgstr ""
 
 msgid "Restricted 18+"
@@ -14031,9 +13718,6 @@ msgstr "Gervihnöttur"
 msgid "Satellite dish settings"
 msgstr "Uppsetning Gervihnattabúnaðar"
 
-msgid "Satellite equipment"
-msgstr "Gervihnatta búnaður"
-
 #
 #, fuzzy
 msgid "Satellite equipment setup"
@@ -14319,13 +14003,6 @@ msgstr "Hierarchy upplýsingar"
 msgid "Searching east ..."
 msgstr "Leita austur"
 
-msgid "Searching for available updates. Please wait..."
-msgstr "Leita að tiltækum uppfærslum. Vinsamlega bíðið..."
-
-#
-msgid "Searching for new installed or removed packages. Please wait..."
-msgstr "Leita að nýinnsettum eða fjarlægðum pökkum. Vinsamlega bíðið..."
-
 #, fuzzy
 msgid "Searching west ..."
 msgstr "Leita vestur"
@@ -14551,14 +14228,6 @@ msgstr "Velja úttaks möppu"
 msgid "Select audio track"
 msgstr "Veldu hljóð rás"
 
-#, fuzzy
-msgid "Select backup files"
-msgstr "Veldu afrits skrár"
-
-#, fuzzy
-msgid "Select backup location"
-msgstr "Veldu stað fyrir afrit"
-
 #
 #, fuzzy
 msgid "Select channel from history"
@@ -14589,11 +14258,11 @@ msgstr ""
 msgid "Select destination for:"
 msgstr ""
 
-msgid "Select extra packages folder"
+msgid "Select display of record icon based on 'Sref only' or 'Sref + Stream url' where applicable."
 msgstr ""
 
-msgid "Select files for backup."
-msgstr "Veldu skrár fyrir afrit."
+msgid "Select extra packages folder"
+msgstr ""
 
 #
 msgid "Select files/folders to backup"
@@ -14800,15 +14469,6 @@ msgstr "Ýttu á OK á fjarstýringunni til að halda áfram."
 #, fuzzy
 msgid "Select to restore all deleted images"
 msgstr "Ná í nýjasta útgefið stýrikerfi"
-
-#
-#, fuzzy
-msgid "Select upgrade source"
-msgstr "Veldu upphafs slóð til að breyta."
-
-#
-msgid "Select upgrade source to edit."
-msgstr "Veldu upphafs slóð til að breyta."
 
 #
 msgid "Select video input with up/down buttons"
@@ -15226,7 +14886,7 @@ msgstr ""
 msgid "Set the time the timer must stop."
 msgstr ""
 
-msgid "Set the type of the progress indication in the channel selection screen."
+msgid "Set the type of the progress indication in the channel selection screen (right alignment only available in single line mode)."
 msgstr ""
 
 msgid "Set to the desired primetime."
@@ -15829,7 +15489,7 @@ msgstr "Möppu vafri"
 msgid "Show the radio player"
 msgstr "Sýna útvarpsspilara..."
 
-msgid "Show the service information on two lines in the channel selection screen. You can choose between the current event description below the channel name, or the current event description next to the channel name, and the next event description on the second line."
+msgid "Show the service information on two lines in the channel selection screen."
 msgstr ""
 
 #, fuzzy
@@ -16061,10 +15721,6 @@ msgid "SkinSelector: Restart GUI"
 msgstr "Endurræsa gluggakerfi núna?"
 
 #
-msgid "Skins"
-msgstr "Skinn"
-
-#
 #, fuzzy
 msgid "Skip back"
 msgstr "fara til baka"
@@ -16242,6 +15898,16 @@ msgstr "Sérfræði stillingar"
 
 #
 #, fuzzy
+msgid "Softcam Management"
+msgstr "Hugbúnaður"
+
+#
+#, fuzzy
+msgid "Softcam Manager"
+msgstr "Hugbúnaður"
+
+#
+#, fuzzy
 msgid "Softcam Script"
 msgstr "Hugbúnaður"
 
@@ -16265,11 +15931,6 @@ msgstr ""
 msgid "SoftcamCheck"
 msgstr "Hugbúnaður"
 
-#
-#, fuzzy
-msgid "SoftcamManager"
-msgstr "Hugbúnaður"
-
 msgid "SoftcamScript enable/disable cam restart"
 msgstr ""
 
@@ -16277,23 +15938,9 @@ msgid "SoftcamScript select camscript"
 msgstr ""
 
 #
-msgid "Software"
-msgstr "Hugbúnaður"
-
-#
 #, fuzzy
 msgid "Software Update"
 msgstr "Hugbúnaðar uppfærsla"
-
-msgid "Software management"
-msgstr "Hugbúnaðar umsýsla"
-
-msgid "Software manager setup"
-msgstr "Uppsetning hugbúnaðar umsýslu"
-
-#
-msgid "Software restore"
-msgstr "Hugbúnaðar endurinnsetning"
 
 #
 msgid "Software update"
@@ -16303,9 +15950,6 @@ msgstr "Hugbúnaðar uppfærsla"
 #, fuzzy
 msgid "Software update settings"
 msgstr "Hugbúnaðar uppfærsla"
-
-msgid "Softwaremanager information"
-msgstr "Upplýsingar hugbúnaðar umsýslu"
 
 msgid "Solomon Islands"
 msgstr ""
@@ -16352,20 +15996,10 @@ msgstr ""
 msgid "Sorry your uShare config is missing"
 msgstr ""
 
-#, python-format
-msgid "Sorry, %s has not been installed!"
-msgstr ""
-
 msgid "Sorry, but the file is not compatible with this image version."
 msgstr ""
 
 msgid "Sorry, but the restore failed."
-msgstr ""
-
-msgid "Sorry, no backups found!"
-msgstr ""
-
-msgid "Sorry, no details available!"
 msgstr ""
 
 msgid "Sorry, no physical devices that supports SWAP attached. Can't create SWAP file on network or fat32 file-systems."
@@ -16375,11 +16009,6 @@ msgid "Sorry, not enough free RAM found, and no physical devices that supports S
 msgstr ""
 
 msgid "Sorry, this tuner is in use."
-msgstr ""
-
-msgid ""
-"Sorry, your backup destination is not writeable.\n"
-"Please select a different one."
 msgstr ""
 
 msgid "Sort"
@@ -16514,6 +16143,12 @@ msgid "Sports Magazines"
 msgstr ""
 
 msgid "Sprache"
+msgstr ""
+
+msgid "Sref + stream url"
+msgstr ""
+
+msgid "Sref only"
 msgstr ""
 
 msgid "Sri Lanka"
@@ -16790,6 +16425,26 @@ msgstr "Vistuð staða"
 msgid "Stream"
 msgstr ""
 
+#
+#, fuzzy
+msgid "Stream Relay Settings"
+msgstr "Hugbúnaðar uppfærsla"
+
+#, fuzzy
+msgid "Stream Relay Setup Actions"
+msgstr "Samskipti"
+
+#
+#, fuzzy
+msgid "Stream Relay delay"
+msgstr "Tímastilling"
+
+msgid "Stream Relay port"
+msgstr ""
+
+msgid "Stream Relay url"
+msgstr ""
+
 msgid "Stream request"
 msgstr ""
 
@@ -16808,12 +16463,6 @@ msgstr "Sýna rásir sem byrja á"
 #, fuzzy
 msgid "Streaming Clients Info"
 msgstr "Sýna rásir sem byrja á"
-
-msgid "Streamrelay port"
-msgstr ""
-
-msgid "Streamrelay url"
-msgstr ""
 
 msgid "Strict DLNA"
 msgstr ""
@@ -17373,7 +17022,7 @@ msgid ""
 "Please install it."
 msgstr ""
 
-msgid "The IP address of the streamrelay server that is used to descramble services that can only be decrypted via streamrelay"
+msgid "The IP address of the streamrelay server that is used to descramble services that can only be decrypted via stream relay."
 msgstr ""
 
 msgid ""
@@ -17407,10 +17056,6 @@ msgstr ""
 
 msgid "The backup creates a snapshot of the image exactly as it is at the current instant."
 msgstr ""
-
-#
-msgid "The backup failed. Please choose a different backup location."
-msgstr "Afritun mistókst. Veldu annan stað fyrir afritið."
 
 msgid "The backup location does not have enough free space."
 msgstr ""
@@ -17484,7 +17129,7 @@ msgstr "Slóðin %s er þegar til."
 msgid "The pin code you entered is wrong."
 msgstr "Kóðinn sem þú slóst inn er rangur."
 
-msgid "The port of the streamrelay server that is used to descramble services that can only be decrypted via streamrelay"
+msgid "The port of the streamrelay server that is used to descramble services that can only be decrypted via stream relay."
 msgstr ""
 
 #
@@ -17539,9 +17184,6 @@ msgstr ""
 "Þráðlausa netkortið er ekki tengt!\n"
 "Vinsamlega tengið það."
 
-msgid "The wizard can backup your current settings. Do you want to do a backup now?"
-msgstr "Ráðgjafinn getur tekið afrit af stillingum þínum. Viltu taka afrit núna?"
-
 msgid "The wizard is finished now, and will reboot."
 msgstr ""
 
@@ -17552,17 +17194,6 @@ msgid "Theater"
 msgstr ""
 
 #
-msgid "There are at least "
-msgstr "Það eru allavega "
-
-#, python-format
-msgid "There are at least %s updates available."
-msgstr ""
-
-msgid "There are currently no outstanding actions."
-msgstr "Það er ekkert atriði sem að liggur fyrir."
-
-#
 #, fuzzy
 msgid "There are no saved playlists to delete!"
 msgstr "Veldu spilunarlista til að eyða..."
@@ -17571,9 +17202,6 @@ msgstr "Veldu spilunarlista til að eyða..."
 #, fuzzy
 msgid "There are no saved playlists to load!"
 msgstr "eyða vistuðum spilunarlista"
-
-msgid "There are no updates available."
-msgstr "Það er engin uppfærsla tiltæk."
 
 msgid "There has been an error, please try again later. If this issue persists, please check openvix.co.uk or world-of-satellite.com"
 msgstr ""
@@ -17823,18 +17451,6 @@ msgstr ""
 
 msgid "This option sets up the picture sharpness, used when the picture is being upscaled."
 msgstr ""
-
-msgid "This plugin is installed."
-msgstr "Þetta íforrit er uppsett."
-
-msgid "This plugin is not installed."
-msgstr "Þetta íforrit er ekki sett upp."
-
-msgid "This plugin will be installed."
-msgstr "Þetta íforrit verður sett inn."
-
-msgid "This plugin will be removed."
-msgstr "Þetta íforrit verður tekið út."
 
 msgid "This setting allows the tuner configuration to be a duplication of how another tuner is already configured."
 msgstr ""
@@ -18294,10 +17910,6 @@ msgid "Try to find used transponders in terrestrial network... please wait..."
 msgstr "Reyni að finna sendi í kapalkerfi.. vinsamlega bíðið..."
 
 #
-msgid "Trying to download a new packetlist. Please wait..."
-msgstr "Reyni að hlaða niður nýjum pakka lista. Vinsamlega bíðið..."
-
-#
 msgid "Tue"
 msgstr "Þri"
 
@@ -18501,12 +18113,6 @@ msgstr "Stillt af notanda"
 msgid "Undetermined"
 msgstr ""
 
-msgid "Undo install"
-msgstr "Hætta við innsetningu"
-
-msgid "Undo uninstall"
-msgstr "Hætta við að hætta við"
-
 msgid "Unencrypted"
 msgstr "Opin rás"
 
@@ -18523,9 +18129,6 @@ msgstr ""
 
 msgid "Unicable delay after last diseqc command"
 msgstr ""
-
-msgid "Uninstall"
-msgstr "Taka út"
 
 msgid "United Arab Emirates"
 msgstr ""
@@ -18621,9 +18224,6 @@ msgstr ""
 msgid "Updated: %s"
 msgstr "Uppfæra"
 
-msgid "Updatefeed not available."
-msgstr "Uppfærslur á fæðirásum ekki tiltækar."
-
 #
 #, fuzzy
 msgid "Updating Cache"
@@ -18634,9 +18234,6 @@ msgstr ""
 
 msgid "Updating mount locations..."
 msgstr ""
-
-msgid "Updating software catalog"
-msgstr "Uppfæri efnisyfirlit hugbúnaðar"
 
 msgid "Upgrade and reboot system"
 msgstr ""
@@ -18842,9 +18439,6 @@ msgid "Use the wizard to set up basic features"
 msgstr ""
 
 msgid "Use these input device settings?"
-msgstr ""
-
-msgid "Use these settings?"
 msgstr ""
 
 #
@@ -19123,65 +18717,9 @@ msgstr "Skoða bíómyndir..."
 msgid "View Video CD..."
 msgstr "Skoða Video CD..."
 
-#
-msgid "View details"
-msgstr "Skoða nánar"
-
 #, fuzzy
 msgid "View extensions"
 msgstr "skoða íforrit..."
-
-#
-msgid "View list of available "
-msgstr "Skoða lista af tiltækum"
-
-#
-msgid "View list of available CommonInterface extensions"
-msgstr "Skoða lista af tiltækum CommonInterface viðbótum."
-
-#
-msgid "View list of available EPG extensions."
-msgstr "Skoða lista af tiltækum EPG viðbótum."
-
-msgid "View list of available Satellite equipment extensions."
-msgstr "Skoða lista af tiltækum gervihnatta viðbótum."
-
-#
-msgid "View list of available communication extensions."
-msgstr "Skoða lista af tiltækum samskipta viðbótum."
-
-#
-msgid "View list of available default settings"
-msgstr "Skoða lista af tiltækum sjálfgefnum stillingum"
-
-#
-#, fuzzy
-msgid "View list of available display and userinterface extensions."
-msgstr "Skoða lista af tiltækum Skjá og viðmóts viðbótum."
-
-#
-msgid "View list of available multimedia extensions."
-msgstr "Skoða lista af tiltækum magmiðlunar viðbótum."
-
-#
-msgid "View list of available networking extensions"
-msgstr "Skoða lista af tiltækum netkerfis viðbótum"
-
-#
-msgid "View list of available recording extensions"
-msgstr "Skoða lista af tiltækum upptöku viðbótum"
-
-#
-msgid "View list of available skins"
-msgstr "Skoða lista af tiltækum skinnum"
-
-#
-msgid "View list of available software extensions"
-msgstr "Skoða lista af tiltækum hugbúnaðar viðbótum"
-
-#
-msgid "View list of available system extensions"
-msgstr "Skoða lista af tiltækum kerfis viðbótum"
 
 msgid "View mode"
 msgstr ""
@@ -19481,10 +19019,6 @@ msgstr ""
 "\n"
 "Farðu þá að enda þess og ýttu á OK, veldu 'enda klippingu'. Það er allt og sumt."
 
-#, fuzzy
-msgid "Welcome to the image upgrade wizard. The wizard will assist you in upgrading the firmware of your %s %s by providing a backup facility for your current settings and a short explanation of how to upgrade your firmware."
-msgstr "Velkominn til stýrikerfis uppfærslu ráðgjafann. Ráðgjafinn aðstoðar þig við að uppfæra stýrikerfi %s %sins með því að sjá um afritun af þínum stillingum og sýnir svo hverning uppfærslan fer fram."
-
 msgid ""
 "Welcome to the restore wizard.\n"
 "\n"
@@ -19740,10 +19274,6 @@ msgstr ""
 msgid "When tuned to a service the system will normally scan the transponder for any changes and save them. Only set to 'yes' if you're absolutely sure of what you're doing."
 msgstr ""
 
-#
-msgid "Where do you want to backup your settings?"
-msgstr "Hvar viltu vista afritið?"
-
 msgid "Where should the recording be saved?"
 msgstr ""
 
@@ -19908,9 +19438,6 @@ msgstr ""
 msgid "Yes to all"
 msgstr "Já við allt"
 
-msgid "Yes, always"
-msgstr "Já, alltaf"
-
 #
 msgid "Yes, and delete this movie"
 msgstr "Já, og eyða þessari bíómynd"
@@ -19919,10 +19446,6 @@ msgstr "Já, og eyða þessari bíómynd"
 #, fuzzy
 msgid "Yes, and return to the movie list"
 msgstr "Já, fara til baka á mynda lista"
-
-#
-msgid "Yes, backup my settings!"
-msgstr "Já, taka afrit að stilinunum!"
 
 #
 #, fuzzy
@@ -19953,10 +19476,6 @@ msgid "Yes, do another manual scan now"
 msgstr "Já, leitaðu aftur handvirkt núna"
 
 #
-msgid "Yes, restore the settings now"
-msgstr "Já, settu inn afritið núna"
-
-#
 #, fuzzy
 msgid "Yes, show delete time"
 msgstr "Já, og eyða þessari bíómynd"
@@ -19964,10 +19483,6 @@ msgstr "Já, og eyða þessari bíómynd"
 #, fuzzy
 msgid "Yes, show record time"
 msgstr "Taka upp"
-
-#
-msgid "Yes, shut down now."
-msgstr "Já, slökkva núna"
 
 msgid "Yesterday"
 msgstr ""
@@ -19992,29 +19507,15 @@ msgstr ""
 msgid "You can Display PIP with or without OSD Menu"
 msgstr ""
 
-#
-msgid "You can cancel the installation."
-msgstr "Þú getur hætt við uppsetninguna."
-
-#
-msgid "You can cancel the removal."
-msgstr "Þú getur hætt við að fjarlægja."
-
 msgid "You can continue watching TV while this is running."
 msgstr ""
 
 msgid "You can have the list sorted by time or alphanumerical."
 msgstr ""
 
-msgid "You can install this plugin."
-msgstr "Þú getur sett inn þetta íforrit."
-
 #, fuzzy, python-format
 msgid "You can only burn %s %s recordings!"
 msgstr "Þú getur bara brennt %s %s upptökur!"
-
-msgid "You can remove this plugin."
-msgstr "Þú getur tekið út þetta íforrit."
 
 #
 msgid "You cannot delete this!"
@@ -20027,14 +19528,6 @@ msgid "You have a marked recording"
 msgid_plural "You have marked recordings"
 msgstr[0] ""
 msgstr[1] ""
-
-#
-msgid "You have chosen to backup your settings. Please press OK to start the backup now."
-msgstr "Þú hefur valið að taka afrit af stillingum þínum. Ýttu á OK til að byrja að taka afrit núna."
-
-#
-msgid "You have chosen to restore your settings. Enigma2 will restart after restore. Please press OK to start the restore now."
-msgstr "Þú hefur valið að setja inn eldra afrit. Enigma2 mun endurræsa eftir innsetningu. Ýttu á OK til að byrja að setja inn afritið núna."
 
 msgid ""
 "You have chosen to save the current timeshift event, but the event has not yet finished\n"
@@ -20057,14 +19550,6 @@ msgstr "Þú þarf að bíða %s!"
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
 msgstr ""
-
-#
-msgid ""
-"You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.dm7025.de.\n"
-"Your %s %s will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
-msgstr ""
-"Þú þarft að hafa tölvu tengda við %s %sið. Ef þú þarft nánari upplýsingar þá skoðaðu síðuna http://www.dm7025.de.\n"
-"%s %sið verður núna stoppað. Eftir að þú hefur uppfært samkvæmt leiðbeinungunum á síðunni þá mun nýja stýrikerfið biðja þig um að setja aftur inn afritið."
 
 msgid "You seem to be in timeshft, the service will briefly stop as timeshift stops."
 msgstr ""
@@ -20158,10 +19643,6 @@ msgstr ""
 msgid "Your %s %s is shutting down"
 msgstr ""
 
-#
-msgid "Your %s %s is shutting down. Please wait..."
-msgstr "%s %sið er að slökkva á sér. Vinsamlega bíðið..."
-
 #, python-format
 msgid "Your %s %s might be unusable now. Please consult the manual for further assistance before rebooting your %s %s."
 msgstr ""
@@ -20199,10 +19680,6 @@ msgstr ""
 
 msgid "Your STB will restart after pressing OK on your remote control."
 msgstr ""
-
-#
-msgid "Your backup succeeded. We will now continue to explain the further upgrade process."
-msgstr "Það tókst að taka afrit. Nú höldum við áfram með uppfærsluna."
 
 #
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
@@ -20259,6 +19736,11 @@ msgstr ""
 
 #
 msgid "Your network configuration has been activated."
+msgstr "Stillingar netkerfis hafa verið gerðar virkar."
+
+#
+#, fuzzy
+msgid "Your network configuration has been disabled."
 msgstr "Stillingar netkerfis hafa verið gerðar virkar."
 
 #
@@ -20841,9 +20323,6 @@ msgstr ""
 msgid "entertainment (general)"
 msgstr ""
 
-msgid "epg cache backup"
-msgstr ""
-
 msgid "equestrian"
 msgstr ""
 
@@ -20881,9 +20360,6 @@ msgid "exit DVD player or return to file browser"
 msgstr "hætta í DVD spilara og fara til baka í skráarvafra"
 
 msgid "experimental film/video"
-msgstr ""
-
-msgid "extensions."
 msgstr ""
 
 msgid "extra wide"
@@ -20963,9 +20439,6 @@ msgstr "laust"
 #
 msgid "free diskspace"
 msgstr "laust diskpláss"
-
-msgid "from"
-msgstr ""
 
 msgid "full"
 msgstr ""
@@ -21387,9 +20860,6 @@ msgstr ""
 msgid "original language"
 msgstr ""
 
-msgid "packages selected."
-msgstr ""
-
 msgid "page left"
 msgstr ""
 
@@ -21633,12 +21103,6 @@ msgstr "sýna atriði nánar"
 msgid "show mediaplayer on mainmenu"
 msgstr ""
 
-msgid "show softwaremanager in plugin menu"
-msgstr ""
-
-msgid "show softwaremanager on blue button"
-msgstr ""
-
 msgid "show/game show (general)"
 msgstr ""
 
@@ -21728,10 +21192,6 @@ msgstr "Biðstaða"
 msgid "start cut here"
 msgstr "byrja klippingu hér"
 
-#
-msgid "start directory"
-msgstr "byrjunar mappa"
-
 msgid "stepsize"
 msgstr ""
 
@@ -21817,7 +21277,7 @@ msgstr "sýna upplýsingalínu"
 
 #
 #, fuzzy
-msgid "two lines and next event"
+msgid "two lines+next event"
 msgstr "fara niður í næsta atriði"
 
 #
@@ -21870,9 +21330,6 @@ msgstr ""
 
 msgid "until standby/restart"
 msgstr "bíða til biðstöðu/endurræsingu"
-
-msgid "updates available."
-msgstr ""
 
 msgid "use best / controlled by HDMI"
 msgstr ""
@@ -22018,6 +21475,112 @@ msgstr "stokkið"
 msgid "| separated list of prefixes you'd like to be removed from event names, separated with |, e.g. New:|Live:"
 msgstr ""
 
+#~ msgid ""
+#~ "\n"
+#~ "Advanced options and settings."
+#~ msgstr ""
+#~ "\n"
+#~ "Auka sérfræði stillingar."
+
+#~ msgid ""
+#~ "\n"
+#~ "After pressing OK, please wait!"
+#~ msgstr ""
+#~ "\n"
+#~ "Bíðið eftir að hafa ýtt á OK!"
+
+#, fuzzy, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Backup your %s %s settings."
+#~ msgstr "Afrita kerfis stillingar"
+
+#~ msgid ""
+#~ "\n"
+#~ "Edit the upgrade source address."
+#~ msgstr ""
+#~ "\n"
+#~ "Breyta veffangi uppfærslu uppruna."
+
+#, fuzzy, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Manage extensions or plugins for your %s %s"
+#~ msgstr ""
+#~ "\n"
+#~ "Umsýsla á viðbótum eða íforritum fyrir móttakarann þinn"
+
+#
+#, fuzzy, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Online update of your %s %s software."
+#~ msgstr ""
+#~ "\n"
+#~ "Uppfærsla hugbúnaðar beint af neti."
+
+#
+#~ msgid ""
+#~ "\n"
+#~ "Press OK on your remote control to continue."
+#~ msgstr ""
+#~ "\n"
+#~ "Ýtið á OK á fjarstýringunni til að halda áfram."
+
+#
+#, fuzzy, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Restore your %s %s settings."
+#~ msgstr "Setja inn kerfis stillingar"
+
+#
+#, fuzzy, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Restore your %s %s with a new firmware."
+#~ msgstr ""
+#~ "\n"
+#~ "Setja inn nýtt stýrikerfi í %s %sið þitt."
+
+#
+#~ msgid ""
+#~ "\n"
+#~ "Restore your backups by date."
+#~ msgstr ""
+#~ "\n"
+#~ "Setja inn stilligar eftir dagsetningu."
+
+#~ msgid ""
+#~ "\n"
+#~ "Scan for local extensions and install them."
+#~ msgstr ""
+#~ "\n"
+#~ "Leita að viðbótum á móttakara og setja þær upp."
+
+#
+#~ msgid ""
+#~ "\n"
+#~ "Select your backup device.\n"
+#~ "Current device: "
+#~ msgstr ""
+#~ "\n"
+#~ "Veldu afritunar tæki.\n"
+#~ "Núverandi tæki:"
+
+#
+#~ msgid ""
+#~ "\n"
+#~ "View, install and remove available or installed packages."
+#~ msgstr ""
+#~ "\n"
+#~ "Skoða, setja inn og taka út hugbúnaðar pakka."
+
+#
+#, fuzzy, python-format
+#~ msgid "%s %s software because updates are available."
+#~ msgstr "Hugbúnaður uppfærslur eru tiltækar fyrir %s %sið."
+
 #
 #, fuzzy
 #~ msgid "(FTA Service)"
@@ -22033,6 +21596,13 @@ msgstr ""
 #~ msgid "1,1"
 #~ msgstr "1.1"
 
+#~ msgid "A search for available updates is currently in progress."
+#~ msgstr "Leit að tiltækum uppfærslum í gangi."
+
+#
+#~ msgid "A small overview of the available icon states and actions."
+#~ msgstr "Einfalt yfirlit yfir stöðu smámynda og aðgerða."
+
 #
 #, fuzzy
 #~ msgid "Activate MAC address configuration"
@@ -22047,6 +21617,32 @@ msgstr ""
 #~ msgid "Activate network adapter configuration"
 #~ msgstr "virkja stillingar netkorts"
 
+#~ msgid "Advanced restore"
+#~ msgstr "Sérfræði innsetning afrita"
+
+#, fuzzy
+#~ msgid "Advanced software"
+#~ msgstr "Hugbúnaður sérfræðinga"
+
+#, fuzzy
+#~ msgid "Advanced software plugin"
+#~ msgstr "Sérfræði íforrit"
+
+#~ msgid "Always ask"
+#~ msgstr "Spyrja alltaf"
+
+#~ msgid "Author: "
+#~ msgstr "Höfundur:"
+
+#~ msgid "Backup failed."
+#~ msgstr "Afritun tókst ekki."
+
+#~ msgid "Backup is running..."
+#~ msgstr "Afritun í vinnslu..."
+
+#~ msgid "Backup system settings"
+#~ msgstr "Afrita kerfis stillingar"
+
 #
 #, fuzzy
 #~ msgid "Cannot delete current image"
@@ -22056,9 +21652,48 @@ msgstr ""
 #~ msgid "Collection"
 #~ msgstr "Nafn safns"
 
+#~ msgid "Communication"
+#~ msgstr "Samskipti"
+
 #, fuzzy
 #~ msgid "Connected"
 #~ msgstr "Tengdur!"
+
+#
+#~ msgid "Continue"
+#~ msgstr "Áfram"
+
+#
+#, fuzzy
+#~ msgid "Default settings"
+#~ msgstr "Upphafs stillingar"
+
+#~ msgid "Details for plugin: "
+#~ msgstr "Upplýsingar um íforrit:"
+
+#
+#, fuzzy
+#~ msgid "Display and user interface"
+#~ msgstr "Skjár og notenda viðmót"
+
+#
+#~ msgid "Do you want to install the package:\n"
+#~ msgstr "Viltu setja inn pakkann:\n"
+
+#
+#~ msgid "Do you want to remove the package:\n"
+#~ msgstr "Viltu taka út pakkann:\n"
+
+#
+#~ msgid "Do you want to upgrade the package:\n"
+#~ msgstr "Viltu uppfæra pakkann:\n"
+
+#~ msgid "Edit upgrade source url."
+#~ msgstr "Breyta uppfærslu uppruna slóð."
+
+#
+#~ msgid "Electronic Program Guide"
+#~ msgstr "Rafrænn dagskrárstjóri (EPG)"
 
 #
 #, fuzzy
@@ -22080,9 +21715,21 @@ msgstr ""
 #~ msgid "Exit network adapter configuration"
 #~ msgstr "fara úr netkorts stillingum"
 
+#~ msgid "Extended Software"
+#~ msgstr "Viðbótar forrit"
+
+#~ msgid "Extended Software Plugin"
+#~ msgstr "Viðbótar hugbúnaðar íforrit"
+
+#~ msgid "Extensions management"
+#~ msgstr "Viðbóta umsýsla"
+
 #, fuzzy, python-format
 #~ msgid "Flash directory '%s' not allowed!"
 #~ msgstr "Tókst ekki að búa möppuna %s."
+
+#~ msgid "Following tasks will be done after you press OK!"
+#~ msgstr "Eftirfarandi aðgerðir verða framkvæmdar eftir að þú ýtir á OK!"
 
 #
 #, fuzzy
@@ -22094,6 +21741,26 @@ msgstr ""
 #~ msgstr "Hierarchy upplýsingar"
 
 #
+#~ msgid "Install a new image with a USB stick"
+#~ msgstr "Setja inn nýtt stýrikerfi með USB staut"
+
+#
+#~ msgid "Install a new image with your web browser"
+#~ msgstr "Setja inn nýtt stýrikerfi með vafra"
+
+#, fuzzy
+#~ msgid "Install extensions"
+#~ msgstr "Setja inn viðbót."
+
+#
+#~ msgid "Install or remove finished."
+#~ msgstr "Innsetning eða fjarlæging tókst."
+
+#
+#~ msgid "Installation finished."
+#~ msgstr "Uppsetning búin."
+
+#
 #, fuzzy
 #~ msgid "Instant recording..."
 #~ msgstr "Skyndi upptaka..."
@@ -22103,13 +21770,62 @@ msgstr ""
 #~ msgid "Last update: %s"
 #~ msgstr "Listi uppfærðra pakka"
 
+#
+#, fuzzy
+#~ msgid "Left from servicename"
+#~ msgstr "Leita að rásum"
+
+#~ msgid "Manage extensions"
+#~ msgstr "Sýsla með íforrit"
+
+#
+#, fuzzy, python-format
+#~ msgid "Manage your %s %s's software"
+#~ msgstr "Stjórna hugbúnaði móttakarans"
+
+#
+#~ msgid "Multimedia"
+#~ msgstr "Margmiðlun"
+
 #~ msgid "Namespace"
 #~ msgstr "Nafnabox"
+
+#
+#~ msgid "No backup needed"
+#~ msgstr "Afritun óþörf"
+
+#
+#~ msgid "No description available."
+#~ msgstr "Engin lýsing tiltæk."
+
+#~ msgid "No network connection available."
+#~ msgstr "Engin nettenging virk."
+
+#
+#~ msgid "No, do nothing."
+#~ msgstr "Nei, ekki gera neitt."
+
+#
+#~ msgid "No, just start my %s %s"
+#~ msgstr "Nei, ræstu bara %s %sið mitt"
+
+#~ msgid "No, never"
+#~ msgstr "Nei, aldrei"
+
+#
+#~ msgid "OK, guide me through the upgrade process"
+#~ msgstr "Leiðbeindu mér með uppfærsluna"
+
+#~ msgid "Only extensions."
+#~ msgstr "Bara viðbætur."
 
 #
 #, fuzzy
 #~ msgid "Open infobar EPG..."
 #~ msgstr "Upplýsingar"
+
+#~ msgid "Overwrite configuration files during software upgrade?"
+#~ msgstr "Skrifa yfir stillinga skrár við hugbúnaðar uppfærslu?"
 
 #
 #, fuzzy
@@ -22117,27 +21833,149 @@ msgstr ""
 #~ msgstr "PIDs"
 
 #
+#~ msgid "Packet management"
+#~ msgstr "Pakka meðhöndlun"
+
+#
+#~ msgid "Packet manager"
+#~ msgstr "Hugbúnaðarpakka stjóri"
+
+#, fuzzy
+#~ msgid "Percentage right"
+#~ msgstr "Hringpólun hægri"
+
+#
+#, fuzzy
+#~ msgid "Please select a valid directory."
+#~ msgstr "Vinsamlega veldu spilunarlista..."
+
+#
+#~ msgid "Please select medium to use as backup location"
+#~ msgstr "Vinsamlega veljið tæki til að nota sem afritunar stað"
+
+#~ msgid "Plugin manager activity information"
+#~ msgstr "Íforritstjóra aðgerða upplýsingar"
+
+#~ msgid "Plugin manager help"
+#~ msgstr "Íforritsstjóra hjálp"
+
+#
 #, fuzzy
 #~ msgid "Polarisation:"
 #~ msgstr "Pólun"
+
+#~ msgid "Press INFO on your remote control for additional information."
+#~ msgstr "Ýttu á INFO á fjarstýringunni fyrir nánari upplýsingar."
+
+#~ msgid "Press MENU on your remote control for additional options."
+#~ msgstr "Ýttu á MENU á fjarstýringunni til að sjá meiri möguleika."
+
+#
+#~ msgid "Press OK to activate the settings."
+#~ msgstr "Ýtið á OK til að virkja stillingar."
 
 #
 #, fuzzy
 #~ msgid "Press OK to set the MAC address."
 #~ msgstr "Ýttu á OK til að breyta stillingum."
 
+#
+#~ msgid "Process"
+#~ msgstr "Verk"
+
+#
+#, fuzzy
+#~ msgid "Recording & Playback"
+#~ msgstr "Held áfram spilun"
+
+#
+#, fuzzy
+#~ msgid "Recording and playback"
+#~ msgstr "Held áfram spilun"
+
+#
+#~ msgid "Reload"
+#~ msgstr "Endurlesa"
+
+#
+#~ msgid "Remove finished."
+#~ msgstr "Eyðingu lokið."
+
+#
+#~ msgid "Restore backups"
+#~ msgstr "Setja inn afrit"
+
+#
+#~ msgid "Restore system settings"
+#~ msgstr "Setja inn kerfis stillingar"
+
+#~ msgid "Satellite equipment"
+#~ msgstr "Gervihnatta búnaður"
+
+#~ msgid "Searching for available updates. Please wait..."
+#~ msgstr "Leita að tiltækum uppfærslum. Vinsamlega bíðið..."
+
+#
+#~ msgid "Searching for new installed or removed packages. Please wait..."
+#~ msgstr "Leita að nýinnsettum eða fjarlægðum pökkum. Vinsamlega bíðið..."
+
+#, fuzzy
+#~ msgid "Select backup files"
+#~ msgstr "Veldu afrits skrár"
+
+#, fuzzy
+#~ msgid "Select backup location"
+#~ msgstr "Veldu stað fyrir afrit"
+
 #, fuzzy
 #~ msgid "Select directory for logfile"
 #~ msgstr "Tókst ekki að búa möppuna %s."
+
+#~ msgid "Select files for backup."
+#~ msgstr "Veldu skrár fyrir afrit."
+
+#
+#, fuzzy
+#~ msgid "Select upgrade source"
+#~ msgstr "Veldu upphafs slóð til að breyta."
+
+#
+#~ msgid "Select upgrade source to edit."
+#~ msgstr "Veldu upphafs slóð til að breyta."
 
 #
 #, fuzzy
 #~ msgid "Skin Setup"
 #~ msgstr "Uppsetning mótors"
 
+#
+#~ msgid "Skins"
+#~ msgstr "Skinn"
+
+#
+#~ msgid "Software"
+#~ msgstr "Hugbúnaður"
+
+#~ msgid "Software management"
+#~ msgstr "Hugbúnaðar umsýsla"
+
+#~ msgid "Software manager setup"
+#~ msgstr "Uppsetning hugbúnaðar umsýslu"
+
+#
+#~ msgid "Software restore"
+#~ msgstr "Hugbúnaðar endurinnsetning"
+
+#~ msgid "Softwaremanager information"
+#~ msgstr "Upplýsingar hugbúnaðar umsýslu"
+
 #, fuzzy
 #~ msgid "Symbolrate:"
 #~ msgstr "Bitahraði"
+
+#
+#~ msgid "The backup failed. Please choose a different backup location."
+#~ msgstr "Afritun mistókst. Veldu annan stað fyrir afritið."
 
 #, fuzzy
 #~ msgid ""
@@ -22156,9 +21994,34 @@ msgstr ""
 #~ msgid "The timer file (timers.xml) is corrupt and could not be loaded."
 #~ msgstr "Atriða skrá (timer.xml) er skemmd og var ekki hægt að lesa hana."
 
+#~ msgid "The wizard can backup your current settings. Do you want to do a backup now?"
+#~ msgstr "Ráðgjafinn getur tekið afrit af stillingum þínum. Viltu taka afrit núna?"
+
+#
+#~ msgid "There are at least "
+#~ msgstr "Það eru allavega "
+
+#~ msgid "There are currently no outstanding actions."
+#~ msgstr "Það er ekkert atriði sem að liggur fyrir."
+
 #, fuzzy
 #~ msgid "There are no items currently available for this screen."
 #~ msgstr "Það er engin uppfærsla tiltæk."
+
+#~ msgid "There are no updates available."
+#~ msgstr "Það er engin uppfærsla tiltæk."
+
+#~ msgid "This plugin is installed."
+#~ msgstr "Þetta íforrit er uppsett."
+
+#~ msgid "This plugin is not installed."
+#~ msgstr "Þetta íforrit er ekki sett upp."
+
+#~ msgid "This plugin will be installed."
+#~ msgstr "Þetta íforrit verður sett inn."
+
+#~ msgid "This plugin will be removed."
+#~ msgstr "Þetta íforrit verður tekið út."
 
 #
 #, fuzzy
@@ -22171,6 +22034,10 @@ msgstr ""
 #~ msgstr "Upplýsingar"
 
 #
+#~ msgid "Trying to download a new packetlist. Please wait..."
+#~ msgstr "Reyni að hlaða niður nýjum pakka lista. Vinsamlega bíðið..."
+
+#
 #, fuzzy
 #~ msgid "Tuning Info: Live Values"
 #~ msgstr "Móttakari"
@@ -22180,12 +22047,148 @@ msgstr ""
 #~ msgid "Tuning Info: Settings Values"
 #~ msgstr "Móttakari"
 
+#~ msgid "Undo install"
+#~ msgstr "Hætta við innsetningu"
+
+#~ msgid "Undo uninstall"
+#~ msgstr "Hætta við að hætta við"
+
+#~ msgid "Uninstall"
+#~ msgstr "Taka út"
+
+#~ msgid "Updatefeed not available."
+#~ msgstr "Uppfærslur á fæðirásum ekki tiltækar."
+
 #
 #, fuzzy
 #~ msgid "Updating cache"
 #~ msgstr "Uppfæra"
 
+#~ msgid "Updating software catalog"
+#~ msgstr "Uppfæri efnisyfirlit hugbúnaðar"
+
 #
 #, fuzzy, python-format
 #~ msgid "ViX version: %s"
 #~ msgstr "Ný útgáfa:"
+
+#
+#~ msgid "View details"
+#~ msgstr "Skoða nánar"
+
+#
+#~ msgid "View list of available "
+#~ msgstr "Skoða lista af tiltækum"
+
+#
+#~ msgid "View list of available CommonInterface extensions"
+#~ msgstr "Skoða lista af tiltækum CommonInterface viðbótum."
+
+#
+#~ msgid "View list of available EPG extensions."
+#~ msgstr "Skoða lista af tiltækum EPG viðbótum."
+
+#~ msgid "View list of available Satellite equipment extensions."
+#~ msgstr "Skoða lista af tiltækum gervihnatta viðbótum."
+
+#
+#~ msgid "View list of available communication extensions."
+#~ msgstr "Skoða lista af tiltækum samskipta viðbótum."
+
+#
+#~ msgid "View list of available default settings"
+#~ msgstr "Skoða lista af tiltækum sjálfgefnum stillingum"
+
+#
+#, fuzzy
+#~ msgid "View list of available display and userinterface extensions."
+#~ msgstr "Skoða lista af tiltækum Skjá og viðmóts viðbótum."
+
+#
+#~ msgid "View list of available multimedia extensions."
+#~ msgstr "Skoða lista af tiltækum magmiðlunar viðbótum."
+
+#
+#~ msgid "View list of available networking extensions"
+#~ msgstr "Skoða lista af tiltækum netkerfis viðbótum"
+
+#
+#~ msgid "View list of available recording extensions"
+#~ msgstr "Skoða lista af tiltækum upptöku viðbótum"
+
+#
+#~ msgid "View list of available skins"
+#~ msgstr "Skoða lista af tiltækum skinnum"
+
+#
+#~ msgid "View list of available software extensions"
+#~ msgstr "Skoða lista af tiltækum hugbúnaðar viðbótum"
+
+#
+#~ msgid "View list of available system extensions"
+#~ msgstr "Skoða lista af tiltækum kerfis viðbótum"
+
+#, fuzzy
+#~ msgid "Welcome to the image upgrade wizard. The wizard will assist you in upgrading the firmware of your %s %s by providing a backup facility for your current settings and a short explanation of how to upgrade your firmware."
+#~ msgstr "Velkominn til stýrikerfis uppfærslu ráðgjafann. Ráðgjafinn aðstoðar þig við að uppfæra stýrikerfi %s %sins með því að sjá um afritun af þínum stillingum og sýnir svo hverning uppfærslan fer fram."
+
+#
+#~ msgid "Where do you want to backup your settings?"
+#~ msgstr "Hvar viltu vista afritið?"
+
+#~ msgid "Yes, always"
+#~ msgstr "Já, alltaf"
+
+#
+#~ msgid "Yes, backup my settings!"
+#~ msgstr "Já, taka afrit að stilinunum!"
+
+#
+#~ msgid "Yes, restore the settings now"
+#~ msgstr "Já, settu inn afritið núna"
+
+#
+#~ msgid "Yes, shut down now."
+#~ msgstr "Já, slökkva núna"
+
+#
+#~ msgid "You can cancel the installation."
+#~ msgstr "Þú getur hætt við uppsetninguna."
+
+#
+#~ msgid "You can cancel the removal."
+#~ msgstr "Þú getur hætt við að fjarlægja."
+
+#~ msgid "You can install this plugin."
+#~ msgstr "Þú getur sett inn þetta íforrit."
+
+#~ msgid "You can remove this plugin."
+#~ msgstr "Þú getur tekið út þetta íforrit."
+
+#
+#~ msgid "You have chosen to backup your settings. Please press OK to start the backup now."
+#~ msgstr "Þú hefur valið að taka afrit af stillingum þínum. Ýttu á OK til að byrja að taka afrit núna."
+
+#
+#~ msgid "You have chosen to restore your settings. Enigma2 will restart after restore. Please press OK to start the restore now."
+#~ msgstr "Þú hefur valið að setja inn eldra afrit. Enigma2 mun endurræsa eftir innsetningu. Ýttu á OK til að byrja að setja inn afritið núna."
+
+#
+#~ msgid ""
+#~ "You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.dm7025.de.\n"
+#~ "Your %s %s will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
+#~ msgstr ""
+#~ "Þú þarft að hafa tölvu tengda við %s %sið. Ef þú þarft nánari upplýsingar þá skoðaðu síðuna http://www.dm7025.de.\n"
+#~ "%s %sið verður núna stoppað. Eftir að þú hefur uppfært samkvæmt leiðbeinungunum á síðunni þá mun nýja stýrikerfið biðja þig um að setja aftur inn afritið."
+
+#
+#~ msgid "Your %s %s is shutting down. Please wait..."
+#~ msgstr "%s %sið er að slökkva á sér. Vinsamlega bíðið..."
+
+#
+#~ msgid "Your backup succeeded. We will now continue to explain the further upgrade process."
+#~ msgstr "Það tókst að taka afrit. Nú höldum við áfram með uppfærsluna."
+
+#
+#~ msgid "start directory"
+#~ msgstr "byrjunar mappa"

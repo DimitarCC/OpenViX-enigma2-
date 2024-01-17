@@ -818,7 +818,6 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 		if (!marked && isPlayable && service_info && m_is_playable_ignore.valid())
 		{
 			isplayable_value = service_info->isPlayable(*m_cursor, m_is_playable_ignore);
-
 			if (isplayable_value == 0) // service unavailable
 			{
 				if (m_color_set[serviceNotAvail])
@@ -931,7 +930,7 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 					painter.clippop();
 				}
 
-				if (m_pixmaps[picRecord] && isRecorded)
+				if (m_pixmaps[picRecord] && isRecorded && ((m_record_indicator_mode == 1) || (m_record_indicator_mode == 2)))
 				{
 					eSize pixmap_size = m_pixmaps[picRecord]->size();
 					xlpos -= 15 + pixmap_size.width();
@@ -1216,7 +1215,7 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 						//------------------------------------------------ Event remaining ------------------------------------------------------------------------
 						std::string timeLeft_str = "";
 						char buffer[15];
-						snprintf(buffer, sizeof(buffer), ("%s" + m_text_time).c_str(), timeLeft == 0 ? "" : "+", timeLeft/60);
+						snprintf(buffer, sizeof(buffer), ("%s" + m_text_time).c_str(), timeLeft < 60 ? "" : "+", timeLeft/60);
 						timeLeft_str = buffer;
 						ePtr<eTextPara> paraLeft = new eTextPara(eRect(0, 0, m_itemsize.width(), m_itemheight/2));
 						paraLeft->setFont(m_element_font[celServiceInfoRemainingTime]);
@@ -1254,24 +1253,6 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 
 						painter.renderPara(paraLeft, ePoint(m_itemsize.width() - bboxtLeft.width() - 15, offset.y() - 2 + m_itemheight/2 + ((m_itemheight/2 - bboxtLeft.height())/2)));
 					}
-
-					//------------------------------------------------ Event remaining ------------------------------------------------------------------------
-					std::string timeLeft_str = "";
-					char buffer[15];
-					snprintf(buffer, sizeof(buffer), "+%d min", timeLeft/60 );
-					timeLeft_str = buffer;
-					ePtr<eTextPara> paraLeft = new eTextPara(eRect(0, 0, m_itemsize.width(), m_itemheight/2));
-					paraLeft->setFont(m_element_font[celServiceInfo]);
-					paraLeft->renderString(timeLeft_str.c_str());
-					eRect bboxtLeft = paraLeft->getBoundBox();
-					painter.renderPara(paraLeft, ePoint(m_itemsize.width() - bboxtLeft.width() - 15, offset.y() - 2 + m_itemheight/2 + ((m_itemheight/2 - bboxtLeft.height())/2)));
-
-					//------------------------------------------------- Event name ------------------------------------------------------------------------------
-					ePtr<eTextPara> para = new eTextPara(eRect(0, 0, m_itemsize.width() - xoffs - bboxtLeft.width() - 25 - m_items_distances, m_itemheight/2));
-					para->setFont(m_element_font[celServiceInfo]);
-					para->renderString(text.c_str());
-					eRect bbox = para->getBoundBox();
-					painter.renderPara(para, ePoint(xoffs, offset.y() - 2 + m_itemheight/2 + ((m_itemheight/2 - bbox.height())/2)));
 				}
 			}
 		} else {

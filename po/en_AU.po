@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2 3.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-22 13:36+0000\n"
+"POT-Creation-Date: 2024-01-09 11:41+0000\n"
 "PO-Revision-Date: 2017-01-01 23:30+1100\n"
 "Last-Translator: IanSav\n"
 "Language-Team: OpenViX\n"
@@ -32,45 +32,8 @@ msgstr ""
 
 msgid ""
 "\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Advanced options and settings."
-
-msgid ""
-"\n"
-"After pressing OK, please wait!"
-msgstr ""
-"\n"
-"After pressing OK, please wait!"
-
-#, python-format
-msgid ""
-"\n"
-"Backup your %s %s settings."
-msgstr ""
-"\n"
-"Backup your %s %s settings."
-
-msgid ""
-"\n"
-"Edit the upgrade source address."
-msgstr ""
-"\n"
-"Edit the upgrade source address."
-
-msgid ""
-"\n"
 "It contains other items."
 msgstr ""
-
-#, python-format
-msgid ""
-"\n"
-"Manage extensions or plugins for your %s %s"
-msgstr ""
-"\n"
-"Manage extensions or plugins for your %s %s"
 
 msgid ""
 "\n"
@@ -81,79 +44,18 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#, python-format
-msgid ""
-"\n"
-"Online update of your %s %s software."
-msgstr ""
-"\n"
-"Online update of your %s %s software."
-
-msgid ""
-"\n"
-"Press OK on your remote control to continue."
-msgstr ""
-"\n"
-"Press OK on your remote control to continue."
-
 msgid ""
 "\n"
 "Recording in progress."
 msgstr ""
 "\n"
 "Recording in progress."
-
-#, python-format
-msgid ""
-"\n"
-"Restore your %s %s settings."
-msgstr ""
-"\n"
-"Restore your %s %s settings."
-
-#, python-format
-msgid ""
-"\n"
-"Restore your %s %s with a new firmware."
-msgstr ""
-"\n"
-"Restore your %s %s with a new firmware."
-
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Restore your backups by date."
-
-msgid ""
-"\n"
-"Scan for local extensions and install them."
-msgstr ""
-"\n"
-"Scan for local extensions and install them."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
-"Current device: "
-msgstr ""
-"\n"
-"Select your backup device.\n"
-"Current device: "
 
 #, python-format
 msgid ""
 "\n"
 "Timer '%s' disabled!"
 msgstr ""
-
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"View, install and remove available or installed packages."
 
 msgid " "
 msgstr ""
@@ -1194,10 +1096,6 @@ msgstr "%s %s ir mouse"
 msgid "%s %s remote control (native)"
 msgstr "%s %s remote control (native)"
 
-#, python-format
-msgid "%s %s software because updates are available."
-msgstr "%s %s software because updates are available."
-
 #, fuzzy, python-format
 msgid "%s ( %s Cards )"
 msgstr "%s (%s)\n"
@@ -1837,9 +1735,6 @@ msgstr "A repeating timer or just once?"
 msgid "A required tool (%s) was not found."
 msgstr "A required tool (%s) was not found."
 
-msgid "A search for available updates is currently in progress."
-msgstr "A search for available updates is currently in progress."
-
 msgid ""
 "A second configured interface has been found.\n"
 "\n"
@@ -1864,9 +1759,6 @@ msgid ""
 msgstr ""
 "A sleep timer wants to shut down\n"
 "your %s %s. Proceed?"
-
-msgid "A small overview of the available icon states and actions."
-msgstr "A small overview of the available icon states and actions."
 
 msgid ""
 "A timer failed to record!\n"
@@ -2193,15 +2085,6 @@ msgstr "Advanced"
 msgid "Advanced options"
 msgstr "Advanced options"
 
-msgid "Advanced restore"
-msgstr "Advanced restore"
-
-msgid "Advanced software"
-msgstr "Advanced software"
-
-msgid "Advanced software plugin"
-msgstr "Advanced software plugin"
-
 msgid "Advanced video enhancement setup"
 msgstr "Advanced video enhancement setup"
 
@@ -2415,9 +2298,6 @@ msgstr "Alternative radio mode"
 msgid "Alternative services tuner priority"
 msgstr "Alternative services tuner priority"
 
-msgid "Always ask"
-msgstr "Always ask"
-
 msgid "Always hide infobar"
 msgstr "Always hide infobar"
 
@@ -2440,9 +2320,6 @@ msgstr "martial sports"
 
 msgid "An empty filename is illegal."
 msgstr "An empty filename is illegal."
-
-msgid "An error occurred while downloading the packetlist. Please try again."
-msgstr "An error occurred while downloading the packetlist. Please try again."
 
 msgid "An unknown error occurred!"
 msgstr "An unknown error occurred!"
@@ -2517,13 +2394,6 @@ msgstr ""
 "Are you sure you want to activate this network configuration?\n"
 "\n"
 
-msgid ""
-"Are you sure you want to delete\n"
-"the following backup:\n"
-msgstr ""
-"Are you sure you want to delete\n"
-"the following backup:\n"
-
 msgid "Are you sure you want to delete all the selected logs:\n"
 msgstr "Are you sure you want to delete all the selected logs:\n"
 
@@ -2545,6 +2415,14 @@ msgid ""
 msgstr ""
 "Are you sure you want to delete this:\n"
 " "
+
+#, fuzzy
+msgid ""
+"Are you sure you want to disable this network configuration?\n"
+"\n"
+msgstr ""
+"Are you sure you want to activate this network configuration?\n"
+"\n"
 
 #, fuzzy
 msgid ""
@@ -2588,25 +2466,6 @@ msgid ""
 msgstr ""
 "Are you sure you want to restart your network interfaces?\n"
 "\n"
-
-#, python-format
-msgid ""
-"Are you sure you want to restore\n"
-"the following backup:\n"
-"%s\n"
-"Your receiver will restart after the backup has been restored!"
-msgstr ""
-"Are you sure you want to restore\n"
-"the following backup:\n"
-"%s\n"
-"Your receiver will restart after the backup has been restored!"
-
-msgid ""
-"Are you sure you want to restore the backup?\n"
-"Your receiver will restart after the backup has been restored!"
-msgstr ""
-"Are you sure you want to restore the backup?\n"
-"Your receiver will restart after the backup has been restored!"
 
 #, fuzzy
 msgid ""
@@ -2739,9 +2598,6 @@ msgstr "Italian"
 #, fuzzy
 msgid "Austria"
 msgstr "equestrian"
-
-msgid "Author: "
-msgstr "Author: "
 
 msgid "Authoring mode"
 msgstr "Authoring mode"
@@ -2967,9 +2823,6 @@ msgstr "Backup completed."
 msgid "Backup complete..."
 msgstr "Backup completed."
 
-msgid "Backup completed."
-msgstr "Backup completed."
-
 #, fuzzy
 msgid "Backup confirmation"
 msgstr "Manual configuration"
@@ -2981,9 +2834,6 @@ msgstr "Backup completed."
 msgid "Backup failed - e. g. wrong backup destination or no space left on backup device."
 msgstr ""
 
-msgid "Backup failed."
-msgstr "Backup failed."
-
 #, fuzzy
 msgid ""
 "Backup in progress,\n"
@@ -2991,9 +2841,6 @@ msgid ""
 msgstr ""
 "A background update check is in progress,\n"
 "please wait a few minutes and try again."
-
-msgid "Backup is running..."
-msgstr "Backup is running..."
 
 #, fuzzy
 msgid "Backup location"
@@ -3010,9 +2857,6 @@ msgstr "Backup Manager"
 #, fuzzy
 msgid "Backup prefix"
 msgstr "Backup failed."
-
-msgid "Backup system settings"
-msgstr "Backup system settings"
 
 msgid "Backup/Flash/ReBoot system image."
 msgstr ""
@@ -4099,9 +3943,6 @@ msgstr "Common Interface assignment"
 msgid "Common options"
 msgstr "Scan options"
 
-msgid "Communication"
-msgstr "Communication"
-
 msgid "Comoros"
 msgstr ""
 
@@ -4194,13 +4035,16 @@ msgstr "Configure for how many minutes finished events should remain visible in 
 msgid "Configure how recording filenames are constructed."
 msgstr "Configure how recording filenames are constructed."
 
-msgid "Configure if and how crypto icons will be shown in the channel selection list."
+#, fuzzy
+msgid "Configure if and how crypto icons will be shown in the channel selection list (left alignment only available in single line mode)."
 msgstr "Configure if and how crypto icons will be shown in the channel selection list."
 
-msgid "Configure if and how service type icons will be shown."
+#, fuzzy
+msgid "Configure if and how service type icons will be shown (left alignment only available in single line mode)."
 msgstr "Configure if and how service type icons will be shown."
 
-msgid "Configure if and how the record indicator will be shown in the channel selection list."
+#, fuzzy
+msgid "Configure if and how the record indicator will be shown in the channel selection list (left alignment only available in single line mode)."
 msgstr "Configure if and how the record indicator will be shown in the channel selection list."
 
 msgid "Configure if and how wide the service name column will be shown in the channel selection list."
@@ -4514,9 +4358,6 @@ msgstr "Content does not fit on DVD!"
 
 msgid "Context"
 msgstr "Context"
-
-msgid "Continue"
-msgstr "Continue"
 
 msgid "Continue playback"
 msgstr "Continue playback"
@@ -5177,9 +5018,6 @@ msgstr ""
 msgid "Default recording type"
 msgstr "Default recording type"
 
-msgid "Default settings"
-msgstr "Default settings"
-
 #, fuzzy, python-format
 msgid "Default: '%s'."
 msgstr "Defaults"
@@ -5257,6 +5095,9 @@ msgstr "Delay in miliseconds before start of scrolling text on display."
 
 msgid "Delay time"
 msgstr "Delay time"
+
+msgid "Delay when closing a stream relay service before reallocating the tuner for another service. Using '0' is only recommended for boxes with multiple satellite tuners."
+msgstr ""
 
 msgid "Delay:"
 msgstr "Delay:"
@@ -5375,9 +5216,6 @@ msgstr "Description"
 
 msgid "Deselect"
 msgstr "Deselect"
-
-msgid "Details for plugin: "
-msgstr "Details for plugin: "
 
 msgid "Detect next boxes before standby"
 msgstr ""
@@ -5572,9 +5410,6 @@ msgstr "Display >16:9 content as"
 msgid "Display Skin"
 msgstr "Display"
 
-msgid "Display and user interface"
-msgstr "Display and user interface"
-
 msgid "Display message before playing next movie"
 msgstr "Display message before playing next movie"
 
@@ -5727,9 +5562,6 @@ msgstr "Do you want to install the package:\n"
 msgid "Do you want to install plugins"
 msgstr "Do you want to install the package:\n"
 
-msgid "Do you want to install the package:\n"
-msgstr "Do you want to install the package:\n"
-
 msgid "Do you want to play DVD in drive?"
 msgstr "Do you want to play DVD in drive?"
 
@@ -5739,12 +5571,6 @@ msgstr "Do you want to preview this DVD before burning?"
 #, python-format
 msgid "Do you want to reboot your %s %s"
 msgstr "Do you want to reboot your %s %s"
-
-msgid "Do you want to reboot your receiver?"
-msgstr "Do you want to reboot your receiver?"
-
-msgid "Do you want to remove the package:\n"
-msgstr "Do you want to remove the package:\n"
 
 #, fuzzy
 msgid "Do you want to restart GUI now ?"
@@ -5771,9 +5597,6 @@ msgstr "Do you want to resume playback?"
 #, fuzzy, python-format
 msgid "Do you want to update your %s %s?"
 msgstr "Do you want to update your %s %s ?"
-
-msgid "Do you want to upgrade the package:\n"
-msgstr "Do you want to upgrade the package:\n"
 
 #, fuzzy
 msgid "Documentary"
@@ -6078,9 +5901,6 @@ msgstr "Edit the network configuration of your %s %s.\n"
 msgid "Edit title"
 msgstr "Edit title"
 
-msgid "Edit upgrade source url."
-msgstr "Edit upgrade source url."
-
 #, fuzzy
 msgid "Education"
 msgstr "Modulation"
@@ -6108,9 +5928,6 @@ msgstr "Elapsed"
 
 msgid "Elapsed & Remaining"
 msgstr "Elapsed & Remaining"
-
-msgid "Electronic Program Guide"
-msgstr "Electronic Program Guide"
 
 msgid "Empty slot"
 msgstr ""
@@ -6187,6 +6004,13 @@ msgstr ""
 #, fuzzy
 msgid "Enable automatic collections"
 msgstr "Enable auto cable scan"
+
+#, fuzzy
+msgid "Enable blinking"
+msgstr "Enable Virgin EPG"
+
+msgid "Enable blinking for ui elements. For example for recording icon"
+msgstr ""
 
 msgid "Enable blinking rec symbol on the LCD Display"
 msgstr ""
@@ -6355,6 +6179,9 @@ msgstr "Reenter new PIN"
 #, fuzzy
 msgid "Enter a number to jump to a service/channel"
 msgstr "enter number to jump to channel."
+
+msgid "Enter adapter settings or disable adapter, then Save to action changed setup."
+msgstr ""
 
 msgid "Enter if you are in the east or west hemisphere."
 msgstr ""
@@ -6668,12 +6495,6 @@ msgstr "Extended Setup..."
 msgid "Extended Shares"
 msgstr "Extended Shares"
 
-msgid "Extended Software"
-msgstr "Extended Software"
-
-msgid "Extended Software Plugin"
-msgstr "Extended Software Plugin"
-
 #, fuzzy
 msgid "Extended info"
 msgstr "Extended"
@@ -6686,9 +6507,6 @@ msgstr "Extended setup..."
 
 msgid "Extensions"
 msgstr "Extensions"
-
-msgid "Extensions management"
-msgstr "Extensions management"
 
 #, fuzzy
 msgid "Extensions menu"
@@ -7089,9 +6907,6 @@ msgstr ""
 
 msgid "Folkloric"
 msgstr ""
-
-msgid "Following tasks will be done after you press OK!"
-msgstr "Following tasks will be done after you press OK!"
 
 msgid "Font size"
 msgstr "Font size"
@@ -8430,21 +8245,12 @@ msgstr ""
 msgid "Install Plugins"
 msgstr "Install plugins"
 
-msgid "Install a new image with a USB stick"
-msgstr "Install a new image with a USB stick"
-
-msgid "Install a new image with your web browser"
-msgstr "Install a new image with your web browser"
-
 msgid "Install channel list"
 msgstr "Install channel list"
 
 #, fuzzy
 msgid "Install confirmation"
 msgstr "Manual configuration"
-
-msgid "Install extensions"
-msgstr "Install extensions"
 
 msgid "Install extensions."
 msgstr "Install extensions."
@@ -8455,14 +8261,8 @@ msgstr "Install lcd picons on"
 msgid "Install local extension"
 msgstr "Install local extension"
 
-msgid "Install or remove finished."
-msgstr "Install or remove finished."
-
 msgid "Install picons on"
 msgstr "Install picons on"
-
-msgid "Installation finished."
-msgstr "Installation finished."
 
 #, python-format
 msgid "Installed:\t%s\n"
@@ -8890,8 +8690,8 @@ msgstr ""
 msgid "Left"
 msgstr "Left"
 
-msgid "Left from servicename"
-msgstr "Left from servicename"
+msgid "Left from servicename (only available in single line mode)"
+msgstr ""
 
 #, fuzzy
 msgid "Left long"
@@ -9230,16 +9030,9 @@ msgstr ""
 msgid "Malta"
 msgstr ""
 
-msgid "Manage extensions"
-msgstr "Manage extensions"
-
 #, fuzzy
 msgid "Manage settings backup."
 msgstr "Automatic settings backup"
-
-#, python-format
-msgid "Manage your %s %s's software"
-msgstr "Manage your %s %s's software"
 
 msgid "Manage your devices mount points."
 msgstr ""
@@ -9798,9 +9591,6 @@ msgstr ""
 msgid "Multiboot only able to restore this backup to mmc slot1"
 msgstr ""
 
-msgid "Multimedia"
-msgstr "Multimedia"
-
 msgid "Multiple service support"
 msgstr "Multiple service support"
 
@@ -10140,9 +9930,6 @@ msgstr "No active channel found."
 msgid "No age block"
 msgstr "No age block"
 
-msgid "No backup needed"
-msgstr "No backup needed"
-
 msgid "No card inserted!"
 msgstr "No card inserted!"
 
@@ -10206,9 +9993,6 @@ msgstr ""
 msgid "No delay"
 msgstr "No delay"
 
-msgid "No description available."
-msgstr "No description available."
-
 msgid "No displayable files on this medium found!"
 msgstr "No displayable files on this medium found!"
 
@@ -10234,9 +10018,6 @@ msgstr ""
 #, fuzzy
 msgid "No module found"
 msgstr "no module found"
-
-msgid "No network connection available."
-msgstr "No network connection available."
 
 msgid "No networks found"
 msgstr "No networks found"
@@ -10319,15 +10100,6 @@ msgstr ""
 
 msgid "No, but restart from the beginning"
 msgstr "No, but restart from the beginning"
-
-msgid "No, do nothing."
-msgstr "No, do nothing."
-
-msgid "No, just start my %s %s"
-msgstr "No, just start my %s %s"
-
-msgid "No, never"
-msgstr "No, never"
 
 msgid "No, scan later manually"
 msgstr "No, scan later manually"
@@ -10473,9 +10245,6 @@ msgstr "OK button (long)"
 msgid "OK button (short)"
 msgstr "OK button (short)"
 
-msgid "OK, guide me through the upgrade process"
-msgstr "OK, guide me through the upgrade process"
-
 msgid "OK, to perform a restore"
 msgstr ""
 
@@ -10573,9 +10342,6 @@ msgstr "Only active when in standby"
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
-
-msgid "Only extensions."
-msgstr "Only extensions."
 
 msgid "Only free scan"
 msgstr "Only free scan"
@@ -10730,12 +10496,6 @@ msgstr "Output"
 msgid "Overwrite Recovery"
 msgstr ""
 
-msgid "Overwrite configuration files during software upgrade?"
-msgstr "Overwrite configuration files during software upgrade?"
-
-msgid "Overwrite configuration files?"
-msgstr "Overwrite configuration files?"
-
 msgid "PAGE UP/DOWN"
 msgstr "PAGE UP/DOWN"
 
@@ -10837,12 +10597,6 @@ msgstr "Package list update"
 
 msgid "Packages"
 msgstr "Packages"
-
-msgid "Packet management"
-msgstr "Packet management"
-
-msgid "Packet manager"
-msgstr "Packet manager"
 
 msgid "Page down"
 msgstr "Page down"
@@ -10978,8 +10732,8 @@ msgstr "Percentage"
 msgid "Percentage left"
 msgstr "Percentage left"
 
-msgid "Percentage right"
-msgstr "Percentage right"
+msgid "Percentage right (only available in single line mode)"
+msgstr ""
 
 msgid "Perform a complete image backup before updating."
 msgstr "Perform a complete image backup before updating."
@@ -11116,7 +10870,13 @@ msgstr "Play previous"
 msgid "Play recorded movies"
 msgstr "Play recorded movies..."
 
+msgid "Play service with Stream Relay"
+msgstr ""
+
 msgid "Play service with streamrelay"
+msgstr ""
+
+msgid "Play service without Stream Relay"
 msgstr ""
 
 msgid "Play service without streamrelay"
@@ -11133,6 +10893,10 @@ msgstr "Start recording?"
 #, fuzzy
 msgid "Play the selected recording"
 msgstr "Stop and delete recording"
+
+#, fuzzy
+msgid "Playback"
+msgstr "Pause playback"
 
 msgid ""
 "Playback information missing\n"
@@ -11254,10 +11018,6 @@ msgid "Please select a subservice..."
 msgstr "Please select a subservice..."
 
 #, fuzzy
-msgid "Please select a valid directory."
-msgstr "Please select a playlist..."
-
-#, fuzzy
 msgid "Please select device to use as SWAP file location."
 msgstr "Please select medium to use as backup location"
 
@@ -11266,9 +11026,6 @@ msgstr ""
 
 msgid "Please select medium to be scanned"
 msgstr "Please select medium to be scanned"
-
-msgid "Please select medium to use as backup location"
-msgstr "Please select medium to use as backup location"
 
 #, fuzzy
 msgid "Please select the default action of the EPG button"
@@ -11436,6 +11193,10 @@ msgstr "Please wait while we test your network..."
 msgid "Please wait while your network configuration is activated..."
 msgstr "Please wait while your network configuration is activated..."
 
+#, fuzzy
+msgid "Please wait while your network configuration is deactivated..."
+msgstr "Please wait while your network configuration is activated..."
+
 #, fuzzy, python-format
 msgid "Please wait, initialising %s."
 msgstr "Please wait... Loading list..."
@@ -11460,21 +11221,12 @@ msgstr "Plugin browser"
 msgid "Plugin browser settings"
 msgstr "Plugin browser"
 
-msgid "Plugin details"
-msgstr "Plugin details"
-
 #, fuzzy
 msgid "Plugin install"
 msgstr "Plugin details"
 
 msgid "Plugin listing failed - e. g. wrong backup destination or no space left on backup device."
 msgstr ""
-
-msgid "Plugin manager activity information"
-msgstr "Plugin manager activity information"
-
-msgid "Plugin manager help"
-msgstr "Plugin manager help"
 
 msgid "Plugins"
 msgstr "Plugins"
@@ -11714,12 +11466,6 @@ msgstr "Press OK to select a provider."
 msgid "Press GREEN (Reboot) to switch images, YELLOW (Delete) to erase an image or BLUE (Restore) to restore all deleted images."
 msgstr ""
 
-msgid "Press INFO on your remote control for additional information."
-msgstr "Press INFO on your remote control for additional information."
-
-msgid "Press MENU on your remote control for additional options."
-msgstr "Press MENU on your remote control for additional options."
-
 #, fuzzy
 msgid "Press OK"
 msgstr "Progress"
@@ -11730,9 +11476,6 @@ msgstr "Press OK on your remote control to continue."
 #, fuzzy, python-format
 msgid "Press OK to activate the selected%s skin."
 msgstr "Press OK to activate the selected skin."
-
-msgid "Press OK to activate the settings."
-msgstr "Press OK to activate the settings."
 
 msgid "Press OK to edit the settings."
 msgstr "Press OK to edit the settings."
@@ -11819,9 +11562,6 @@ msgid ""
 "If this issue persists please check/report on forum"
 msgstr ""
 
-msgid "Process"
-msgstr "Process"
-
 #, python-format
 msgid "Processor temp:\t%s"
 msgstr ""
@@ -11838,8 +11578,8 @@ msgstr "Progress"
 msgid "Progress bar left"
 msgstr "Progress bar left"
 
-msgid "Progress bar right"
-msgstr "Progress bar right"
+msgid "Progress bar right (only available in single line mode)"
+msgstr ""
 
 msgid "Prominent"
 msgstr ""
@@ -12174,6 +11914,10 @@ msgstr ""
 msgid "Record"
 msgstr "Record"
 
+#, fuzzy
+msgid "Record icon match"
+msgstr "Recording type"
+
 msgid "Record next"
 msgstr "Record next"
 
@@ -12190,10 +11934,6 @@ msgstr "Record time limited due to conflicting timer %s"
 msgid "Recording"
 msgstr "Recording"
 
-#, fuzzy
-msgid "Recording & Playback"
-msgstr "Resuming playback"
-
 msgid "Recording 4097, 5001 and 5002 streams not possible with external players, so convert recordings to servicetype 1."
 msgstr ""
 
@@ -12204,10 +11944,6 @@ msgid ""
 msgstr ""
 "Timer overlap in timers.xml detected!\n"
 "Please recheck it!"
-
-#, fuzzy
-msgid "Recording and playback"
-msgstr "Recording and playback settings"
 
 msgid "Recording and playback settings"
 msgstr "Recording and playback settings"
@@ -12333,9 +12069,6 @@ msgstr ""
 #, fuzzy
 msgid "Religion"
 msgstr "religion"
-
-msgid "Reload"
-msgstr "Reload"
 
 msgid "Reload blacklists"
 msgstr "Reload blacklists"
@@ -12470,9 +12203,6 @@ msgstr "Remove completed timers after (days)"
 #, fuzzy
 msgid "Remove finished timers after (days)"
 msgstr "Remove completed timers after (days)"
-
-msgid "Remove finished."
-msgstr "Remove finished."
 
 msgid "Remove from parental protection"
 msgstr "Remove from parental protection"
@@ -12681,9 +12411,6 @@ msgstr "Restore"
 msgid "Restore Confirmation"
 msgstr "Remove Confirmation"
 
-msgid "Restore backups"
-msgstr "Restore backups"
-
 #, fuzzy
 msgid "Restore confirmation"
 msgstr "Remove Confirmation"
@@ -12699,9 +12426,6 @@ msgstr "Set default"
 msgid "Restore deleted user bouquets"
 msgstr "Restore deleted user bouquets"
 
-msgid "Restore system settings"
-msgstr "Restore system settings"
-
 #, fuzzy
 msgid "Restore wizard"
 msgstr "Network wizard"
@@ -12715,9 +12439,6 @@ msgstr ""
 
 #, fuzzy
 msgid "Restoring plugins..."
-msgstr "Restoring..."
-
-msgid "Restoring..."
 msgstr "Restoring..."
 
 msgid "Restricted 18+"
@@ -13003,9 +12724,6 @@ msgstr "Satellite"
 msgid "Satellite dish settings"
 msgstr "Satellite dish setup"
 
-msgid "Satellite equipment"
-msgstr "Satellite equipment"
-
 msgid "Satellite equipment setup"
 msgstr "Satellite equipment setup"
 
@@ -13262,12 +12980,6 @@ msgstr "Searching"
 msgid "Searching east ..."
 msgstr "Searching east ..."
 
-msgid "Searching for available updates. Please wait..."
-msgstr "Searching for available updates. Please wait..."
-
-msgid "Searching for new installed or removed packages. Please wait..."
-msgstr "Searching for new installed or removed packages. Please wait..."
-
 msgid "Searching west ..."
 msgstr "Searching west ..."
 
@@ -13475,12 +13187,6 @@ msgstr "Select target folder"
 msgid "Select audio track"
 msgstr "Select audio track"
 
-msgid "Select backup files"
-msgstr "Select backup files"
-
-msgid "Select backup location"
-msgstr "Select backup location"
-
 #, fuzzy
 msgid "Select channel from history"
 msgstr "Set the channel for this timer."
@@ -13510,12 +13216,12 @@ msgstr "Select destination for:"
 msgid "Select destination for:"
 msgstr "Select destination for:"
 
+msgid "Select display of record icon based on 'Sref only' or 'Sref + Stream url' where applicable."
+msgstr ""
+
 #, fuzzy
 msgid "Select extra packages folder"
 msgstr "Select target folder"
-
-msgid "Select files for backup."
-msgstr "Select files for backup."
 
 msgid "Select files/folders to backup"
 msgstr "Select files/folders to backup"
@@ -13699,12 +13405,6 @@ msgstr "Configure remote control type"
 #, fuzzy
 msgid "Select to restore all deleted images"
 msgstr "Permanently remove all deleted items"
-
-msgid "Select upgrade source"
-msgstr "Select upgrade source"
-
-msgid "Select upgrade source to edit."
-msgstr "Select upgrade source to edit."
 
 msgid "Select video input with up/down buttons"
 msgstr "Select video input with up/down buttons"
@@ -14093,7 +13793,8 @@ msgstr "Set the time the timer must start."
 msgid "Set the time the timer must stop."
 msgstr "Set the time the timer must stop."
 
-msgid "Set the type of the progress indication in the channel selection screen."
+#, fuzzy
+msgid "Set the type of the progress indication in the channel selection screen (right alignment only available in single line mode)."
 msgstr "Set the type of the progress indication in the channel selection screen."
 
 #, fuzzy
@@ -14593,8 +14294,9 @@ msgstr "Show the plugin browser.."
 msgid "Show the radio player"
 msgstr "Show the radio player..."
 
-msgid "Show the service information on two lines in the channel selection screen. You can choose between the current event description below the channel name, or the current event description next to the channel name, and the next event description on the second line."
-msgstr ""
+#, fuzzy
+msgid "Show the service information on two lines in the channel selection screen."
+msgstr "Set the type of the progress indication in the channel selection screen."
 
 #, fuzzy
 msgid "Show the tv player"
@@ -14788,9 +14490,6 @@ msgstr "Skins"
 msgid "SkinSelector: Restart GUI"
 msgstr "Restart GUI"
 
-msgid "Skins"
-msgstr "Skins"
-
 msgid "Skip back"
 msgstr "Skip back"
 
@@ -14940,6 +14639,14 @@ msgid "Softcam Actions"
 msgstr "Softcam settings"
 
 #, fuzzy
+msgid "Softcam Management"
+msgstr "LogManager"
+
+#, fuzzy
+msgid "Softcam Manager"
+msgstr "LogManager"
+
+#, fuzzy
 msgid "Softcam Script"
 msgstr "SoftcamCheck"
 
@@ -14965,39 +14672,20 @@ msgstr "Softcam settings"
 msgid "SoftcamCheck"
 msgstr "SoftcamCheck"
 
-#, fuzzy
-msgid "SoftcamManager"
-msgstr "LogManager"
-
 msgid "SoftcamScript enable/disable cam restart"
 msgstr ""
 
 msgid "SoftcamScript select camscript"
 msgstr ""
 
-msgid "Software"
-msgstr "Software"
-
 msgid "Software Update"
 msgstr "Software Update"
-
-msgid "Software management"
-msgstr "Software management"
-
-msgid "Software manager setup"
-msgstr "Software manager setup"
-
-msgid "Software restore"
-msgstr "Software restore"
 
 msgid "Software update"
 msgstr "Software update"
 
 msgid "Software update settings"
 msgstr "Software update settings"
-
-msgid "Softwaremanager information"
-msgstr "Softwaremanager information"
 
 msgid "Solomon Islands"
 msgstr ""
@@ -15045,21 +14733,11 @@ msgstr "Sorry your MiniDLNA config is missing"
 msgid "Sorry your uShare config is missing"
 msgstr "Sorry your uShare config is missing"
 
-#, python-format
-msgid "Sorry, %s has not been installed!"
-msgstr "Sorry, %s has not been installed!"
-
 msgid "Sorry, but the file is not compatible with this image version."
 msgstr ""
 
 msgid "Sorry, but the restore failed."
 msgstr ""
-
-msgid "Sorry, no backups found!"
-msgstr "Sorry, no backups found!"
-
-msgid "Sorry, no details available!"
-msgstr "Sorry, no details available!"
 
 msgid "Sorry, no physical devices that supports SWAP attached. Can't create SWAP file on network or fat32 file-systems."
 msgstr ""
@@ -15069,13 +14747,6 @@ msgstr ""
 
 msgid "Sorry, this tuner is in use."
 msgstr "Sorry, this tuner is in use."
-
-msgid ""
-"Sorry, your backup destination is not writeable.\n"
-"Please select a different one."
-msgstr ""
-"Sorry, your backup destination is not writeable.\n"
-"Please select a different one."
 
 msgid "Sort"
 msgstr "Sort"
@@ -15200,6 +14871,13 @@ msgid "Sports Magazines"
 msgstr "sports magazine"
 
 msgid "Sprache"
+msgstr ""
+
+#, fuzzy
+msgid "Sref + stream url"
+msgstr "Stream request"
+
+msgid "Sref only"
 msgstr ""
 
 msgid "Sri Lanka"
@@ -15411,6 +15089,26 @@ msgstr "Stored position"
 msgid "Stream"
 msgstr "Stream"
 
+#, fuzzy
+msgid "Stream Relay Settings"
+msgstr "uShare port"
+
+#, fuzzy
+msgid "Stream Relay Setup Actions"
+msgstr "Time settings"
+
+#, fuzzy
+msgid "Stream Relay delay"
+msgstr "Stream request"
+
+#, fuzzy
+msgid "Stream Relay port"
+msgstr "uShare port"
+
+#, fuzzy
+msgid "Stream Relay url"
+msgstr "Stream request"
+
 msgid "Stream request"
 msgstr "Stream request"
 
@@ -15427,14 +15125,6 @@ msgstr "Streaming clients info"
 #, fuzzy
 msgid "Streaming Clients Info"
 msgstr "Streaming clients info"
-
-#, fuzzy
-msgid "Streamrelay port"
-msgstr "uShare port"
-
-#, fuzzy
-msgid "Streamrelay url"
-msgstr "Stream request"
 
 msgid "Strict DLNA"
 msgstr "Strict DLNA"
@@ -15929,7 +15619,7 @@ msgstr ""
 "The IMDb plugin is not installed!\n"
 "Please install it."
 
-msgid "The IP address of the streamrelay server that is used to descramble services that can only be decrypted via streamrelay"
+msgid "The IP address of the streamrelay server that is used to descramble services that can only be decrypted via stream relay."
 msgstr ""
 
 msgid ""
@@ -15962,9 +15652,6 @@ msgstr ""
 
 msgid "The backup creates a snapshot of the image exactly as it is at the current instant."
 msgstr ""
-
-msgid "The backup failed. Please choose a different backup location."
-msgstr "The backup failed. Please choose a different backup location."
 
 msgid "The backup location does not have enough free space."
 msgstr ""
@@ -16033,7 +15720,7 @@ msgstr "The path %s already exists."
 msgid "The pin code you entered is wrong."
 msgstr "The pin code you entered is wrong."
 
-msgid "The port of the streamrelay server that is used to descramble services that can only be decrypted via streamrelay"
+msgid "The port of the streamrelay server that is used to descramble services that can only be decrypted via stream relay."
 msgstr ""
 
 #, python-format
@@ -16078,9 +15765,6 @@ msgstr ""
 "The wireless LAN plugin is not installed!\n"
 "Please install it."
 
-msgid "The wizard can backup your current settings. Do you want to do a backup now?"
-msgstr "The wizard can backup your current settings. Do you want to do a backup now?"
-
 #, fuzzy
 msgid "The wizard is finished now, and will reboot."
 msgstr "The wizard is finished now."
@@ -16092,16 +15776,6 @@ msgstr "The wizard is finished now."
 msgid "Theater"
 msgstr "Later"
 
-msgid "There are at least "
-msgstr "There are at least "
-
-#, python-format
-msgid "There are at least %s updates available."
-msgstr "There are at least %s updates available."
-
-msgid "There are currently no outstanding actions."
-msgstr "There are currently no outstanding actions."
-
 #, fuzzy
 msgid "There are no saved playlists to delete!"
 msgstr "Please select a playlist to delete..."
@@ -16109,9 +15783,6 @@ msgstr "Please select a playlist to delete..."
 #, fuzzy
 msgid "There are no saved playlists to load!"
 msgstr "Delete saved playlist"
-
-msgid "There are no updates available."
-msgstr "There are no updates available."
 
 msgid "There has been an error, please try again later. If this issue persists, please check openvix.co.uk or world-of-satellite.com"
 msgstr "There has been an error, please try again later. If this issue persists, please check openvix.co.uk or world-of-satellite.com"
@@ -16376,18 +16047,6 @@ msgstr "This option sets the surpression of false digital contours, that are the
 
 msgid "This option sets up the picture sharpness, used when the picture is being upscaled."
 msgstr "This option sets up the picture sharpness, used when the picture is being upscaled."
-
-msgid "This plugin is installed."
-msgstr "This plugin is installed."
-
-msgid "This plugin is not installed."
-msgstr "This plugin is not installed."
-
-msgid "This plugin will be installed."
-msgstr "This plugin will be installed."
-
-msgid "This plugin will be removed."
-msgstr "This plugin will be removed."
 
 msgid "This setting allows the tuner configuration to be a duplication of how another tuner is already configured."
 msgstr ""
@@ -16798,9 +16457,6 @@ msgstr "Try to find used transponders in cable network.. please wait..."
 msgid "Try to find used transponders in terrestrial network... please wait..."
 msgstr "Try to find used transponders in terrestrial network... please wait..."
 
-msgid "Trying to download a new packetlist. Please wait..."
-msgstr "Trying to download a new packetlist. Please wait..."
-
 msgid "Tue"
 msgstr "Tue"
 
@@ -16981,12 +16637,6 @@ msgstr "User defined"
 msgid "Undetermined"
 msgstr "Undetermined"
 
-msgid "Undo install"
-msgstr "Undo install"
-
-msgid "Undo uninstall"
-msgstr "Undo uninstall"
-
 msgid "Unencrypted"
 msgstr "Unencrypted"
 
@@ -17004,9 +16654,6 @@ msgstr "Delay after enable voltage before switch command"
 #, fuzzy
 msgid "Unicable delay after last diseqc command"
 msgstr "Delay after last diseqc command"
-
-msgid "Uninstall"
-msgstr "Uninstall"
 
 msgid "United Arab Emirates"
 msgstr ""
@@ -17094,9 +16741,6 @@ msgstr ""
 msgid "Updated: %s"
 msgstr "Update"
 
-msgid "Updatefeed not available."
-msgstr "Updatefeed not available."
-
 #, fuzzy
 msgid "Updating Cache"
 msgstr "Update"
@@ -17107,9 +16751,6 @@ msgstr "please wait..."
 
 #, fuzzy
 msgid "Updating mount locations..."
-msgstr "Updating software catalog"
-
-msgid "Updating software catalog"
 msgstr "Updating software catalog"
 
 msgid "Upgrade and reboot system"
@@ -17309,9 +16950,6 @@ msgstr "Use the wizard to set up basic features"
 
 msgid "Use these input device settings?"
 msgstr "Use these input device settings?"
-
-msgid "Use these settings?"
-msgstr "Use these settings?"
 
 msgid "Use this video enhancement settings?"
 msgstr "Use this video enhancement settings?"
@@ -17573,51 +17211,9 @@ msgstr "View Movies..."
 msgid "View Video CD..."
 msgstr "View Video CD..."
 
-msgid "View details"
-msgstr "View details"
-
 #, fuzzy
 msgid "View extensions"
 msgstr "View extensions..."
-
-msgid "View list of available "
-msgstr "View list of available "
-
-msgid "View list of available CommonInterface extensions"
-msgstr "View list of available CommonInterface extensions"
-
-msgid "View list of available EPG extensions."
-msgstr "View list of available EPG extensions."
-
-msgid "View list of available Satellite equipment extensions."
-msgstr "View list of available Satellite equipment extensions."
-
-msgid "View list of available communication extensions."
-msgstr "View list of available communication extensions."
-
-msgid "View list of available default settings"
-msgstr "View list of available default settings"
-
-msgid "View list of available display and userinterface extensions."
-msgstr "View list of available display and userinterface extensions."
-
-msgid "View list of available multimedia extensions."
-msgstr "View list of available multimedia extensions."
-
-msgid "View list of available networking extensions"
-msgstr "View list of available networking extensions"
-
-msgid "View list of available recording extensions"
-msgstr "View list of available recording extensions"
-
-msgid "View list of available skins"
-msgstr "View list of available skins"
-
-msgid "View list of available software extensions"
-msgstr "View list of available software extensions"
-
-msgid "View list of available system extensions"
-msgstr "View list of available system extensions"
 
 msgid "View mode"
 msgstr "View mode"
@@ -17892,9 +17488,6 @@ msgstr ""
 "\n"
 "Then seek to the end, press OK, select 'end cut'. That's it."
 
-msgid "Welcome to the image upgrade wizard. The wizard will assist you in upgrading the firmware of your %s %s by providing a backup facility for your current settings and a short explanation of how to upgrade your firmware."
-msgstr "Welcome to the image upgrade wizard. The wizard will assist you in upgrading the firmware of your %s %s by providing a backup facility for your current settings and a short explanation of how to upgrade your firmware."
-
 msgid ""
 "Welcome to the restore wizard.\n"
 "\n"
@@ -18151,9 +17744,6 @@ msgstr ""
 msgid "When tuned to a service the system will normally scan the transponder for any changes and save them. Only set to 'yes' if you're absolutely sure of what you're doing."
 msgstr "When tuned to a service the system will normally scan the transponder for any changes and save them. Only set to 'yes' if you're absolutely sure of what you're doing."
 
-msgid "Where do you want to backup your settings?"
-msgstr "Where do you want to backup your settings?"
-
 msgid "Where should the recording be saved?"
 msgstr "Where should the recording be saved?"
 
@@ -18312,17 +17902,11 @@ msgstr "Yes (save index in setup tuner)"
 msgid "Yes to all"
 msgstr "Yes to all"
 
-msgid "Yes, always"
-msgstr "Yes, always"
-
 msgid "Yes, and delete this movie"
 msgstr "Yes, and delete this movie"
 
 msgid "Yes, and return to the movie list"
 msgstr "Yes, and return to the movie list"
-
-msgid "Yes, backup my settings!"
-msgstr "Yes, backup my settings!"
 
 msgid "Yes, but don't save timeshift as movie"
 msgstr "Yes, but don't save timeshift as movie"
@@ -18345,17 +17929,11 @@ msgstr "Yes, do an automatic scan now"
 msgid "Yes, do another manual scan now"
 msgstr "Yes, do another manual scan now"
 
-msgid "Yes, restore the settings now"
-msgstr "Yes, restore the settings now"
-
 msgid "Yes, show delete time"
 msgstr "Yes, show delete time"
 
 msgid "Yes, show record time"
 msgstr "Yes, show record time"
-
-msgid "Yes, shut down now."
-msgstr "Yes, shut down now."
 
 msgid "Yesterday"
 msgstr "Yesterday"
@@ -18386,27 +17964,15 @@ msgstr "You can Display MiniTV with or without OSD Menu"
 msgid "You can Display PIP with or without OSD Menu"
 msgstr "You can Display PIP with or without OSD Menu"
 
-msgid "You can cancel the installation."
-msgstr "You can cancel the installation."
-
-msgid "You can cancel the removal."
-msgstr "You can cancel the removal."
-
 msgid "You can continue watching TV while this is running."
 msgstr "You can continue watching TV while this is running."
 
 msgid "You can have the list sorted by time or alphanumerical."
 msgstr "You can have the list sorted by time or alphanumerical."
 
-msgid "You can install this plugin."
-msgstr "You can install this plugin."
-
 #, python-format
 msgid "You can only burn %s %s recordings!"
 msgstr "You can only burn %s %s recordings!"
-
-msgid "You can remove this plugin."
-msgstr "You can remove this plugin."
 
 msgid "You cannot delete this!"
 msgstr "You cannot delete this!"
@@ -18419,12 +17985,6 @@ msgid "You have a marked recording"
 msgid_plural "You have marked recordings"
 msgstr[0] "Save and record"
 msgstr[1] "Save and record"
-
-msgid "You have chosen to backup your settings. Please press OK to start the backup now."
-msgstr "You have chosen to backup your settings. Please press OK to start the backup now."
-
-msgid "You have chosen to restore your settings. Enigma2 will restart after restore. Please press OK to start the restore now."
-msgstr "You have chosen to restore your settings. Enigma2 will restart after restore. Please press OK to start the restore now."
 
 msgid ""
 "You have chosen to save the current timeshift event, but the event has not yet finished\n"
@@ -18446,13 +18006,6 @@ msgstr "You have to wait %s!"
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
 msgstr "You must switch to the service %s (%s - '%s')!\n"
-
-msgid ""
-"You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.dm7025.de.\n"
-"Your %s %s will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
-msgstr ""
-"You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.dm7025.de.\n"
-"Your %s %s will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
 
 msgid "You seem to be in timeshft, the service will briefly stop as timeshift stops."
 msgstr "You seem to be in timeshft, the service will briefly stop as timeshift stops."
@@ -18550,9 +18103,6 @@ msgstr "Your %s %s is rebooting"
 msgid "Your %s %s is shutting down"
 msgstr "Your %s %s is shutting down"
 
-msgid "Your %s %s is shutting down. Please wait..."
-msgstr "Your %s %s is shutting down. Please wait..."
-
 #, python-format
 msgid "Your %s %s might be unusable now. Please consult the manual for further assistance before rebooting your %s %s."
 msgstr "Your %s %s might be unusable now. Please consult the manual for further assistance before rebooting your %s %s."
@@ -18594,9 +18144,6 @@ msgstr ""
 
 msgid "Your STB will restart after pressing OK on your remote control."
 msgstr "Your STB will restart after pressing OK on your remote control."
-
-msgid "Your backup succeeded. We will now continue to explain the further upgrade process."
-msgstr "Your backup succeeded. We will now continue to explain the further upgrade process."
 
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
@@ -18653,6 +18200,10 @@ msgstr ""
 "Please press OK to continue."
 
 msgid "Your network configuration has been activated."
+msgstr "Your network configuration has been activated."
+
+#, fuzzy
+msgid "Your network configuration has been disabled."
 msgstr "Your network configuration has been activated."
 
 msgid "Your network has finished restarting"
@@ -19191,9 +18742,6 @@ msgstr "entertainment (6-14 year old)"
 msgid "entertainment (general)"
 msgstr "entertainment (6-14 year old)"
 
-msgid "epg cache backup"
-msgstr "epg cache backup"
-
 msgid "equestrian"
 msgstr "equestrian"
 
@@ -19229,9 +18777,6 @@ msgstr "exit DVD player or return to file browser"
 
 msgid "experimental film/video"
 msgstr "experimental film/video"
-
-msgid "extensions."
-msgstr "extensions."
 
 msgid "extra wide"
 msgstr "extra wide"
@@ -19306,9 +18851,6 @@ msgstr "free"
 
 msgid "free diskspace"
 msgstr "free diskspace"
-
-msgid "from"
-msgstr "from"
 
 msgid "full"
 msgstr "full"
@@ -19689,9 +19231,6 @@ msgstr "original"
 msgid "original language"
 msgstr "original language"
 
-msgid "packages selected."
-msgstr "packages selected."
-
 msgid "page left"
 msgstr "page left"
 
@@ -19906,12 +19445,6 @@ msgstr "show event details"
 msgid "show mediaplayer on mainmenu"
 msgstr "show mediaplayer on mainmenu"
 
-msgid "show softwaremanager in plugin menu"
-msgstr "show softwaremanager in plugin menu"
-
-msgid "show softwaremanager on blue button"
-msgstr "show softwaremanager on blue button"
-
 msgid "show/game show (general)"
 msgstr "show/game show (general)"
 
@@ -19996,9 +19529,6 @@ msgstr "Standby"
 msgid "start cut here"
 msgstr "start cut here"
 
-msgid "start directory"
-msgstr "start directory"
-
 msgid "stepsize"
 msgstr "stepsize"
 
@@ -20071,7 +19601,7 @@ msgid "two lines"
 msgstr "Two lines"
 
 #, fuzzy
-msgid "two lines and next event"
+msgid "two lines+next event"
 msgstr "Go to next event"
 
 #, fuzzy
@@ -20118,9 +19648,6 @@ msgstr "unpublished"
 
 msgid "until standby/restart"
 msgstr "until standby/restart"
-
-msgid "updates available."
-msgstr "updates available."
 
 msgid "use best / controlled by HDMI"
 msgstr ""
@@ -20246,6 +19773,104 @@ msgstr "zapped"
 msgid "| separated list of prefixes you'd like to be removed from event names, separated with |, e.g. New:|Live:"
 msgstr ""
 
+#~ msgid ""
+#~ "\n"
+#~ "Advanced options and settings."
+#~ msgstr ""
+#~ "\n"
+#~ "Advanced options and settings."
+
+#~ msgid ""
+#~ "\n"
+#~ "After pressing OK, please wait!"
+#~ msgstr ""
+#~ "\n"
+#~ "After pressing OK, please wait!"
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Backup your %s %s settings."
+#~ msgstr ""
+#~ "\n"
+#~ "Backup your %s %s settings."
+
+#~ msgid ""
+#~ "\n"
+#~ "Edit the upgrade source address."
+#~ msgstr ""
+#~ "\n"
+#~ "Edit the upgrade source address."
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Manage extensions or plugins for your %s %s"
+#~ msgstr ""
+#~ "\n"
+#~ "Manage extensions or plugins for your %s %s"
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Online update of your %s %s software."
+#~ msgstr ""
+#~ "\n"
+#~ "Online update of your %s %s software."
+
+#~ msgid ""
+#~ "\n"
+#~ "Press OK on your remote control to continue."
+#~ msgstr ""
+#~ "\n"
+#~ "Press OK on your remote control to continue."
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Restore your %s %s settings."
+#~ msgstr ""
+#~ "\n"
+#~ "Restore your %s %s settings."
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Restore your %s %s with a new firmware."
+#~ msgstr ""
+#~ "\n"
+#~ "Restore your %s %s with a new firmware."
+
+#~ msgid ""
+#~ "\n"
+#~ "Restore your backups by date."
+#~ msgstr ""
+#~ "\n"
+#~ "Restore your backups by date."
+
+#~ msgid ""
+#~ "\n"
+#~ "Scan for local extensions and install them."
+#~ msgstr ""
+#~ "\n"
+#~ "Scan for local extensions and install them."
+
+#~ msgid ""
+#~ "\n"
+#~ "Select your backup device.\n"
+#~ "Current device: "
+#~ msgstr ""
+#~ "\n"
+#~ "Select your backup device.\n"
+#~ "Current device: "
+
+#~ msgid ""
+#~ "\n"
+#~ "View, install and remove available or installed packages."
+#~ msgstr ""
+#~ "\n"
+#~ "View, install and remove available or installed packages."
+
 #, python-format
 #~ msgid "%.0f GB"
 #~ msgstr "%.0f GB"
@@ -20270,6 +19895,10 @@ msgstr ""
 #~ msgid "%d.%03d GB"
 #~ msgstr "%d GB"
 
+#, python-format
+#~ msgid "%s %s software because updates are available."
+#~ msgstr "%s %s software because updates are available."
+
 #, fuzzy
 #~ msgid "(FTA Service)"
 #~ msgstr "Service"
@@ -20282,6 +19911,12 @@ msgstr ""
 #~ msgid "1,1"
 #~ msgstr "1.1"
 
+#~ msgid "A search for available updates is currently in progress."
+#~ msgstr "A search for available updates is currently in progress."
+
+#~ msgid "A small overview of the available icon states and actions."
+#~ msgstr "A small overview of the available icon states and actions."
+
 #~ msgid "Activate MAC address configuration"
 #~ msgstr "Activate MAC address configuration"
 
@@ -20291,11 +19926,67 @@ msgstr ""
 #~ msgid "Activate network adapter configuration"
 #~ msgstr "Activate network adapter configuration"
 
+#~ msgid "Advanced restore"
+#~ msgstr "Advanced restore"
+
+#~ msgid "Advanced software"
+#~ msgstr "Advanced software"
+
+#~ msgid "Advanced software plugin"
+#~ msgstr "Advanced software plugin"
+
+#~ msgid "Always ask"
+#~ msgstr "Always ask"
+
+#~ msgid "An error occurred while downloading the packetlist. Please try again."
+#~ msgstr "An error occurred while downloading the packetlist. Please try again."
+
+#~ msgid ""
+#~ "Are you sure you want to delete\n"
+#~ "the following backup:\n"
+#~ msgstr ""
+#~ "Are you sure you want to delete\n"
+#~ "the following backup:\n"
+
+#, python-format
+#~ msgid ""
+#~ "Are you sure you want to restore\n"
+#~ "the following backup:\n"
+#~ "%s\n"
+#~ "Your receiver will restart after the backup has been restored!"
+#~ msgstr ""
+#~ "Are you sure you want to restore\n"
+#~ "the following backup:\n"
+#~ "%s\n"
+#~ "Your receiver will restart after the backup has been restored!"
+
+#~ msgid ""
+#~ "Are you sure you want to restore the backup?\n"
+#~ "Your receiver will restart after the backup has been restored!"
+#~ msgstr ""
+#~ "Are you sure you want to restore the backup?\n"
+#~ "Your receiver will restart after the backup has been restored!"
+
+#~ msgid "Author: "
+#~ msgstr "Author: "
+
 #~ msgid "Background delete option"
 #~ msgstr "Background delete option"
 
 #~ msgid "Background delete speed"
 #~ msgstr "Background delete speed"
+
+#~ msgid "Backup completed."
+#~ msgstr "Backup completed."
+
+#~ msgid "Backup failed."
+#~ msgstr "Backup failed."
+
+#~ msgid "Backup is running..."
+#~ msgstr "Backup is running..."
+
+#~ msgid "Backup system settings"
+#~ msgstr "Backup system settings"
 
 #, python-format
 #~ msgid "Build: %s"
@@ -20319,6 +20010,9 @@ msgstr ""
 #~ msgid "Collection"
 #~ msgstr "Collection name"
 
+#~ msgid "Communication"
+#~ msgstr "Communication"
+
 #~ msgid "Configure on which devices the background delete option should be used."
 #~ msgstr "Configure on which devices the background delete option should be used."
 
@@ -20329,6 +20023,9 @@ msgstr ""
 #~ msgid "Connected"
 #~ msgstr "Connected!"
 
+#~ msgid "Continue"
+#~ msgstr "Continue"
+
 #~ msgid "Current CEC address"
 #~ msgstr "Current CEC address"
 
@@ -20336,8 +20033,35 @@ msgstr ""
 #~ msgid "D"
 #~ msgstr "HDMI"
 
+#~ msgid "Default settings"
+#~ msgstr "Default settings"
+
+#~ msgid "Details for plugin: "
+#~ msgstr "Details for plugin: "
+
+#~ msgid "Display and user interface"
+#~ msgstr "Display and user interface"
+
+#~ msgid "Do you want to install the package:\n"
+#~ msgstr "Do you want to install the package:\n"
+
+#~ msgid "Do you want to reboot your receiver?"
+#~ msgstr "Do you want to reboot your receiver?"
+
+#~ msgid "Do you want to remove the package:\n"
+#~ msgstr "Do you want to remove the package:\n"
+
+#~ msgid "Do you want to upgrade the package:\n"
+#~ msgstr "Do you want to upgrade the package:\n"
+
 #~ msgid "ECM-Time"
 #~ msgstr "ECM-Time"
+
+#~ msgid "Edit upgrade source url."
+#~ msgstr "Edit upgrade source url."
+
+#~ msgid "Electronic Program Guide"
+#~ msgstr "Electronic Program Guide"
 
 #, fuzzy
 #~ msgid "EtPortal"
@@ -20358,6 +20082,15 @@ msgstr ""
 #~ msgid "Exit network adapter configuration"
 #~ msgstr "Exit network adapter configuration"
 
+#~ msgid "Extended Software"
+#~ msgstr "Extended Software"
+
+#~ msgid "Extended Software Plugin"
+#~ msgstr "Extended Software Plugin"
+
+#~ msgid "Extensions management"
+#~ msgstr "Extensions management"
+
 #, fuzzy
 #~ msgid "F"
 #~ msgstr "F1"
@@ -20365,6 +20098,9 @@ msgstr ""
 #, fuzzy, python-format
 #~ msgid "Flash directory '%s' not allowed!"
 #~ msgstr "Creating directory %s failed."
+
+#~ msgid "Following tasks will be done after you press OK!"
+#~ msgstr "Following tasks will be done after you press OK!"
 
 #, fuzzy
 #~ msgid "G"
@@ -20389,6 +20125,21 @@ msgstr ""
 #~ msgid "IMDB Search"
 #~ msgstr "IMDb Search"
 
+#~ msgid "Install a new image with a USB stick"
+#~ msgstr "Install a new image with a USB stick"
+
+#~ msgid "Install a new image with your web browser"
+#~ msgstr "Install a new image with your web browser"
+
+#~ msgid "Install extensions"
+#~ msgstr "Install extensions"
+
+#~ msgid "Install or remove finished."
+#~ msgstr "Install or remove finished."
+
+#~ msgid "Installation finished."
+#~ msgstr "Installation finished."
+
 #~ msgid "Instant recording..."
 #~ msgstr "Instant recording..."
 
@@ -20399,8 +20150,45 @@ msgstr ""
 #~ msgid "Last update: %s"
 #~ msgstr "Last update: %s"
 
+#~ msgid "Left from servicename"
+#~ msgstr "Left from servicename"
+
+#~ msgid "Manage extensions"
+#~ msgstr "Manage extensions"
+
+#, python-format
+#~ msgid "Manage your %s %s's software"
+#~ msgstr "Manage your %s %s's software"
+
+#~ msgid "Multimedia"
+#~ msgstr "Multimedia"
+
 #~ msgid "Namespace"
 #~ msgstr "Namespace"
+
+#~ msgid "No backup needed"
+#~ msgstr "No backup needed"
+
+#~ msgid "No description available."
+#~ msgstr "No description available."
+
+#~ msgid "No network connection available."
+#~ msgstr "No network connection available."
+
+#~ msgid "No, do nothing."
+#~ msgstr "No, do nothing."
+
+#~ msgid "No, just start my %s %s"
+#~ msgstr "No, just start my %s %s"
+
+#~ msgid "No, never"
+#~ msgstr "No, never"
+
+#~ msgid "OK, guide me through the upgrade process"
+#~ msgstr "OK, guide me through the upgrade process"
+
+#~ msgid "Only extensions."
+#~ msgstr "Only extensions."
 
 #, fuzzy
 #~ msgid "Open infobar EPG..."
@@ -20410,22 +20198,115 @@ msgstr ""
 #~ msgid "OpenTV download setup"
 #~ msgstr "OpenVpn Setup"
 
+#~ msgid "Overwrite configuration files during software upgrade?"
+#~ msgstr "Overwrite configuration files during software upgrade?"
+
+#~ msgid "Overwrite configuration files?"
+#~ msgstr "Overwrite configuration files?"
+
 #, fuzzy
 #~ msgid "PID"
 #~ msgstr "PIDs"
 
+#~ msgid "Packet management"
+#~ msgstr "Packet management"
+
+#~ msgid "Packet manager"
+#~ msgstr "Packet manager"
+
+#~ msgid "Percentage right"
+#~ msgstr "Percentage right"
+
 #~ msgid "Perform a settings backup, making a backup before updating is strongly advised."
 #~ msgstr "Perform a settings backup, making a backup before updating is strongly advised."
+
+#, fuzzy
+#~ msgid "Please select a valid directory."
+#~ msgstr "Please select a playlist..."
+
+#~ msgid "Please select medium to use as backup location"
+#~ msgstr "Please select medium to use as backup location"
+
+#~ msgid "Plugin details"
+#~ msgstr "Plugin details"
+
+#~ msgid "Plugin manager activity information"
+#~ msgstr "Plugin manager activity information"
+
+#~ msgid "Plugin manager help"
+#~ msgstr "Plugin manager help"
 
 #~ msgid "Polarisation:"
 #~ msgstr "Polarisation:"
 
+#~ msgid "Press INFO on your remote control for additional information."
+#~ msgstr "Press INFO on your remote control for additional information."
+
+#~ msgid "Press MENU on your remote control for additional options."
+#~ msgstr "Press MENU on your remote control for additional options."
+
+#~ msgid "Press OK to activate the settings."
+#~ msgstr "Press OK to activate the settings."
+
 #~ msgid "Press OK to set the MAC address."
 #~ msgstr "Press OK to set the MAC address."
+
+#~ msgid "Process"
+#~ msgstr "Process"
+
+#~ msgid "Progress bar right"
+#~ msgstr "Progress bar right"
+
+#, fuzzy
+#~ msgid "Recording & Playback"
+#~ msgstr "Resuming playback"
+
+#, fuzzy
+#~ msgid "Recording and playback"
+#~ msgstr "Recording and playback settings"
+
+#~ msgid "Reload"
+#~ msgstr "Reload"
+
+#~ msgid "Remove finished."
+#~ msgstr "Remove finished."
+
+#~ msgid "Restore backups"
+#~ msgstr "Restore backups"
+
+#~ msgid "Restore system settings"
+#~ msgstr "Restore system settings"
+
+#~ msgid "Restoring..."
+#~ msgstr "Restoring..."
+
+#~ msgid "Satellite equipment"
+#~ msgstr "Satellite equipment"
+
+#~ msgid "Searching for available updates. Please wait..."
+#~ msgstr "Searching for available updates. Please wait..."
+
+#~ msgid "Searching for new installed or removed packages. Please wait..."
+#~ msgstr "Searching for new installed or removed packages. Please wait..."
+
+#~ msgid "Select backup files"
+#~ msgstr "Select backup files"
+
+#~ msgid "Select backup location"
+#~ msgstr "Select backup location"
 
 #, fuzzy
 #~ msgid "Select directory for logfile"
 #~ msgstr "Creating directory %s failed."
+
+#~ msgid "Select files for backup."
+#~ msgstr "Select files for backup."
+
+#~ msgid "Select upgrade source"
+#~ msgstr "Select upgrade source"
+
+#~ msgid "Select upgrade source to edit."
+#~ msgstr "Select upgrade source to edit."
 
 #~ msgid "Serv.Name"
 #~ msgstr "Serv.Name"
@@ -20439,6 +20320,41 @@ msgstr ""
 #, fuzzy
 #~ msgid "Skin Setup"
 #~ msgstr "Skin setup"
+
+#~ msgid "Skins"
+#~ msgstr "Skins"
+
+#~ msgid "Software"
+#~ msgstr "Software"
+
+#~ msgid "Software management"
+#~ msgstr "Software management"
+
+#~ msgid "Software manager setup"
+#~ msgstr "Software manager setup"
+
+#~ msgid "Software restore"
+#~ msgstr "Software restore"
+
+#~ msgid "Softwaremanager information"
+#~ msgstr "Softwaremanager information"
+
+#, python-format
+#~ msgid "Sorry, %s has not been installed!"
+#~ msgstr "Sorry, %s has not been installed!"
+
+#~ msgid "Sorry, no backups found!"
+#~ msgstr "Sorry, no backups found!"
+
+#~ msgid "Sorry, no details available!"
+#~ msgstr "Sorry, no details available!"
+
+#~ msgid ""
+#~ "Sorry, your backup destination is not writeable.\n"
+#~ "Please select a different one."
+#~ msgstr ""
+#~ "Sorry, your backup destination is not writeable.\n"
+#~ "Please select a different one."
 
 #~ msgid "Subtitle selection..."
 #~ msgstr "Subtitle selection..."
@@ -20456,6 +20372,9 @@ msgstr ""
 #~ msgid "TB"
 #~ msgstr "TB"
 
+#~ msgid "The backup failed. Please choose a different backup location."
+#~ msgstr "The backup failed. Please choose a different backup location."
+
 #~ msgid ""
 #~ "The software management extension is not installed!\n"
 #~ "Please install it."
@@ -20469,18 +20388,49 @@ msgstr ""
 #~ msgid "The timer file (timers.xml) is corrupt and could not be loaded."
 #~ msgstr "The timer file (timers.xml) is corrupt and could not be loaded."
 
+#~ msgid "The wizard can backup your current settings. Do you want to do a backup now?"
+#~ msgstr "The wizard can backup your current settings. Do you want to do a backup now?"
+
+#~ msgid "There are at least "
+#~ msgstr "There are at least "
+
+#, python-format
+#~ msgid "There are at least %s updates available."
+#~ msgstr "There are at least %s updates available."
+
+#~ msgid "There are currently no outstanding actions."
+#~ msgstr "There are currently no outstanding actions."
+
 #, fuzzy
 #~ msgid "There are no items currently available for this screen."
 #~ msgstr "There are no updates available."
 
+#~ msgid "There are no updates available."
+#~ msgstr "There are no updates available."
+
 #~ msgid "This option allows you to disable sorting of the menus"
 #~ msgstr "This option allows you to disable sorting of the menus"
+
+#~ msgid "This plugin is installed."
+#~ msgstr "This plugin is installed."
+
+#~ msgid "This plugin is not installed."
+#~ msgstr "This plugin is not installed."
+
+#~ msgid "This plugin will be installed."
+#~ msgstr "This plugin will be installed."
+
+#~ msgid "This plugin will be removed."
+#~ msgstr "This plugin will be removed."
 
 #~ msgid "Timer selection..."
 #~ msgstr "Timer selection..."
 
 #~ msgid "Transponder Information"
 #~ msgstr "Transponder Information"
+
+#~ msgid "Trying to download a new packetlist. Please wait..."
+#~ msgstr "Trying to download a new packetlist. Please wait..."
 
 #, fuzzy
 #~ msgid "Tuning Info: Live Values"
@@ -20490,13 +20440,31 @@ msgstr ""
 #~ msgid "Tuning Info: Settings Values"
 #~ msgstr "Tuner settings"
 
+#~ msgid "Undo install"
+#~ msgstr "Undo install"
+
+#~ msgid "Undo uninstall"
+#~ msgstr "Undo uninstall"
+
+#~ msgid "Uninstall"
+#~ msgstr "Uninstall"
+
 #, fuzzy
 #~ msgid "Update Interval"
 #~ msgstr "Update interval (in seconds)"
 
+#~ msgid "Updatefeed not available."
+#~ msgstr "Updatefeed not available."
+
 #, fuzzy
 #~ msgid "Updating cache"
 #~ msgstr "Update"
+
+#~ msgid "Updating software catalog"
+#~ msgstr "Updating software catalog"
+
+#~ msgid "Use these settings?"
+#~ msgstr "Use these settings?"
 
 #~ msgid "Using fixed address"
 #~ msgstr "Using fixed address"
@@ -20505,8 +20473,99 @@ msgstr ""
 #~ msgid "ViX version: %s"
 #~ msgstr "Version: %s"
 
+#~ msgid "View details"
+#~ msgstr "View details"
+
+#~ msgid "View list of available "
+#~ msgstr "View list of available "
+
+#~ msgid "View list of available CommonInterface extensions"
+#~ msgstr "View list of available CommonInterface extensions"
+
+#~ msgid "View list of available EPG extensions."
+#~ msgstr "View list of available EPG extensions."
+
+#~ msgid "View list of available Satellite equipment extensions."
+#~ msgstr "View list of available Satellite equipment extensions."
+
+#~ msgid "View list of available communication extensions."
+#~ msgstr "View list of available communication extensions."
+
+#~ msgid "View list of available default settings"
+#~ msgstr "View list of available default settings"
+
+#~ msgid "View list of available display and userinterface extensions."
+#~ msgstr "View list of available display and userinterface extensions."
+
+#~ msgid "View list of available multimedia extensions."
+#~ msgstr "View list of available multimedia extensions."
+
+#~ msgid "View list of available networking extensions"
+#~ msgstr "View list of available networking extensions"
+
+#~ msgid "View list of available recording extensions"
+#~ msgstr "View list of available recording extensions"
+
+#~ msgid "View list of available skins"
+#~ msgstr "View list of available skins"
+
+#~ msgid "View list of available software extensions"
+#~ msgstr "View list of available software extensions"
+
+#~ msgid "View list of available system extensions"
+#~ msgstr "View list of available system extensions"
+
 #~ msgid "Visual impaired commentary"
 #~ msgstr "Visual impaired commentary"
+
+#~ msgid "Welcome to the image upgrade wizard. The wizard will assist you in upgrading the firmware of your %s %s by providing a backup facility for your current settings and a short explanation of how to upgrade your firmware."
+#~ msgstr "Welcome to the image upgrade wizard. The wizard will assist you in upgrading the firmware of your %s %s by providing a backup facility for your current settings and a short explanation of how to upgrade your firmware."
+
+#~ msgid "Where do you want to backup your settings?"
+#~ msgstr "Where do you want to backup your settings?"
+
+#~ msgid "Yes, always"
+#~ msgstr "Yes, always"
+
+#~ msgid "Yes, backup my settings!"
+#~ msgstr "Yes, backup my settings!"
+
+#~ msgid "Yes, restore the settings now"
+#~ msgstr "Yes, restore the settings now"
+
+#~ msgid "Yes, shut down now."
+#~ msgstr "Yes, shut down now."
+
+#~ msgid "You can cancel the installation."
+#~ msgstr "You can cancel the installation."
+
+#~ msgid "You can cancel the removal."
+#~ msgstr "You can cancel the removal."
+
+#~ msgid "You can install this plugin."
+#~ msgstr "You can install this plugin."
+
+#~ msgid "You can remove this plugin."
+#~ msgstr "You can remove this plugin."
+
+#~ msgid "You have chosen to backup your settings. Please press OK to start the backup now."
+#~ msgstr "You have chosen to backup your settings. Please press OK to start the backup now."
+
+#~ msgid "You have chosen to restore your settings. Enigma2 will restart after restore. Please press OK to start the restore now."
+#~ msgstr "You have chosen to restore your settings. Enigma2 will restart after restore. Please press OK to start the restore now."
+
+#~ msgid ""
+#~ "You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.dm7025.de.\n"
+#~ "Your %s %s will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
+#~ msgstr ""
+#~ "You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.dm7025.de.\n"
+#~ "Your %s %s will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
+
+#~ msgid "Your %s %s is shutting down. Please wait..."
+#~ msgstr "Your %s %s is shutting down. Please wait..."
+
+#~ msgid "Your backup succeeded. We will now continue to explain the further upgrade process."
+#~ msgstr "Your backup succeeded. We will now continue to explain the further upgrade process."
 
 #~ msgid "alphabetic"
 #~ msgstr "alphabetic"
@@ -20517,8 +20576,17 @@ msgstr ""
 #~ msgid "by date"
 #~ msgstr "by date"
 
+#~ msgid "epg cache backup"
+#~ msgstr "epg cache backup"
+
+#~ msgid "extensions."
+#~ msgstr "extensions."
+
 #~ msgid "flat alphabetic reverse"
 #~ msgstr "flat alphabetic reverse"
+
+#~ msgid "from"
+#~ msgstr "from"
 
 #~ msgid "is strongly advised."
 #~ msgstr "is strongly advised."
@@ -20529,5 +20597,20 @@ msgstr ""
 #~ msgid "movie/drama (general)"
 #~ msgstr "movie/drama (general)"
 
+#~ msgid "packages selected."
+#~ msgstr "packages selected."
+
 #~ msgid "reverse by date"
 #~ msgstr "reverse by date"
+
+#~ msgid "show softwaremanager in plugin menu"
+#~ msgstr "show softwaremanager in plugin menu"
+
+#~ msgid "show softwaremanager on blue button"
+#~ msgstr "show softwaremanager on blue button"
+
+#~ msgid "start directory"
+#~ msgstr "start directory"
+
+#~ msgid "updates available."
+#~ msgstr "updates available."

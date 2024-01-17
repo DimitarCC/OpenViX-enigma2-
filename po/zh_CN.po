@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenViX 5.4 enigma2 chinese translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-22 13:36+0000\n"
+"POT-Creation-Date: 2024-01-09 11:41+0000\n"
 "PO-Revision-Date: 2021-07-19 02:36+0800\n"
 "Last-Translator: litvcom\n"
 "Language-Team: \n"
@@ -31,47 +31,10 @@ msgstr ""
 
 msgid ""
 "\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"高级选项和设置."
-
-msgid ""
-"\n"
-"After pressing OK, please wait!"
-msgstr ""
-"\n"
-"按OK键后,请稍候!"
-
-#, python-format
-msgid ""
-"\n"
-"Backup your %s %s settings."
-msgstr ""
-"\n"
-"备份 %s %s 设置."
-
-msgid ""
-"\n"
-"Edit the upgrade source address."
-msgstr ""
-"\n"
-"编辑升级源地址."
-
-msgid ""
-"\n"
 "It contains other items."
 msgstr ""
 "\n"
 "它包含其他项目."
-
-#, python-format
-msgid ""
-"\n"
-"Manage extensions or plugins for your %s %s"
-msgstr ""
-"\n"
-"管理 %s %s 的扩展或插件"
 
 msgid ""
 "\n"
@@ -83,21 +46,6 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#, python-format
-msgid ""
-"\n"
-"Online update of your %s %s software."
-msgstr ""
-"\n"
-"在线更新 %s %s 软件."
-
-msgid ""
-"\n"
-"Press OK on your remote control to continue."
-msgstr ""
-"\n"
-"按遥控器上的OK键继续."
-
 msgid ""
 "\n"
 "Recording in progress."
@@ -108,56 +56,10 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"Restore your %s %s settings."
-msgstr ""
-"\n"
-"恢复 %s %s 设置."
-
-#, python-format
-msgid ""
-"\n"
-"Restore your %s %s with a new firmware."
-msgstr ""
-"\n"
-"用新固件恢复%s %s."
-
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"按日期恢复备份."
-
-msgid ""
-"\n"
-"Scan for local extensions and install them."
-msgstr ""
-"\n"
-"扫描本地扩展插件并安装."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
-"Current device: "
-msgstr ""
-"\n"
-"选择备份设备.\n"
-"当前设备:"
-
-#, python-format
-msgid ""
-"\n"
 "Timer '%s' disabled!"
 msgstr ""
 "\n"
 "定时器 '%s' 已禁用!"
-
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"查看,安装和删除可用或已安装的软件包."
 
 msgid " "
 msgstr ""
@@ -1087,10 +989,6 @@ msgid "%s %s remote control (native)"
 msgstr "%s %s 远程控制(本机)"
 
 #, python-format
-msgid "%s %s software because updates are available."
-msgstr "%s %s 软件有可用的更新."
-
-#, python-format
 msgid "%s ( %s Cards )"
 msgstr "%s ( %s 张卡 )"
 
@@ -1712,9 +1610,6 @@ msgstr "是否重复定时器或只运行一次？"
 msgid "A required tool (%s) was not found."
 msgstr "所需的工具(%s)没有找到."
 
-msgid "A search for available updates is currently in progress."
-msgstr "正在搜索可用的更新."
-
 msgid ""
 "A second configured interface has been found.\n"
 "\n"
@@ -1739,9 +1634,6 @@ msgid ""
 msgstr ""
 "睡眠定时器要关闭\n"
 "你的 %s %s. 是否继续?"
-
-msgid "A small overview of the available icon states and actions."
-msgstr "可用图标状态和操作的一个小概述."
 
 msgid ""
 "A timer failed to record!\n"
@@ -2052,15 +1944,6 @@ msgstr "高级"
 msgid "Advanced options"
 msgstr "高级选项"
 
-msgid "Advanced restore"
-msgstr "高级恢复"
-
-msgid "Advanced software"
-msgstr "高级软件"
-
-msgid "Advanced software plugin"
-msgstr "高级软件插件"
-
 msgid "Advanced video enhancement setup"
 msgstr "高级视频增强设置"
 
@@ -2268,9 +2151,6 @@ msgstr "可选广播模式"
 msgid "Alternative services tuner priority"
 msgstr "可选调谐器的优先次序"
 
-msgid "Always ask"
-msgstr "总是询问"
-
 msgid "Always hide infobar"
 msgstr "总是隐藏信息栏"
 
@@ -2293,9 +2173,6 @@ msgstr "美属萨摩亚"
 
 msgid "An empty filename is illegal."
 msgstr "空文件名是非法的."
-
-msgid "An error occurred while downloading the packetlist. Please try again."
-msgstr "下载包列表时出错.请再试一次."
 
 msgid "An unknown error occurred!"
 msgstr "发生未知错误!"
@@ -2369,13 +2246,6 @@ msgstr ""
 "是否确实要激活此网络配置?\n"
 "\n"
 
-msgid ""
-"Are you sure you want to delete\n"
-"the following backup:\n"
-msgstr ""
-"是否确实要删除\n"
-"下列备份:\n"
-
 msgid "Are you sure you want to delete all the selected logs:\n"
 msgstr "确定要删除所有选定的日志:\n"
 
@@ -2394,6 +2264,14 @@ msgid ""
 msgstr ""
 "是否确定要删除此项:\n"
 " "
+
+#, fuzzy
+msgid ""
+"Are you sure you want to disable this network configuration?\n"
+"\n"
+msgstr ""
+"是否确实要激活此网络配置?\n"
+"\n"
 
 msgid ""
 "Are you sure you want to download this image:\n"
@@ -2434,25 +2312,6 @@ msgid ""
 msgstr ""
 "是否确定要重新启动网络接口?\n"
 "\n"
-
-#, python-format
-msgid ""
-"Are you sure you want to restore\n"
-"the following backup:\n"
-"%s\n"
-"Your receiver will restart after the backup has been restored!"
-msgstr ""
-"是否确定要恢复\n"
-"下列备份:\n"
-" %s\n"
-"备份恢复后,接收器将重新启动!"
-
-msgid ""
-"Are you sure you want to restore the backup?\n"
-"Your receiver will restart after the backup has been restored!"
-msgstr ""
-"是否确实要恢复备份?\n"
-"备份恢复后,接收器将重新启动!"
 
 msgid ""
 "Are you sure you want to restore this backup:\n"
@@ -2579,9 +2438,6 @@ msgstr "澳大利亚"
 
 msgid "Austria"
 msgstr "奥地利"
-
-msgid "Author: "
-msgstr "作者:"
 
 msgid "Authoring mode"
 msgstr "编辑模式"
@@ -2791,9 +2647,6 @@ msgstr "备份完成."
 msgid "Backup complete..."
 msgstr "备份完成..."
 
-msgid "Backup completed."
-msgstr "备份完成."
-
 msgid "Backup confirmation"
 msgstr "备份确认"
 
@@ -2803,18 +2656,12 @@ msgstr "已创建备份"
 msgid "Backup failed - e. g. wrong backup destination or no space left on backup device."
 msgstr "备份失败-例如备份目标错误或备份设备上没有剩余空间."
 
-msgid "Backup failed."
-msgstr "备份失败."
-
 msgid ""
 "Backup in progress,\n"
 "Please wait for it to finish, before trying again."
 msgstr ""
 "正在进行备份.\n"
 "请等待它完成,然后再尝试."
-
-msgid "Backup is running..."
-msgstr "备份正在运行..."
 
 msgid "Backup location"
 msgstr "备份位置"
@@ -2827,9 +2674,6 @@ msgstr "备份管理器设置"
 
 msgid "Backup prefix"
 msgstr "备份前缀"
-
-msgid "Backup system settings"
-msgstr "备份系统设置"
 
 msgid "Backup/Flash/ReBoot system image."
 msgstr "备份/刷写/重新启动系统镜像."
@@ -3868,9 +3712,6 @@ msgstr "通用接口分配"
 msgid "Common options"
 msgstr "常用选项"
 
-msgid "Communication"
-msgstr "通信"
-
 msgid "Comoros"
 msgstr "科摩罗"
 
@@ -3953,13 +3794,16 @@ msgstr "配置EPG中已结束事件仍保持可见的分钟数，当您需要有
 msgid "Configure how recording filenames are constructed."
 msgstr "配置录制文件名如何构建."
 
-msgid "Configure if and how crypto icons will be shown in the channel selection list."
+#, fuzzy
+msgid "Configure if and how crypto icons will be shown in the channel selection list (left alignment only available in single line mode)."
 msgstr "配置是否将加密图标在频道选择列表中显示."
 
-msgid "Configure if and how service type icons will be shown."
+#, fuzzy
+msgid "Configure if and how service type icons will be shown (left alignment only available in single line mode)."
 msgstr "配置是否显示及如何显示服务类型图标."
 
-msgid "Configure if and how the record indicator will be shown in the channel selection list."
+#, fuzzy
+msgid "Configure if and how the record indicator will be shown in the channel selection list (left alignment only available in single line mode)."
 msgstr "配置录制指示器在频道选择列表中如何显示."
 
 msgid "Configure if and how wide the service name column will be shown in the channel selection list."
@@ -4267,9 +4111,6 @@ msgstr "内容不适合在DVD!"
 
 msgid "Context"
 msgstr "上下文"
-
-msgid "Continue"
-msgstr "继续"
 
 msgid "Continue playback"
 msgstr "继续回放"
@@ -4911,9 +4752,6 @@ msgstr "默认端口为: '%d'. 必要时更换."
 msgid "Default recording type"
 msgstr "默认录制类型"
 
-msgid "Default settings"
-msgstr "默认设置"
-
 #, python-format
 msgid "Default: '%s'."
 msgstr "默认值: '%s'."
@@ -4989,6 +4827,9 @@ msgstr "在显示文本滚动开始之前,以毫秒为单位延迟."
 
 msgid "Delay time"
 msgstr "延迟时间"
+
+msgid "Delay when closing a stream relay service before reallocating the tuner for another service. Using '0' is only recommended for boxes with multiple satellite tuners."
+msgstr ""
 
 msgid "Delay:"
 msgstr "延迟："
@@ -5100,9 +4941,6 @@ msgstr "描述"
 
 msgid "Deselect"
 msgstr "取消选择"
-
-msgid "Details for plugin: "
-msgstr "插件详细信息: "
 
 msgid "Detect next boxes before standby"
 msgstr "待机前检测下一个机顶盒"
@@ -5289,9 +5127,6 @@ msgstr "显示>16:9内容为"
 msgid "Display Skin"
 msgstr "显示皮肤"
 
-msgid "Display and user interface"
-msgstr "显示和用户界面"
-
 msgid "Display message before playing next movie"
 msgstr "在播放下一部电影之前显示信息"
 
@@ -5445,9 +5280,6 @@ msgstr ""
 msgid "Do you want to install plugins"
 msgstr "是否安装插件？"
 
-msgid "Do you want to install the package:\n"
-msgstr "是否安装该软件包:\n"
-
 msgid "Do you want to play DVD in drive?"
 msgstr "是否播放驱动器中的DVD?"
 
@@ -5457,12 +5289,6 @@ msgstr "是否在烧录之前预览DVD?"
 #, python-format
 msgid "Do you want to reboot your %s %s"
 msgstr "是否要重新启动 %s %s"
-
-msgid "Do you want to reboot your receiver?"
-msgstr "是否要重新启动接收器?"
-
-msgid "Do you want to remove the package:\n"
-msgstr "是否要删除该软件包:\n"
 
 msgid "Do you want to restart GUI now ?"
 msgstr "现在要重新启动GUI吗?"
@@ -5485,9 +5311,6 @@ msgstr "是否继续播放?"
 #, fuzzy, python-format
 msgid "Do you want to update your %s %s?"
 msgstr "是否要更新 %s %s?"
-
-msgid "Do you want to upgrade the package:\n"
-msgstr "是否升级软件包:\n"
 
 msgid "Documentary"
 msgstr "纪录片"
@@ -5775,9 +5598,6 @@ msgstr "编辑 %s %s 的网络配置.\n"
 msgid "Edit title"
 msgstr "编辑标题"
 
-msgid "Edit upgrade source url."
-msgstr "编辑升级源地址."
-
 #, fuzzy
 msgid "Education"
 msgstr "调制"
@@ -5803,9 +5623,6 @@ msgstr "已使用"
 
 msgid "Elapsed & Remaining"
 msgstr "已用和剩余"
-
-msgid "Electronic Program Guide"
-msgstr "电子节目指南"
 
 msgid "Empty slot"
 msgstr "空分区"
@@ -5876,6 +5693,13 @@ msgstr "启用 OpenTV EPG数据的自动下载.如果只有一个调谐器可用
 
 msgid "Enable automatic collections"
 msgstr "启用自动收集"
+
+#, fuzzy
+msgid "Enable blinking"
+msgstr "启用原始EPG"
+
+msgid "Enable blinking for ui elements. For example for recording icon"
+msgstr ""
 
 msgid "Enable blinking rec symbol on the LCD Display"
 msgstr "在LCD显示屏上启用闪烁rec符号"
@@ -6034,6 +5858,9 @@ msgstr "输入PIN码"
 
 msgid "Enter a number to jump to a service/channel"
 msgstr "输入号码以跳转到服务/频道"
+
+msgid "Enter adapter settings or disable adapter, then Save to action changed setup."
+msgstr ""
 
 msgid "Enter if you are in the east or west hemisphere."
 msgstr "如果你在东半球或西半球,请输入."
@@ -6333,12 +6160,6 @@ msgstr "正在扩展设置..."
 msgid "Extended Shares"
 msgstr "高级版本"
 
-msgid "Extended Software"
-msgstr "扩展软件"
-
-msgid "Extended Software Plugin"
-msgstr "扩展软件插件"
-
 #, fuzzy
 msgid "Extended info"
 msgstr "扩展"
@@ -6351,9 +6172,6 @@ msgstr "扩展设置..."
 
 msgid "Extensions"
 msgstr "扩展"
-
-msgid "Extensions management"
-msgstr "扩展管理"
 
 #, fuzzy
 msgid "Extensions menu"
@@ -6733,9 +6551,6 @@ msgstr ""
 
 msgid "Folkloric"
 msgstr ""
-
-msgid "Following tasks will be done after you press OK!"
-msgstr "按下OK键后将完成以下任务!"
 
 msgid "Font size"
 msgstr "字体大小"
@@ -8007,20 +7822,11 @@ msgstr "从tmp文件夹安装IPK."
 msgid "Install Plugins"
 msgstr "安装插件"
 
-msgid "Install a new image with a USB stick"
-msgstr "使用U盘安装新镜像"
-
-msgid "Install a new image with your web browser"
-msgstr "通过网页浏览器安装新镜像"
-
 msgid "Install channel list"
 msgstr "安装频道列表"
 
 msgid "Install confirmation"
 msgstr "安装确认"
-
-msgid "Install extensions"
-msgstr "安装扩展插件"
 
 msgid "Install extensions."
 msgstr "安装扩展插件."
@@ -8031,14 +7837,8 @@ msgstr "安装lcd picons到"
 msgid "Install local extension"
 msgstr "安装本地扩展"
 
-msgid "Install or remove finished."
-msgstr "安装或删除完成."
-
 msgid "Install picons on"
 msgstr "在线安装picons"
-
-msgid "Installation finished."
-msgstr "安装完成."
 
 #, python-format
 msgid "Installed:\t%s\n"
@@ -8452,8 +8252,8 @@ msgstr "黎巴嫩"
 msgid "Left"
 msgstr "左箭头"
 
-msgid "Left from servicename"
-msgstr "频道名称左侧"
+msgid "Left from servicename (only available in single line mode)"
+msgstr ""
 
 msgid "Left long"
 msgstr "左键长按"
@@ -8787,15 +8587,8 @@ msgstr "马里"
 msgid "Malta"
 msgstr "马耳他"
 
-msgid "Manage extensions"
-msgstr "管理扩展"
-
 msgid "Manage settings backup."
 msgstr "管理备份设置."
-
-#, python-format
-msgid "Manage your %s %s's software"
-msgstr "管理 %s %s's 的软件"
 
 msgid "Manage your devices mount points."
 msgstr "管理设备装载点."
@@ -9325,9 +9118,6 @@ msgstr "多重启动错误！-启动分区中没有启动."
 msgid "Multiboot only able to restore this backup to mmc slot1"
 msgstr "多引导只能将此备份还原到mmc slot1"
 
-msgid "Multimedia"
-msgstr "多媒体"
-
 msgid "Multiple service support"
 msgstr "多频道支持"
 
@@ -9665,9 +9455,6 @@ msgstr "没有找到活动的频道."
 msgid "No age block"
 msgstr "没有年龄限制。"
 
-msgid "No backup needed"
-msgstr "无需备份"
-
 msgid "No card inserted!"
 msgstr "没有插卡!"
 
@@ -9739,9 +9526,6 @@ msgstr ""
 msgid "No delay"
 msgstr "无延迟"
 
-msgid "No description available."
-msgstr "没有可用的描述."
-
 msgid "No displayable files on this medium found!"
 msgstr "在此媒体上找不到可显示的文件!"
 
@@ -9765,9 +9549,6 @@ msgstr ""
 
 msgid "No module found"
 msgstr "未找到模块"
-
-msgid "No network connection available."
-msgstr "没有可用的网络连接."
 
 msgid "No networks found"
 msgstr "没有发现网络"
@@ -9848,15 +9629,6 @@ msgstr ""
 
 msgid "No, but restart from the beginning"
 msgstr "否,但从头开始"
-
-msgid "No, do nothing."
-msgstr "否,无动作."
-
-msgid "No, just start my %s %s"
-msgstr "否,只需启动我的 %s %s"
-
-msgid "No, never"
-msgstr "否,从不"
 
 msgid "No, scan later manually"
 msgstr "否,以后手动扫描"
@@ -9996,9 +9768,6 @@ msgstr "OK键(长按)"
 msgid "OK button (short)"
 msgstr "OK键(短按)"
 
-msgid "OK, guide me through the upgrade process"
-msgstr "确定,引导我完成升级过程"
-
 msgid "OK, to perform a restore"
 msgstr "好,执行还原"
 
@@ -10094,9 +9863,6 @@ msgstr "仅在待机时激活"
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr "仅使用的SCR设备已由自定义编程器重新编程时才更改此设备,有关更多信息,请与重新编程设备的人员联系."
-
-msgid "Only extensions."
-msgstr "仅扩展."
 
 msgid "Only free scan"
 msgstr "仅扫描免费频道"
@@ -10248,12 +10014,6 @@ msgstr "输出"
 msgid "Overwrite Recovery"
 msgstr ""
 
-msgid "Overwrite configuration files during software upgrade?"
-msgstr "在软件升级期间是否覆盖配置文件?"
-
-msgid "Overwrite configuration files?"
-msgstr "是否覆盖配置文件?"
-
 msgid "PAGE UP/DOWN"
 msgstr "上/下翻页"
 
@@ -10353,12 +10113,6 @@ msgstr "软件列表更新"
 
 msgid "Packages"
 msgstr "软件包"
-
-msgid "Packet management"
-msgstr "软件包管理"
-
-msgid "Packet manager"
-msgstr "软件包管理"
 
 msgid "Page down"
 msgstr "下一页"
@@ -10488,8 +10242,8 @@ msgstr "百分比"
 msgid "Percentage left"
 msgstr "百分比显示在左侧"
 
-msgid "Percentage right"
-msgstr "百分比显示在右侧"
+msgid "Percentage right (only available in single line mode)"
+msgstr ""
 
 msgid "Perform a complete image backup before updating."
 msgstr "在更新之前执行完整的镜像备份."
@@ -10620,7 +10374,13 @@ msgstr "播放上一个"
 msgid "Play recorded movies"
 msgstr "正在播放录制的电影..."
 
+msgid "Play service with Stream Relay"
+msgstr ""
+
 msgid "Play service with streamrelay"
+msgstr ""
+
+msgid "Play service without Stream Relay"
 msgstr ""
 
 msgid "Play service without streamrelay"
@@ -10635,6 +10395,10 @@ msgstr "播放标记的条目"
 
 msgid "Play the selected recording"
 msgstr "播放选定的条目"
+
+#, fuzzy
+msgid "Playback"
+msgstr "暂停播放"
 
 msgid ""
 "Playback information missing\n"
@@ -10754,10 +10518,6 @@ msgstr "请选择要录制的子频道..."
 msgid "Please select a subservice..."
 msgstr "请选择一个子频道..."
 
-#, fuzzy
-msgid "Please select a valid directory."
-msgstr "请选择一个可接受的目录."
-
 msgid "Please select device to use as SWAP file location."
 msgstr "请选择要用作交换文件位置的设备."
 
@@ -10767,9 +10527,6 @@ msgstr "请输入包含某些包的文件夹."
 
 msgid "Please select medium to be scanned"
 msgstr "请选择要扫描的介质"
-
-msgid "Please select medium to use as backup location"
-msgstr "请选择介质作为备份位置"
 
 msgid "Please select the default action of the EPG button"
 msgstr "请选择EPG按键的默认操作"
@@ -10926,6 +10683,10 @@ msgstr "正在测试网络,请稍候..."
 msgid "Please wait while your network configuration is activated..."
 msgstr "正在激活网络配置,请稍候..."
 
+#, fuzzy
+msgid "Please wait while your network configuration is deactivated..."
+msgstr "正在激活网络配置,请稍候..."
+
 #, fuzzy, python-format
 msgid "Please wait, initialising %s."
 msgstr "请稍候... 正在加载列表..."
@@ -10948,20 +10709,11 @@ msgstr "插件浏览器"
 msgid "Plugin browser settings"
 msgstr "插件浏览器设置"
 
-msgid "Plugin details"
-msgstr "插件详细信息"
-
 msgid "Plugin install"
 msgstr "插件安装"
 
 msgid "Plugin listing failed - e. g. wrong backup destination or no space left on backup device."
 msgstr "插件列表失败-例如备份目标错误或备份设备上没有剩余空间."
-
-msgid "Plugin manager activity information"
-msgstr "插件管理活动信息"
-
-msgid "Plugin manager help"
-msgstr "插件管理器帮助"
 
 msgid "Plugins"
 msgstr "插件"
@@ -11187,12 +10939,6 @@ msgstr "按'菜单'键选择存储设备"
 msgid "Press GREEN (Reboot) to switch images, YELLOW (Delete) to erase an image or BLUE (Restore) to restore all deleted images."
 msgstr "按绿色键(重启)切换镜像,按黄色键(删除)删除镜像或按蓝色键(恢复)恢复所有删除的镜像."
 
-msgid "Press INFO on your remote control for additional information."
-msgstr "按遥控器上的INFO键以获取更多信息."
-
-msgid "Press MENU on your remote control for additional options."
-msgstr "按遥控器上的MENU键可查看其他选项."
-
 #, fuzzy
 msgid "Press OK"
 msgstr "进度"
@@ -11203,9 +10949,6 @@ msgstr "按遥控器上的OK键继续."
 #, python-format
 msgid "Press OK to activate the selected%s skin."
 msgstr "按OK键激活选定的 %s 皮肤."
-
-msgid "Press OK to activate the settings."
-msgstr "按OK键激活设置."
 
 msgid "Press OK to edit the settings."
 msgstr "按OK键编辑设置."
@@ -11293,9 +11036,6 @@ msgstr ""
 "检索更新列表时出现问题.\n"
 "如果这个问题仍然存在,请检查/报告论坛"
 
-msgid "Process"
-msgstr "过程"
-
 #, python-format
 msgid "Processor temp:\t%s"
 msgstr "处理器温度:\t%s"
@@ -11312,8 +11052,8 @@ msgstr "进度"
 msgid "Progress bar left"
 msgstr "进度栏左侧"
 
-msgid "Progress bar right"
-msgstr "进度栏右侧"
+msgid "Progress bar right (only available in single line mode)"
+msgstr ""
 
 msgid "Prominent"
 msgstr ""
@@ -11633,6 +11373,10 @@ msgstr ""
 msgid "Record"
 msgstr "录(像)"
 
+#, fuzzy
+msgid "Record icon match"
+msgstr "录制类型"
+
 msgid "Record next"
 msgstr "录制下一个"
 
@@ -11649,9 +11393,6 @@ msgstr "由于定时器 %s 冲突,录制时间受到限制"
 msgid "Recording"
 msgstr "录制"
 
-msgid "Recording & Playback"
-msgstr "录制和回放"
-
 msgid "Recording 4097, 5001 and 5002 streams not possible with external players, so convert recordings to servicetype 1."
 msgstr ""
 
@@ -11662,9 +11403,6 @@ msgid ""
 msgstr ""
 "检测到timers.xml中的计时器重叠!\n"
 "请重新检查!"
-
-msgid "Recording and playback"
-msgstr "录制和回放"
 
 msgid "Recording and playback settings"
 msgstr "录制和回放设置"
@@ -11789,9 +11527,6 @@ msgstr "相关PID路由"
 msgid "Religion"
 msgstr "宗教"
 
-msgid "Reload"
-msgstr "重新加载"
-
 msgid "Reload blacklists"
 msgstr "重新加载黑名单"
 
@@ -11911,9 +11646,6 @@ msgstr "在(天)之后删除完成的定时器日志"
 
 msgid "Remove finished timers after (days)"
 msgstr "在(天)之后删除完成的定时器"
-
-msgid "Remove finished."
-msgstr "删除完成."
 
 msgid "Remove from parental protection"
 msgstr "取消家长控制"
@@ -12110,9 +11842,6 @@ msgstr "恢复"
 msgid "Restore Confirmation"
 msgstr "还原确认"
 
-msgid "Restore backups"
-msgstr "恢复备份"
-
 #, fuzzy
 msgid "Restore confirmation"
 msgstr "还原确认"
@@ -12127,9 +11856,6 @@ msgstr "恢复默认"
 msgid "Restore deleted user bouquets"
 msgstr "恢复已删除的收藏夹"
 
-msgid "Restore system settings"
-msgstr "恢复系统设置"
-
 msgid "Restore wizard"
 msgstr "还原向导"
 
@@ -12141,9 +11867,6 @@ msgstr "正在还原插件,这可能需要很长时间..."
 
 msgid "Restoring plugins..."
 msgstr "正在还原插件..."
-
-msgid "Restoring..."
-msgstr "恢复中..."
 
 msgid "Restricted 18+"
 msgstr "限制18+"
@@ -12420,9 +12143,6 @@ msgstr "卫星"
 msgid "Satellite dish settings"
 msgstr "卫星天线设置"
 
-msgid "Satellite equipment"
-msgstr "卫星设备"
-
 msgid "Satellite equipment setup"
 msgstr "卫星设备设置"
 
@@ -12675,12 +12395,6 @@ msgstr "搜索"
 msgid "Searching east ..."
 msgstr "正在向东搜寻..."
 
-msgid "Searching for available updates. Please wait..."
-msgstr "正在搜索可用更新.请稍候..."
-
-msgid "Searching for new installed or removed packages. Please wait..."
-msgstr "正在搜索新安装或删除的软件包.请稍候..."
-
 msgid "Searching west ..."
 msgstr "正在向西搜寻..."
 
@@ -12886,12 +12600,6 @@ msgstr "选择要刷写的镜像:"
 msgid "Select audio track"
 msgstr "选择音轨"
 
-msgid "Select backup files"
-msgstr "选择备份文件"
-
-msgid "Select backup location"
-msgstr "选择备份位置"
-
 msgid "Select channel from history"
 msgstr "从历史记录中选择频道"
 
@@ -12917,11 +12625,11 @@ msgstr "为INFO按键选择默认操作"
 msgid "Select destination for:"
 msgstr "选择目标:"
 
+msgid "Select display of record icon based on 'Sref only' or 'Sref + Stream url' where applicable."
+msgstr ""
+
 msgid "Select extra packages folder"
 msgstr "选择附加包文件夹"
-
-msgid "Select files for backup."
-msgstr "选择要备份的文件."
 
 msgid "Select files/folders to backup"
 msgstr "选择要备份的文件/文件夹"
@@ -13096,12 +12804,6 @@ msgstr "配置远程控制类型"
 
 msgid "Select to restore all deleted images"
 msgstr "选择以恢复所有已删除的镜像"
-
-msgid "Select upgrade source"
-msgstr "选择升级源"
-
-msgid "Select upgrade source to edit."
-msgstr "选择要编辑的升级源."
 
 msgid "Select video input with up/down buttons"
 msgstr "用向上/向下键选择视频条目"
@@ -13461,7 +13163,8 @@ msgstr "设置定时器必须启动的时间."
 msgid "Set the time the timer must stop."
 msgstr "设置定时器必须停止的时间."
 
-msgid "Set the type of the progress indication in the channel selection screen."
+#, fuzzy
+msgid "Set the type of the progress indication in the channel selection screen (right alignment only available in single line mode)."
 msgstr "在频道选择屏幕中设置进度指示的类型."
 
 msgid "Set to the desired primetime."
@@ -13930,8 +13633,9 @@ msgstr "显示插件浏览器.."
 msgid "Show the radio player"
 msgstr "显示广播播放器 ..."
 
-msgid "Show the service information on two lines in the channel selection screen. You can choose between the current event description below the channel name, or the current event description next to the channel name, and the next event description on the second line."
-msgstr ""
+#, fuzzy
+msgid "Show the service information on two lines in the channel selection screen."
+msgstr "在频道选择屏幕中设置进度指示的类型."
 
 #, fuzzy
 msgid "Show the tv player"
@@ -14114,9 +13818,6 @@ msgstr "当前皮肤:\t%s"
 msgid "SkinSelector: Restart GUI"
 msgstr "皮肤选择器:重新启动GUI"
 
-msgid "Skins"
-msgstr "皮肤"
-
 msgid "Skip back"
 msgstr "向后快退"
 
@@ -14260,6 +13961,14 @@ msgid "Softcam Actions"
 msgstr "SoftCam设置"
 
 #, fuzzy
+msgid "Softcam Management"
+msgstr "日志管理"
+
+#, fuzzy
+msgid "Softcam Manager"
+msgstr "日志管理"
+
+#, fuzzy
 msgid "Softcam Script"
 msgstr "Softcam设置"
 
@@ -14281,39 +13990,20 @@ msgstr "Softcam正在停止..."
 msgid "SoftcamCheck"
 msgstr "Softcam检查"
 
-#, fuzzy
-msgid "SoftcamManager"
-msgstr "日志管理"
-
 msgid "SoftcamScript enable/disable cam restart"
 msgstr ""
 
 msgid "SoftcamScript select camscript"
 msgstr ""
 
-msgid "Software"
-msgstr "软件"
-
 msgid "Software Update"
 msgstr "软件更新"
-
-msgid "Software management"
-msgstr "软件管理"
-
-msgid "Software manager setup"
-msgstr "软件管理设置"
-
-msgid "Software restore"
-msgstr "软件恢复"
 
 msgid "Software update"
 msgstr "软件更新"
 
 msgid "Software update settings"
 msgstr "软件更新设置"
-
-msgid "Softwaremanager information"
-msgstr "软件管理信息"
 
 msgid "Solomon Islands"
 msgstr "所罗门群岛"
@@ -14360,21 +14050,11 @@ msgstr "抱歉MiniDLNA配置丢失"
 msgid "Sorry your uShare config is missing"
 msgstr "抱歉uShare配置丢失"
 
-#, python-format
-msgid "Sorry, %s has not been installed!"
-msgstr "抱歉, %s 尚未安装!"
-
 msgid "Sorry, but the file is not compatible with this image version."
 msgstr "抱歉,文件与此镜像版本不兼容."
 
 msgid "Sorry, but the restore failed."
 msgstr "抱歉,还原失败."
-
-msgid "Sorry, no backups found!"
-msgstr "抱歉,找不到备份!"
-
-msgid "Sorry, no details available!"
-msgstr "抱歉,没有可用详情！"
 
 msgid "Sorry, no physical devices that supports SWAP attached. Can't create SWAP file on network or fat32 file-systems."
 msgstr "抱歉,没有支持交换连接的物理设备.无法在网络或fat32文件系统上创建交换文件."
@@ -14384,13 +14064,6 @@ msgstr "抱歉,找不到足够的可用RAM,并且没有支持交换连接的物�
 
 msgid "Sorry, this tuner is in use."
 msgstr "抱歉,该调谐器正在使用中."
-
-msgid ""
-"Sorry, your backup destination is not writeable.\n"
-"Please select a different one."
-msgstr ""
-"抱歉,备份目标不可写入.\n"
-"请选择其他."
 
 msgid "Sort"
 msgstr "排序"
@@ -14508,6 +14181,13 @@ msgid "Sports Magazines"
 msgstr "体育杂志"
 
 msgid "Sprache"
+msgstr ""
+
+#, fuzzy
+msgid "Sref + stream url"
+msgstr "直播请求"
+
+msgid "Sref only"
 msgstr ""
 
 msgid "Sri Lanka"
@@ -14713,6 +14393,26 @@ msgstr "存储位置"
 msgid "Stream"
 msgstr "直播"
 
+#, fuzzy
+msgid "Stream Relay Settings"
+msgstr "uShare 端口"
+
+#, fuzzy
+msgid "Stream Relay Setup Actions"
+msgstr "时间设置"
+
+#, fuzzy
+msgid "Stream Relay delay"
+msgstr "直播请求"
+
+#, fuzzy
+msgid "Stream Relay port"
+msgstr "uShare 端口"
+
+#, fuzzy
+msgid "Stream Relay url"
+msgstr "直播请求"
+
 msgid "Stream request"
 msgstr "直播请求"
 
@@ -14727,14 +14427,6 @@ msgstr "流媒体客户端"
 
 msgid "Streaming Clients Info"
 msgstr "流媒体客户端信息"
-
-#, fuzzy
-msgid "Streamrelay port"
-msgstr "uShare 端口"
-
-#, fuzzy
-msgid "Streamrelay url"
-msgstr "直播请求"
 
 msgid "Strict DLNA"
 msgstr "精确DLNA"
@@ -15207,7 +14899,7 @@ msgstr ""
 "IMDb插件未安装!\n"
 "请安装它."
 
-msgid "The IP address of the streamrelay server that is used to descramble services that can only be decrypted via streamrelay"
+msgid "The IP address of the streamrelay server that is used to descramble services that can only be decrypted via stream relay."
 msgstr ""
 
 msgid ""
@@ -15243,9 +14935,6 @@ msgstr ""
 
 msgid "The backup creates a snapshot of the image exactly as it is at the current instant."
 msgstr ""
-
-msgid "The backup failed. Please choose a different backup location."
-msgstr "备份失败.请选择一个不同的备份位置."
 
 msgid "The backup location does not have enough free space."
 msgstr "备份位置没有足够的可用空间."
@@ -15316,7 +15005,7 @@ msgstr "路径 %s 已经存在."
 msgid "The pin code you entered is wrong."
 msgstr "输入的pin码错误."
 
-msgid "The port of the streamrelay server that is used to descramble services that can only be decrypted via streamrelay"
+msgid "The port of the streamrelay server that is used to descramble services that can only be decrypted via stream relay."
 msgstr ""
 
 #, python-format
@@ -15360,9 +15049,6 @@ msgstr ""
 "无线局域网插件未安装!\n"
 "请安装它."
 
-msgid "The wizard can backup your current settings. Do you want to do a backup now?"
-msgstr "该向导可以备份当前设置.是否现在备份?"
-
 msgid "The wizard is finished now, and will reboot."
 msgstr "向导已完成,并将重新启动."
 
@@ -15373,24 +15059,11 @@ msgstr "向导已经完成."
 msgid "Theater"
 msgstr "创建"
 
-msgid "There are at least "
-msgstr "至少有 "
-
-#, python-format
-msgid "There are at least %s updates available."
-msgstr "至少有 %s 更新可用."
-
-msgid "There are currently no outstanding actions."
-msgstr "目前没有突出的行动."
-
 msgid "There are no saved playlists to delete!"
 msgstr "没有保存的播放列表可供删除!"
 
 msgid "There are no saved playlists to load!"
 msgstr "没有保存的播放列表可供下载!"
-
-msgid "There are no updates available."
-msgstr "没有可用的更新."
 
 msgid "There has been an error, please try again later. If this issue persists, please check openvix.co.uk or world-of-satellite.com"
 msgstr "出现错误,请稍后重试.如果此问题仍然存在,请查看openvix.co.uk或world-of-satellite.com"
@@ -15640,18 +15313,6 @@ msgstr "这个选项设置的虚假数字轮廓的抑制,这是一个数量有�
 
 msgid "This option sets up the picture sharpness, used when the picture is being upscaled."
 msgstr "此选项设置图片锐度,在图片被放大时使用."
-
-msgid "This plugin is installed."
-msgstr "此插件已安装."
-
-msgid "This plugin is not installed."
-msgstr "未安装此插件."
-
-msgid "This plugin will be installed."
-msgstr "此插件将被安装."
-
-msgid "This plugin will be removed."
-msgstr "此插件将被删除."
 
 msgid "This setting allows the tuner configuration to be a duplication of how another tuner is already configured."
 msgstr "此设置允许调谐器配置与其他调谐器的配置方式重复."
@@ -16043,9 +15704,6 @@ msgstr "尝试在有线网络中找到使用过的转发器..请稍候..."
 msgid "Try to find used transponders in terrestrial network... please wait..."
 msgstr "尝试在地面波网络中找到用过的转发器...请稍候..."
 
-msgid "Trying to download a new packetlist. Please wait..."
-msgstr "正在尝试下载新的打包列表.请稍等 ..."
-
 msgid "Tue"
 msgstr "周二"
 
@@ -16214,12 +15872,6 @@ msgstr "未定义"
 msgid "Undetermined"
 msgstr "待定"
 
-msgid "Undo install"
-msgstr "撤销安装"
-
-msgid "Undo uninstall"
-msgstr "撤消卸载"
-
 msgid "Unencrypted"
 msgstr "未加密"
 
@@ -16234,9 +15886,6 @@ msgstr "开关指令前使能电压后的唯一延迟"
 
 msgid "Unicable delay after last diseqc command"
 msgstr "上次diseqc命令后的唯一延迟"
-
-msgid "Uninstall"
-msgstr "卸载"
 
 msgid "United Arab Emirates"
 msgstr "阿拉伯联合酋长国"
@@ -16325,9 +15974,6 @@ msgstr "正在更新软件包..."
 msgid "Updated: %s"
 msgstr "更新"
 
-msgid "Updatefeed not available."
-msgstr "更新源不可用."
-
 msgid "Updating Cache"
 msgstr "正在更新缓存..."
 
@@ -16336,9 +15982,6 @@ msgstr "正在更新缓存,请稍候..."
 
 msgid "Updating mount locations..."
 msgstr "正在更新安装位置..."
-
-msgid "Updating software catalog"
-msgstr "正在更新软件目录..."
 
 msgid "Upgrade and reboot system"
 msgstr "升级并重启系统"
@@ -16532,9 +16175,6 @@ msgstr "使用向导设置基本功能"
 
 msgid "Use these input device settings?"
 msgstr "使用这些输入设备设置?"
-
-msgid "Use these settings?"
-msgstr "使用这些设置？"
 
 msgid "Use this video enhancement settings?"
 msgstr "使用此视频增强设置?"
@@ -16778,51 +16418,9 @@ msgstr "观看影片..."
 msgid "View Video CD..."
 msgstr "查看视频CD..."
 
-msgid "View details"
-msgstr "查看详细信息"
-
 #, fuzzy
 msgid "View extensions"
 msgstr "查看扩展..."
-
-msgid "View list of available "
-msgstr "查看可用列表"
-
-msgid "View list of available CommonInterface extensions"
-msgstr "查看可用的CAM插件"
-
-msgid "View list of available EPG extensions."
-msgstr "查看可用EPG扩展的列表."
-
-msgid "View list of available Satellite equipment extensions."
-msgstr "查看可用的卫星设备扩展列表."
-
-msgid "View list of available communication extensions."
-msgstr "查看可用的通讯扩展列表."
-
-msgid "View list of available default settings"
-msgstr "查看可用的默认设置列表"
-
-msgid "View list of available display and userinterface extensions."
-msgstr "查看可用显示和用户界面扩展列表."
-
-msgid "View list of available multimedia extensions."
-msgstr "查看可用有多媒体扩展列表."
-
-msgid "View list of available networking extensions"
-msgstr "查看可用的网络扩展列表"
-
-msgid "View list of available recording extensions"
-msgstr "查看可用录制扩展列表"
-
-msgid "View list of available skins"
-msgstr "查看可用的皮肤列表"
-
-msgid "View list of available software extensions"
-msgstr "查看可用软件扩展列表"
-
-msgid "View list of available system extensions"
-msgstr "查看可用系统扩展列表"
 
 msgid "View mode"
 msgstr "视图模式"
@@ -17094,9 +16692,6 @@ msgstr ""
 "\n"
 "之后,选中编辑结束点,单击OK键,选择'编辑结束'."
 
-msgid "Welcome to the image upgrade wizard. The wizard will assist you in upgrading the firmware of your %s %s by providing a backup facility for your current settings and a short explanation of how to upgrade your firmware."
-msgstr "欢迎使用镜像升级向导.向导将为当前设置提供一个备份工具,并简要说明如何 升级固件,从而帮助您升级 %s %s 的镜像."
-
 msgid ""
 "Welcome to the restore wizard.\n"
 "\n"
@@ -17351,9 +16946,6 @@ msgstr "当机顶盒从待机状态唤醒时,它也会向电视发送命令使�
 msgid "When tuned to a service the system will normally scan the transponder for any changes and save them. Only set to 'yes' if you're absolutely sure of what you're doing."
 msgstr "当调谐到频道时,系统通常将扫描转发器的任何改动并保存它们.只有在你完全确定自己在做什么的情况下才设置为'是'."
 
-msgid "Where do you want to backup your settings?"
-msgstr "想在哪里备份设置?"
-
 msgid "Where should the recording be saved?"
 msgstr "录制要保存到哪里？"
 
@@ -17507,17 +17099,11 @@ msgstr "是(在设置调谐器中保存索引)"
 msgid "Yes to all"
 msgstr "全是"
 
-msgid "Yes, always"
-msgstr "是,总是"
-
 msgid "Yes, and delete this movie"
 msgstr "是,并删除此电影"
 
 msgid "Yes, and return to the movie list"
 msgstr "是,并返回电影列表"
-
-msgid "Yes, backup my settings!"
-msgstr "是,备份设置!"
 
 msgid "Yes, but don't save timeshift as movie"
 msgstr "是,但不保存时移作为电影"
@@ -17540,17 +17126,11 @@ msgstr "是,现在进行自动扫描"
 msgid "Yes, do another manual scan now"
 msgstr "是,现在再做一次手动扫描"
 
-msgid "Yes, restore the settings now"
-msgstr "是,现在恢复设置"
-
 msgid "Yes, show delete time"
 msgstr "是,显示删除时间"
 
 msgid "Yes, show record time"
 msgstr "是,显示录制时间"
-
-msgid "Yes, shut down now."
-msgstr "是,现在就关机."
 
 msgid "Yesterday"
 msgstr "昨天"
@@ -17581,27 +17161,15 @@ msgstr "可以显示带或不带OSD菜单的MiniTV"
 msgid "You can Display PIP with or without OSD Menu"
 msgstr "可以显示带或不带OSD菜单的画中画"
 
-msgid "You can cancel the installation."
-msgstr "您可以取消安装."
-
-msgid "You can cancel the removal."
-msgstr "您可以取消删除."
-
 msgid "You can continue watching TV while this is running."
 msgstr "在运行时,您可以继续观看电视."
 
 msgid "You can have the list sorted by time or alphanumerical."
 msgstr "您可以将列表按时间或字母数字排序."
 
-msgid "You can install this plugin."
-msgstr "您可以安装这个插件."
-
 #, python-format
 msgid "You can only burn %s %s recordings!"
 msgstr "您只能刻录 %s %s个录制 !"
-
-msgid "You can remove this plugin."
-msgstr "您可以删除这个插件."
 
 msgid "You cannot delete this!"
 msgstr "不能删除!"
@@ -17615,12 +17183,6 @@ msgid_plural "You have marked recordings"
 msgstr[0] "播放标记的条目"
 msgstr[1] "播放标记的条目"
 msgstr[2] "播放标记的条目"
-
-msgid "You have chosen to backup your settings. Please press OK to start the backup now."
-msgstr "您已选择备份设置.请按OK键立即开始备份."
-
-msgid "You have chosen to restore your settings. Enigma2 will restart after restore. Please press OK to start the restore now."
-msgstr "您选择恢复设置.Enigma2将重启恢复后.请按OK键开始恢复."
 
 msgid ""
 "You have chosen to save the current timeshift event, but the event has not yet finished\n"
@@ -17642,13 +17204,6 @@ msgstr "您必须等待 %s!"
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
 msgstr "必须切换到频道 %s (%s - '%s')!\n"
-
-msgid ""
-"You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.dm7025.de.\n"
-"Your %s %s will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
-msgstr ""
-"需要一台电脑连接到 %s %s. 如果需要进一步的指导,请访问网站http://www.dm7025.de\n"
-"%s %s 现在将被暂停. 从网站执行更新说明后,新镜像将要求恢复设置."
 
 msgid "You seem to be in timeshft, the service will briefly stop as timeshift stops."
 msgstr "您似乎在时移中,当时移停止时节目将短暂停止."
@@ -17746,9 +17301,6 @@ msgstr "您的 %s %s 正在重新启动到恢复模式"
 msgid "Your %s %s is shutting down"
 msgstr "您的 %s %s 正在关闭..."
 
-msgid "Your %s %s is shutting down. Please wait..."
-msgstr "您的 %s %s 正在关闭.请稍候..."
-
 #, python-format
 msgid "Your %s %s might be unusable now. Please consult the manual for further assistance before rebooting your %s %s."
 msgstr "您的 %s %s 现在可能无法使用.重新启动 %s %s 之前,请参阅手册以获得进一步帮助."
@@ -17789,9 +17341,6 @@ msgstr ""
 
 msgid "Your STB will restart after pressing OK on your remote control."
 msgstr "按遥控器上的OK键后,机顶盒将重新启动."
-
-msgid "Your backup succeeded. We will now continue to explain the further upgrade process."
-msgstr "备份成功.我们现在将继续解释进一步的升级过程."
 
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "您的专辑超过了单层介质的容量,您需要一张空白的双层DVD!"
@@ -17845,6 +17394,10 @@ msgstr ""
 "请按OK键继续."
 
 msgid "Your network configuration has been activated."
+msgstr "您的网络配置已激活."
+
+#, fuzzy
+msgid "Your network configuration has been disabled."
 msgstr "您的网络配置已激活."
 
 msgid "Your network has finished restarting"
@@ -18368,9 +17921,6 @@ msgstr "娱乐(6-14岁)"
 msgid "entertainment (general)"
 msgstr "娱乐(普通)"
 
-msgid "epg cache backup"
-msgstr "epg缓存备份"
-
 msgid "equestrian"
 msgstr "马术"
 
@@ -18406,9 +17956,6 @@ msgstr "退出DVD播放机或返回文件浏览器"
 
 msgid "experimental film/video"
 msgstr "实验电影/视频"
-
-msgid "extensions."
-msgstr "扩展."
 
 msgid "extra wide"
 msgstr "超宽"
@@ -18480,9 +18027,6 @@ msgstr "免费"
 
 msgid "free diskspace"
 msgstr "可用磁盘空间"
-
-msgid "from"
-msgstr "从"
 
 msgid "full"
 msgstr "全部"
@@ -18856,9 +18400,6 @@ msgstr "原始"
 msgid "original language"
 msgstr "原始语言"
 
-msgid "packages selected."
-msgstr "选定的软件包."
-
 msgid "page left"
 msgstr "向左翻页"
 
@@ -19071,12 +18612,6 @@ msgstr "显示事件详细信息"
 msgid "show mediaplayer on mainmenu"
 msgstr "在主菜单上显示媒体播放器"
 
-msgid "show softwaremanager in plugin menu"
-msgstr "在插件菜单中显示软件管理器"
-
-msgid "show softwaremanager on blue button"
-msgstr "蓝色键显示软件管理"
-
 msgid "show/game show (general)"
 msgstr "显示/游戏节目(普通)"
 
@@ -19158,9 +18693,6 @@ msgstr "待机"
 msgid "start cut here"
 msgstr "从这里开始剪辑"
 
-msgid "start directory"
-msgstr "起始目录"
-
 msgid "stepsize"
 msgstr "步长"
 
@@ -19233,7 +18765,7 @@ msgid "two lines"
 msgstr "两行"
 
 #, fuzzy
-msgid "two lines and next event"
+msgid "two lines+next event"
 msgstr "转到下一个事件"
 
 msgid "type"
@@ -19278,9 +18810,6 @@ msgstr "未发布"
 
 msgid "until standby/restart"
 msgstr "待机/重启"
-
-msgid "updates available."
-msgstr "更新可用."
 
 msgid "use best / controlled by HDMI"
 msgstr "使用最佳/由HDMI控制"
@@ -19407,6 +18936,104 @@ msgstr "切换"
 msgid "| separated list of prefixes you'd like to be removed from event names, separated with |, e.g. New:|Live:"
 msgstr ""
 
+#~ msgid ""
+#~ "\n"
+#~ "Advanced options and settings."
+#~ msgstr ""
+#~ "\n"
+#~ "高级选项和设置."
+
+#~ msgid ""
+#~ "\n"
+#~ "After pressing OK, please wait!"
+#~ msgstr ""
+#~ "\n"
+#~ "按OK键后,请稍候!"
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Backup your %s %s settings."
+#~ msgstr ""
+#~ "\n"
+#~ "备份 %s %s 设置."
+
+#~ msgid ""
+#~ "\n"
+#~ "Edit the upgrade source address."
+#~ msgstr ""
+#~ "\n"
+#~ "编辑升级源地址."
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Manage extensions or plugins for your %s %s"
+#~ msgstr ""
+#~ "\n"
+#~ "管理 %s %s 的扩展或插件"
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Online update of your %s %s software."
+#~ msgstr ""
+#~ "\n"
+#~ "在线更新 %s %s 软件."
+
+#~ msgid ""
+#~ "\n"
+#~ "Press OK on your remote control to continue."
+#~ msgstr ""
+#~ "\n"
+#~ "按遥控器上的OK键继续."
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Restore your %s %s settings."
+#~ msgstr ""
+#~ "\n"
+#~ "恢复 %s %s 设置."
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "Restore your %s %s with a new firmware."
+#~ msgstr ""
+#~ "\n"
+#~ "用新固件恢复%s %s."
+
+#~ msgid ""
+#~ "\n"
+#~ "Restore your backups by date."
+#~ msgstr ""
+#~ "\n"
+#~ "按日期恢复备份."
+
+#~ msgid ""
+#~ "\n"
+#~ "Scan for local extensions and install them."
+#~ msgstr ""
+#~ "\n"
+#~ "扫描本地扩展插件并安装."
+
+#~ msgid ""
+#~ "\n"
+#~ "Select your backup device.\n"
+#~ "Current device: "
+#~ msgstr ""
+#~ "\n"
+#~ "选择备份设备.\n"
+#~ "当前设备:"
+
+#~ msgid ""
+#~ "\n"
+#~ "View, install and remove available or installed packages."
+#~ msgstr ""
+#~ "\n"
+#~ "查看,安装和删除可用或已安装的软件包."
+
 #~ msgid "        - SD card in use for Image root \n"
 #~ msgstr "        - 用于镜像根的SD卡 \n"
 
@@ -19440,6 +19067,10 @@ msgstr ""
 #~ msgid "%d.%03d GB"
 #~ msgstr "%d.%03d GB"
 
+#, python-format
+#~ msgid "%s %s software because updates are available."
+#~ msgstr "%s %s 软件有可用的更新."
+
 #, fuzzy, python-format
 #~ msgid "%s GB"
 #~ msgstr "%s 或 %s GB"
@@ -19467,6 +19098,12 @@ msgstr ""
 #~ msgid "50 MB/s"
 #~ msgstr "50 MB/秒"
 
+#~ msgid "A search for available updates is currently in progress."
+#~ msgstr "正在搜索可用的更新."
+
+#~ msgid "A small overview of the available icon states and actions."
+#~ msgstr "可用图标状态和操作的一个小概述."
+
 #~ msgid "About Boxbranding"
 #~ msgstr "关于品牌创建"
 
@@ -19482,11 +19119,33 @@ msgstr ""
 #~ msgid "Additional motor options allow you to enter details from your motor's spec sheet so enigma can work out how long it will take to move to another satellite."
 #~ msgstr "额外的电机选项允许您输入详细信息,从您的电机的规格表,这样E2可以计算出需要多长时间才能转移到另一个卫星."
 
+#~ msgid "Advanced restore"
+#~ msgstr "高级恢复"
+
+#~ msgid "Advanced software"
+#~ msgstr "高级软件"
+
+#~ msgid "Advanced software plugin"
+#~ msgstr "高级软件插件"
+
 #~ msgid "Allows you to show/hide OScam Info in extensions (blue button)."
 #~ msgstr "允许您在扩展中显示/隐藏OScam扩展(蓝色键)."
 
 #~ msgid "Allows you to tag your image backup to a box. (default is box name/type)"
 #~ msgstr "允许您将图像备份标记到机顶盒中(默认为机顶盒名称/类型)."
+
+#~ msgid "Always ask"
+#~ msgstr "总是询问"
+
+#~ msgid "An error occurred while downloading the packetlist. Please try again."
+#~ msgstr "下载包列表时出错.请再试一次."
+
+#~ msgid ""
+#~ "Are you sure you want to delete\n"
+#~ "the following backup:\n"
+#~ msgstr ""
+#~ "是否确实要删除\n"
+#~ "下列备份:\n"
 
 #, python-format
 #~ msgid "Are you sure you want to delete image slot %s ?"
@@ -19513,11 +19172,45 @@ msgstr ""
 #~ "是否确实要刷写此镜像:\n"
 #~ "  "
 
+#, python-format
+#~ msgid ""
+#~ "Are you sure you want to restore\n"
+#~ "the following backup:\n"
+#~ "%s\n"
+#~ "Your receiver will restart after the backup has been restored!"
+#~ msgstr ""
+#~ "是否确定要恢复\n"
+#~ "下列备份:\n"
+#~ " %s\n"
+#~ "备份恢复后,接收器将重新启动!"
+
+#~ msgid ""
+#~ "Are you sure you want to restore the backup?\n"
+#~ "Your receiver will restart after the backup has been restored!"
+#~ msgstr ""
+#~ "是否确实要恢复备份?\n"
+#~ "备份恢复后,接收器将重新启动!"
+
+#~ msgid "Author: "
+#~ msgstr "作者:"
+
 #~ msgid "Background delete option"
 #~ msgstr "背景删除选项"
 
 #~ msgid "Background delete speed"
 #~ msgstr "背景删除速度"
+
+#~ msgid "Backup completed."
+#~ msgstr "备份完成."
+
+#~ msgid "Backup failed."
+#~ msgstr "备份失败."
+
+#~ msgid "Backup is running..."
+#~ msgstr "备份正在运行..."
+
+#~ msgid "Backup system settings"
+#~ msgstr "备份系统设置"
 
 #, python-format
 #~ msgid "Build: %s"
@@ -19557,6 +19250,9 @@ msgstr ""
 #~ msgid "Collection"
 #~ msgstr "集合"
 
+#~ msgid "Communication"
+#~ msgstr "通信"
+
 #~ msgid "Configure on which devices the background delete option should be used."
 #~ msgstr "配置哪些设备后台删除选项会被使用."
 
@@ -19565,6 +19261,9 @@ msgstr ""
 
 #~ msgid "Connected"
 #~ msgstr "已连接"
+
+#~ msgid "Continue"
+#~ msgstr "继续"
 
 #~ msgid "Create and flash complete images of your system."
 #~ msgstr "创建并刷写系统的完整镜像."
@@ -19575,17 +19274,44 @@ msgstr ""
 #~ msgid "Current CEC address"
 #~ msgstr "当前CEC地址"
 
+#~ msgid "Default settings"
+#~ msgstr "默认设置"
+
+#~ msgid "Details for plugin: "
+#~ msgstr "插件详细信息: "
+
 #~ msgid "Device: none available"
 #~ msgstr "设备:无可用"
 
+#~ msgid "Display and user interface"
+#~ msgstr "显示和用户界面"
+
 #~ msgid "Do you want to change download url"
 #~ msgstr "是否要更改下载url"
+
+#~ msgid "Do you want to install the package:\n"
+#~ msgstr "是否安装该软件包:\n"
+
+#~ msgid "Do you want to reboot your receiver?"
+#~ msgstr "是否要重新启动接收器?"
+
+#~ msgid "Do you want to remove the package:\n"
+#~ msgstr "是否要删除该软件包:\n"
+
+#~ msgid "Do you want to upgrade the package:\n"
+#~ msgstr "是否升级软件包:\n"
 
 #~ msgid "DownLoad"
 #~ msgstr "下载"
 
 #~ msgid "ECM-Time"
 #~ msgstr "ECM-时间"
+
+#~ msgid "Edit upgrade source url."
+#~ msgstr "编辑升级源地址."
+
+#~ msgid "Electronic Program Guide"
+#~ msgstr "电子节目指南"
 
 #~ msgid "Erase"
 #~ msgstr "擦除"
@@ -19605,6 +19331,15 @@ msgstr ""
 #~ msgid "Exit network adapter configuration"
 #~ msgstr "退出网络适配器配置"
 
+#~ msgid "Extended Software"
+#~ msgstr "扩展软件"
+
+#~ msgid "Extended Software Plugin"
+#~ msgstr "扩展软件插件"
+
+#~ msgid "Extensions management"
+#~ msgstr "扩展管理"
+
 #, fuzzy, python-format
 #~ msgid "FBC socket %s"
 #~ msgstr "内存分区 %s"
@@ -19614,6 +19349,9 @@ msgstr ""
 
 #~ msgid "Flash directory '%s' not allowed!"
 #~ msgstr "不允许使用闪存目录 '%s'!"
+
+#~ msgid "Following tasks will be done after you press OK!"
+#~ msgstr "按下OK键后将完成以下任务!"
 
 #~ msgid "FreeSpace"
 #~ msgstr "可用空间"
@@ -19657,6 +19395,21 @@ msgstr ""
 #~ msgid "Init SDCARD"
 #~ msgstr "初始化SD卡"
 
+#~ msgid "Install a new image with a USB stick"
+#~ msgstr "使用U盘安装新镜像"
+
+#~ msgid "Install a new image with your web browser"
+#~ msgstr "通过网页浏览器安装新镜像"
+
+#~ msgid "Install extensions"
+#~ msgstr "安装扩展插件"
+
+#~ msgid "Install or remove finished."
+#~ msgstr "安装或删除完成."
+
+#~ msgid "Installation finished."
+#~ msgstr "安装完成."
+
 #~ msgid "Instant recording..."
 #~ msgstr "正在即时录制..."
 
@@ -19679,8 +19432,18 @@ msgstr ""
 #~ msgid "Last update: %s"
 #~ msgstr "最近更新: %s"
 
+#~ msgid "Left from servicename"
+#~ msgstr "频道名称左侧"
+
+#~ msgid "Manage extensions"
+#~ msgstr "管理扩展"
+
 #~ msgid "Manage the backups of your settings."
 #~ msgstr "管理设置的备份."
+
+#, python-format
+#~ msgid "Manage your %s %s's software"
+#~ msgstr "管理 %s %s's 的软件"
 
 #~ msgid "Max backups to keep (0==all)"
 #~ msgstr "要保留的最大备份数(0==全部)"
@@ -19703,17 +19466,38 @@ msgstr ""
 #~ msgid "Multiboot manager - to use this routine %s image must be at OpenViX 4.2.043 or later and USB flashed - reply Yes to continue"
 #~ msgstr "多引导管理器-若要使用此例程 %s 映像必须是OpenViX 4.2.043 或更高版本,并且USB已格式化-按'OK'键以继续"
 
+#~ msgid "Multimedia"
+#~ msgstr "多媒体"
+
 #~ msgid "NOW"
 #~ msgstr "正在播放"
 
 #~ msgid "Namespace"
 #~ msgstr "空间名称"
 
+#~ msgid "No backup needed"
+#~ msgstr "无需备份"
+
 #~ msgid "No data received yet"
 #~ msgstr "尚未收到数据"
 
+#~ msgid "No description available."
+#~ msgstr "没有可用的描述."
+
 #~ msgid "No images found for selected download server...if password check validity"
 #~ msgstr "未找到所选下载服务器的镜像…请密检查码有效性"
+
+#~ msgid "No network connection available."
+#~ msgstr "没有可用的网络连接."
+
+#~ msgid "No, do nothing."
+#~ msgstr "否,无动作."
+
+#~ msgid "No, just start my %s %s"
+#~ msgstr "否,只需启动我的 %s %s"
+
+#~ msgid "No, never"
+#~ msgstr "否,从不"
 
 #~ msgid "Note: slot list does not show current image or empty slots."
 #~ msgstr "注意:分区列表不显示当前镜像或空分区."
@@ -19725,26 +19509,72 @@ msgstr ""
 #~ "OfWrite错误(也被发送到任何调试日志):\n"
 #~ "%s"
 
+#~ msgid "OK, guide me through the upgrade process"
+#~ msgstr "确定,引导我完成升级过程"
+
+#~ msgid "Only extensions."
+#~ msgstr "仅扩展."
+
 #~ msgid "Open infobar EPG..."
 #~ msgstr "打开信息栏EPG..."
 
 #~ msgid "OpenTV download setup"
 #~ msgstr "OpenTV下载设置"
 
+#~ msgid "Overwrite configuration files during software upgrade?"
+#~ msgstr "在软件升级期间是否覆盖配置文件?"
+
+#~ msgid "Overwrite configuration files?"
+#~ msgstr "是否覆盖配置文件?"
+
 #~ msgid "PID"
 #~ msgstr "PID"
+
+#~ msgid "Packet management"
+#~ msgstr "软件包管理"
+
+#~ msgid "Packet manager"
+#~ msgstr "软件包管理"
+
+#~ msgid "Percentage right"
+#~ msgstr "百分比显示在右侧"
 
 #~ msgid "Perform a settings backup, making a backup before updating is strongly advised."
 #~ msgstr "执行设置备份,强烈建议在更新前进行备份."
 
+#, fuzzy
+#~ msgid "Please select a valid directory."
+#~ msgstr "请选择一个可接受的目录."
+
+#~ msgid "Please select medium to use as backup location"
+#~ msgstr "请选择介质作为备份位置"
+
 #~ msgid "Please wait while the flash prepares, after the image is flashed, your %s will restart - if error please use Recovery mode to restart."
 #~ msgstr "正在准备,请稍候,映像刷新后,您的 %s 将重新启动-如果出现错误，请使用恢复模式重新启动."
+
+#~ msgid "Plugin details"
+#~ msgstr "插件详细信息"
+
+#~ msgid "Plugin manager activity information"
+#~ msgstr "插件管理活动信息"
+
+#~ msgid "Plugin manager help"
+#~ msgstr "插件管理器帮助"
 
 #~ msgid "Polarisation:"
 #~ msgstr "极化方式 :"
 
+#~ msgid "Press INFO on your remote control for additional information."
+#~ msgstr "按遥控器上的INFO键以获取更多信息."
+
 #~ msgid "Press Init to format SDcard."
 #~ msgstr "按Init格式化SD卡."
+
+#~ msgid "Press MENU on your remote control for additional options."
+#~ msgstr "按遥控器上的MENU键可查看其他选项."
+
+#~ msgid "Press OK to activate the settings."
+#~ msgstr "按OK键激活设置."
 
 #~ msgid "Press OK to set the MAC address."
 #~ msgstr "按OK键设置MAC地址."
@@ -19752,11 +19582,26 @@ msgstr ""
 #~ msgid "Press appropiate Init to move Nand root to SDcard."
 #~ msgstr "按appropate Init将Nand root移动到SD卡."
 
+#~ msgid "Process"
+#~ msgstr "过程"
+
+#~ msgid "Progress bar right"
+#~ msgstr "进度栏右侧"
+
 #~ msgid "Query before backup starts"
 #~ msgstr "备份开始前查询"
 
 #~ msgid "Query before image backup starts"
 #~ msgstr "映像备份开始前的查询"
+
+#~ msgid "Recording & Playback"
+#~ msgstr "录制和回放"
+
+#~ msgid "Recording and playback"
+#~ msgstr "录制和回放"
+
+#~ msgid "Reload"
+#~ msgstr "重新加载"
 
 #, python-format
 #~ msgid "Removal of this slot will not show in %s Gui.  Are you sure you want to delete image slot %s ?"
@@ -19764,6 +19609,18 @@ msgstr ""
 
 #~ msgid "Remove confirmation"
 #~ msgstr "删除确认"
+
+#~ msgid "Remove finished."
+#~ msgstr "删除完成."
+
+#~ msgid "Restore backups"
+#~ msgstr "恢复备份"
+
+#~ msgid "Restore system settings"
+#~ msgstr "恢复系统设置"
+
+#~ msgid "Restoring..."
+#~ msgstr "恢复中..."
 
 #~ msgid "SDcard slot %s (%s) "
 #~ msgstr "SD卡插槽 %s (%s) "
@@ -19774,11 +19631,35 @@ msgstr ""
 #~ msgid "Satellite configuration mode Mode"
 #~ msgstr "卫星配置模式"
 
+#~ msgid "Satellite equipment"
+#~ msgstr "卫星设备"
+
+#~ msgid "Searching for available updates. Please wait..."
+#~ msgstr "正在搜索可用更新.请稍候..."
+
+#~ msgid "Searching for new installed or removed packages. Please wait..."
+#~ msgstr "正在搜索新安装或删除的软件包.请稍候..."
+
+#~ msgid "Select backup files"
+#~ msgstr "选择备份文件"
+
+#~ msgid "Select backup location"
+#~ msgstr "选择备份位置"
+
 #~ msgid "Select between entering an IP address or a domain."
 #~ msgstr "在输入IP地址或域之间进行选择."
 
 #~ msgid "Select directory for logfile"
 #~ msgstr "为日志文件选择目录"
+
+#~ msgid "Select files for backup."
+#~ msgstr "选择要备份的文件."
+
+#~ msgid "Select upgrade source"
+#~ msgstr "选择升级源"
+
+#~ msgid "Select upgrade source to edit."
+#~ msgstr "选择要编辑的升级源."
 
 #~ msgid "Serv.Name"
 #~ msgstr "服务器名称"
@@ -19802,8 +19683,43 @@ msgstr ""
 #~ msgid "Skin Setup"
 #~ msgstr "皮肤设置"
 
+#~ msgid "Skins"
+#~ msgstr "皮肤"
+
 #~ msgid "Softcam"
 #~ msgstr "Softcam"
+
+#~ msgid "Software"
+#~ msgstr "软件"
+
+#~ msgid "Software management"
+#~ msgstr "软件管理"
+
+#~ msgid "Software manager setup"
+#~ msgstr "软件管理设置"
+
+#~ msgid "Software restore"
+#~ msgstr "软件恢复"
+
+#~ msgid "Softwaremanager information"
+#~ msgstr "软件管理信息"
+
+#, python-format
+#~ msgid "Sorry, %s has not been installed!"
+#~ msgstr "抱歉, %s 尚未安装!"
+
+#~ msgid "Sorry, no backups found!"
+#~ msgstr "抱歉,找不到备份!"
+
+#~ msgid "Sorry, no details available!"
+#~ msgstr "抱歉,没有可用详情！"
+
+#~ msgid ""
+#~ "Sorry, your backup destination is not writeable.\n"
+#~ "Please select a different one."
+#~ msgstr ""
+#~ "抱歉,备份目标不可写入.\n"
+#~ "请选择其他."
 
 #~ msgid "Subtitle selection..."
 #~ msgstr "字幕选择..."
@@ -19821,6 +19737,9 @@ msgstr ""
 #~ msgid "TB"
 #~ msgstr "TB"
 
+#~ msgid "The backup failed. Please choose a different backup location."
+#~ msgstr "备份失败.请选择一个不同的备份位置."
+
 #~ msgid ""
 #~ "The software management extension is not installed!\n"
 #~ "Please install it."
@@ -19834,8 +19753,24 @@ msgstr ""
 #~ msgid "The timer file (timers.xml) is corrupt and could not be loaded."
 #~ msgstr "定时器文件(timers.xml)已损坏,无法加载."
 
+#~ msgid "The wizard can backup your current settings. Do you want to do a backup now?"
+#~ msgstr "该向导可以备份当前设置.是否现在备份?"
+
+#~ msgid "There are at least "
+#~ msgstr "至少有 "
+
+#, python-format
+#~ msgid "There are at least %s updates available."
+#~ msgstr "至少有 %s 更新可用."
+
+#~ msgid "There are currently no outstanding actions."
+#~ msgstr "目前没有突出的行动."
+
 #~ msgid "There are no items currently available for this screen."
 #~ msgstr "此屏幕当前没有可用的项目."
+
+#~ msgid "There are no updates available."
+#~ msgstr "没有可用的更新."
 
 #~ msgid "There is no backup to delete."
 #~ msgstr "没有要删除的备份."
@@ -19846,6 +19781,18 @@ msgstr ""
 #~ msgid "This option allows you to disable sorting of the menus"
 #~ msgstr "此选项允许禁用菜单排序"
 
+#~ msgid "This plugin is installed."
+#~ msgstr "此插件已安装."
+
+#~ msgid "This plugin is not installed."
+#~ msgstr "未安装此插件."
+
+#~ msgid "This plugin will be installed."
+#~ msgstr "此插件将被安装."
+
+#~ msgid "This plugin will be removed."
+#~ msgstr "此插件将被删除."
+
 #~ msgid "Time of backup to start"
 #~ msgstr "备份开始时间"
 
@@ -19854,6 +19801,9 @@ msgstr ""
 
 #~ msgid "Transponder Information"
 #~ msgstr "转发器信息"
+
+#~ msgid "Trying to download a new packetlist. Please wait..."
+#~ msgstr "正在尝试下载新的打包列表.请稍等 ..."
 
 #~ msgid "Tuner %s-%s: %s"
 #~ msgstr "调谐器 %s-%s: %s"
@@ -19867,14 +19817,32 @@ msgstr ""
 #~ msgid "Tuning Info: Settings Values"
 #~ msgstr "调整信息:设置值"
 
+#~ msgid "Undo install"
+#~ msgstr "撤销安装"
+
+#~ msgid "Undo uninstall"
+#~ msgstr "撤消卸载"
+
+#~ msgid "Uninstall"
+#~ msgstr "卸载"
+
 #~ msgid "Update Interval"
 #~ msgstr "更新间隔"
+
+#~ msgid "Updatefeed not available."
+#~ msgstr "更新源不可用."
 
 #~ msgid "Updating cache"
 #~ msgstr "正在更新缓存..."
 
+#~ msgid "Updating software catalog"
+#~ msgstr "正在更新软件目录..."
+
 #~ msgid "Use the cursor keys to select an installed image and then Erase button."
 #~ msgstr "使用光标键选择已安装的镜像,然后单击'擦除'键."
+
+#~ msgid "Use these settings?"
+#~ msgstr "使用这些设置？"
 
 #~ msgid "Using fixed address"
 #~ msgstr "使用固定地址"
@@ -19886,11 +19854,71 @@ msgstr ""
 #~ msgid "Video output mode Mode"
 #~ msgstr "视频输出模式"
 
+#~ msgid "View details"
+#~ msgstr "查看详细信息"
+
+#~ msgid "View list of available "
+#~ msgstr "查看可用列表"
+
+#~ msgid "View list of available CommonInterface extensions"
+#~ msgstr "查看可用的CAM插件"
+
+#~ msgid "View list of available EPG extensions."
+#~ msgstr "查看可用EPG扩展的列表."
+
+#~ msgid "View list of available Satellite equipment extensions."
+#~ msgstr "查看可用的卫星设备扩展列表."
+
+#~ msgid "View list of available communication extensions."
+#~ msgstr "查看可用的通讯扩展列表."
+
+#~ msgid "View list of available default settings"
+#~ msgstr "查看可用的默认设置列表"
+
+#~ msgid "View list of available display and userinterface extensions."
+#~ msgstr "查看可用显示和用户界面扩展列表."
+
+#~ msgid "View list of available multimedia extensions."
+#~ msgstr "查看可用有多媒体扩展列表."
+
+#~ msgid "View list of available networking extensions"
+#~ msgstr "查看可用的网络扩展列表"
+
+#~ msgid "View list of available recording extensions"
+#~ msgstr "查看可用录制扩展列表"
+
+#~ msgid "View list of available skins"
+#~ msgstr "查看可用的皮肤列表"
+
+#~ msgid "View list of available software extensions"
+#~ msgstr "查看可用软件扩展列表"
+
+#~ msgid "View list of available system extensions"
+#~ msgstr "查看可用系统扩展列表"
+
 #~ msgid "Visual impaired commentary"
 #~ msgstr "视障人士意见"
 
+#~ msgid "Welcome to the image upgrade wizard. The wizard will assist you in upgrading the firmware of your %s %s by providing a backup facility for your current settings and a short explanation of how to upgrade your firmware."
+#~ msgstr "欢迎使用镜像升级向导.向导将为当前设置提供一个备份工具,并简要说明如何 升级固件,从而帮助您升级 %s %s 的镜像."
+
 #~ msgid "Welcome to the restore wizard.A backup has been detected.You can use this wizard to restore your settings and any extra plugins that were installed when the backup was created."
 #~ msgstr "欢迎使用还原向导.已检测到备份.可以使用此向导还原 创建备份时安装的设置和任何其他插件."
+
+#~ msgid "Where do you want to backup your settings?"
+#~ msgstr "想在哪里备份设置?"
+
+#~ msgid "Yes, always"
+#~ msgstr "是,总是"
+
+#~ msgid "Yes, backup my settings!"
+#~ msgstr "是,备份设置!"
+
+#~ msgid "Yes, restore the settings now"
+#~ msgstr "是,现在恢复设置"
+
+#~ msgid "Yes, shut down now."
+#~ msgstr "是,现在就关机."
 
 #~ msgid ""
 #~ "You are about to flash an eMMC flash; we cannot take any responsibility for any errors or damage to your box during this process.\n"
@@ -19903,8 +19931,39 @@ msgstr ""
 #~ "您确定要刷写这个镜像\n"
 #~ " "
 
+#~ msgid "You can cancel the installation."
+#~ msgstr "您可以取消安装."
+
+#~ msgid "You can cancel the removal."
+#~ msgstr "您可以取消删除."
+
+#~ msgid "You can install this plugin."
+#~ msgstr "您可以安装这个插件."
+
+#~ msgid "You can remove this plugin."
+#~ msgstr "您可以删除这个插件."
+
+#~ msgid "You have chosen to backup your settings. Please press OK to start the backup now."
+#~ msgstr "您已选择备份设置.请按OK键立即开始备份."
+
+#~ msgid "You have chosen to restore your settings. Enigma2 will restart after restore. Please press OK to start the restore now."
+#~ msgstr "您选择恢复设置.Enigma2将重启恢复后.请按OK键开始恢复."
+
 #~ msgid "You have decided not to flash image."
 #~ msgstr "是否退出刷写镜像."
+
+#~ msgid ""
+#~ "You need a PC connected to your %s %s. If you need further instructions, please visit the website http://www.dm7025.de.\n"
+#~ "Your %s %s will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
+#~ msgstr ""
+#~ "需要一台电脑连接到 %s %s. 如果需要进一步的指导,请访问网站http://www.dm7025.de\n"
+#~ "%s %s 现在将被暂停. 从网站执行更新说明后,新镜像将要求恢复设置."
+
+#~ msgid "Your %s %s is shutting down. Please wait..."
+#~ msgstr "您的 %s %s 正在关闭.请稍候..."
+
+#~ msgid "Your backup succeeded. We will now continue to explain the further upgrade process."
+#~ msgstr "备份成功.我们现在将继续解释进一步的升级过程."
 
 #~ msgid "alphabetic"
 #~ msgstr "按字母顺序排列"
@@ -19918,8 +19977,17 @@ msgstr ""
 #~ msgid "downmix"
 #~ msgstr "缩混"
 
+#~ msgid "epg cache backup"
+#~ msgstr "epg缓存备份"
+
+#~ msgid "extensions."
+#~ msgstr "扩展."
+
 #~ msgid "flat alphabetic reverse"
 #~ msgstr "按字母顺序(Z-A)"
+
+#~ msgid "from"
+#~ msgstr "从"
 
 #~ msgid "is strongly advised."
 #~ msgstr "强烈推荐."
@@ -19939,6 +20007,9 @@ msgstr ""
 #~ msgid "now/next: 'now' event label Now"
 #~ msgstr "正在播放"
 
+#~ msgid "packages selected."
+#~ msgstr "选定的软件包."
+
 #~ msgid "passthrough"
 #~ msgstr "直通"
 
@@ -19948,9 +20019,21 @@ msgstr ""
 #~ msgid "rgb"
 #~ msgstr "RGB三原色"
 
+#~ msgid "show softwaremanager in plugin menu"
+#~ msgstr "在插件菜单中显示软件管理器"
+
+#~ msgid "show softwaremanager on blue button"
+#~ msgstr "蓝色键显示软件管理"
+
 #, python-format
 #~ msgid "slot%s - %s "
 #~ msgstr "分区%s - %s "
 
+#~ msgid "start directory"
+#~ msgstr "起始目录"
+
 #~ msgid "third event: 'third' event label Later"
 #~ msgstr "稍后"
+
+#~ msgid "updates available."
+#~ msgstr "更新可用."
