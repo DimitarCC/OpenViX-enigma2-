@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-09 11:41+0000\n"
-"PO-Revision-Date: 2023-10-20 19:33+0300\n"
+"POT-Creation-Date: 2022-12-27 23:35+0000\n"
+"PO-Revision-Date: 2024-01-15 17:42+0200\n"
 "Last-Translator: Orlandox\n"
 "Language-Team: timoj/Kojo/Samzam/Orlandox\n"
 "Language: fi\n"
@@ -2149,6 +2149,9 @@ msgstr "Amerikkalainen Urheilu"
 
 msgid "An empty filename is illegal."
 msgstr "Tyhjä nimi ei ole sallittu."
+
+msgid "An error occurred while downloading the packetlist. Please try again."
+msgstr "Tapahtui virhe pakettilistaa ladattaessa. Yritä uudestaan."
 
 msgid "An unknown error occurred!"
 msgstr "Tuntematon virhe!"
@@ -14401,7 +14404,7 @@ msgstr ""
 "Suomenkielinen käännös: timoj, Kojo, Samzam, Orlandox\n"
 "\n"
 "Ylläpito : Orlandox\n"
-"20.10.2023\n"
+"--- 15.01.2024 ---\n"
 "http://www.huoltovalikko.com"
 
 msgid "TS file is too large for ISO9660 level 1!"
@@ -19408,3 +19411,48 @@ msgstr "Lisää | välimerkiksi ohjelmanimistä poistettavien etuliitteiden list
 
 #~ msgid "updates available."
 #~ msgstr "Päivityksiä saatavilla."
+
+msgid "This change will overwrite all eMMC slots."
+msgstr "Tämä muutos korvaa kaikki eMMC-paikat."
+
+msgid "We advise flashing the new image to a regular MultiBoot slot and restoring a settings backup."
+msgstr "Suosittelemme flashaamaan uuden imagen tavalliseen MultiBoot-paikkaan ja palauttamaan asetusten varmuuskopion."
+
+msgid "Select 'Flash regular slot' to flash a regular MultiBoot slot or select 'Overwrite Recovery' to overwrite the Recovery image."
+msgstr "Valitse 'Flashaa tavallinen paikka' flashataksesi tavallisen MultiBoot-paikan tai valitse 'Korvaa palautusimage' korvataksesi palautusimagen."
+
+msgid "Flash regular slot"
+msgstr "Flashaa tavallinen paikka"
+
+msgid "Overwrite Recovery"
+msgstr "Korvaa palautusimage"
+
+msgid "Do you want to backup eMMC slots? This will add from 1 -> 5 minutes per eMMC slot"
+msgstr "Haluatko varmuuskopioida eMMC-paikat? Tämä lisää 1 - 5 minuuttia eMMC-paikkaa kohden"
+
+msgid "Copy eMMC slots confirmation"
+msgstr "eMMC-paikkojen kopioinnin vahvistus"
+
+msgid "Package manager"
+msgstr "Ohjelmistopakettien hallinnointi"
+
+msgid "Package Manager"
+msgstr "Ohjelmistopakettien hallinnointi"
+
+msgid "Refresh list"
+msgstr "Päivitä lista"
+
+msgid "Downloading a new packet list. Please wait..."
+msgstr "Ladataan uutta pakettilistaa. Odota..."
+
+msgid "Removal has completed."
+msgstr "Poistaminen on valmis."
+
+msgid "Update has completed."
+msgstr "Päivitys on valmis."
+
+msgid "Show packages to be updated"
+msgstr "Näytä päivitettävät ohjelmistopaketit"
+
+msgid "Packages to update"
+msgstr "Päivitettävät ohjelmistopaketit"
