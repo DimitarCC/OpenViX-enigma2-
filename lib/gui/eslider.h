@@ -26,12 +26,12 @@ private:
 	{
 		evtChangedSlider = evtUserWidget
 	};
-	bool m_have_border_color, m_have_foreground_color;
+	bool m_have_border_color, m_have_foreground_color, m_have_background_color;
 	int m_min, m_max, m_value, m_start, m_orientation, m_orientation_swapped, m_border_width;
 	ePtr<gPixmap> m_pixmap, m_backgroundpixmap;
 
 	gRegion m_currently_filled;
-	gRGB m_border_color, m_foreground_color;
+	gRGB m_border_color, m_foreground_color, m_background_color;
 };
 
 #endif
