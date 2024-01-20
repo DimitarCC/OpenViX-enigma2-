@@ -1,7 +1,7 @@
 #include <lib/gui/eslider.h>
 
 eSlider::eSlider(eWidget *parent)
-	:eWidget(parent), m_have_border_color(false), m_have_foreground_color(false),
+	:eWidget(parent), m_have_border_color(false), m_have_foreground_color(false), m_have_background_color(false),
 	m_min(0), m_max(0), m_value(0), m_start(0), m_orientation(orHorizontal), m_orientation_swapped(0),
 	m_border_width(0)
 {
@@ -49,6 +49,13 @@ void eSlider::setForegroundColor(const gRGB &color)
 	invalidate();
 }
 
+void eSlider::setBackgroundColor(const gRGB &col)
+{
+	m_background_color = col;
+	m_have_background_color = true;
+	invalidate();
+}
+
 int eSlider::event(int event, void *data, void *data2)
 {
 	switch (event)
@@ -59,7 +66,7 @@ int eSlider::event(int event, void *data, void *data2)
 
 		eSize s(size());
 		getStyle(style);
-			/* paint background */
+		/* paint background */
 		int cornerRadius = getCornerRadius();
 		if(!cornerRadius) // don't call eWidget paint if radius or gradient
 			eWidget::event(evtPaint, data, data2);
@@ -73,7 +80,7 @@ int eSlider::event(int event, void *data, void *data2)
 		{
 			if (cornerRadius)
 				painter.setRadius(cornerRadius, getCornerRadiusEdges());
-			painter.blit(m_backgroundpixmap, ePoint(0, 0), eRect(), isTransparent() ? gPainter::BT_ALPHATEST : 0);
+			painter.blit(m_backgroundpixmap, ePoint(0, 0), eRect(), isTransparent() ? gPainter::BT_ALPHABLEND : 0);
 		} else if(m_have_background_color && !cornerRadius) {
 			painter.setBackgroundColor(m_background_color);
 			painter.clear();
@@ -81,6 +88,9 @@ int eSlider::event(int event, void *data, void *data2)
 
 		if(cornerRadius)
 		{
+			if(m_have_background_color) {
+				painter.setBackgroundColor(m_background_color);
+			} 
 			painter.setRadius(cornerRadius, getCornerRadiusEdges());
 
 			if (drawborder)
@@ -89,7 +99,8 @@ int eSlider::event(int event, void *data, void *data2)
 					painter.setBackgroundColor(m_border_color);
 				else
 				{
-					painter.setBackgroundColor(m_background_color);
+					gRGB color = style->getColor(eWindowStyle::styleLabel);
+					painter.setBackgroundColor(color);
 				}
 				painter.drawRectangle(eRect(ePoint(0, 0), size()));
  				painter.setBackgroundColor((m_have_background_color) ? m_background_color : gRGB(0, 0, 0));
@@ -97,8 +108,9 @@ int eSlider::event(int event, void *data, void *data2)
 				painter.drawRectangle(eRect(m_border_width, m_border_width, size().width() - m_border_width * 2, size().height() - m_border_width * 2));
 				drawborder = false;
 			}
-			else
+			else {
 				painter.drawRectangle(eRect(ePoint(0, 0), size()));
+			}
 		}
 
 		style->setStyle(painter, eWindowStyle::styleLabel); // TODO - own style
@@ -127,7 +139,7 @@ int eSlider::event(int event, void *data, void *data2)
 
 			if (cornerRadius)
 				painter.setRadius(cornerRadius, getCornerRadiusEdges());
-			painter.blit(m_pixmap, ePoint(0, 0), m_currently_filled.extends, isTransparent() ? gPainter::BT_ALPHATEST : 0);
+			painter.blit(m_pixmap, ePoint(0, 0), m_currently_filled.extends, isTransparent() ? gPainter::BT_ALPHABLEND : 0);
 		}
 
 		if(drawborder) {

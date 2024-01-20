@@ -15,6 +15,7 @@ public:
 	void setBorderWidth(int pixel);
 	void setBorderColor(const gRGB &color);
 	void setForegroundColor(const gRGB &color);
+	void setBackgroundColor(const gRGB &col) override;
 	void setPixmap(gPixmap *pixmap);
 	void setPixmap(ePtr<gPixmap> &pixmap);
 	void setBackgroundPixmap(gPixmap *pixmap);
