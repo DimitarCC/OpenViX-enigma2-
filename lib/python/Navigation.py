@@ -16,6 +16,10 @@ import NavigationInstance
 from Screens.InfoBar import InfoBar
 from Components.Sources.StreamService import StreamServiceList
 from Screens.InfoBarGenerics import streamrelay
+try:
+	from Plugins.Extensions.IPTV.IPTVProviders import processService as processIPTVService
+except:
+	processIPTVService = None
 
 # TODO: remove pNavgation, eNavigation and rewrite this stuff in python.
 
@@ -116,7 +120,17 @@ class Navigation:
 		self.playService(self.currentlyPlayingServiceOrGroup, forceRestart=True)
 
 	def playService(self, ref, checkParentalControl=True, forceRestart=False, adjust=True):
+		from Components.ServiceEventTracker import InfoBarCount
+		InfoBarInstance = InfoBarCount == 1 and InfoBar.instance
+
 		oldref = self.currentlyPlayingServiceOrGroup
+
+		self.currentlyPlayingServiceReference = None
+		self.currentlyPlayingServiceOrGroup = None
+		self.currentlyPlayingService = None
+		if InfoBarInstance:
+			InfoBarInstance.session.screen["CurrentService"].newService(False)
+
 		if ref and oldref and ref == oldref and not forceRestart:
 			print("[Navigation] ignore request to play already running service(1)")
 			return 1
@@ -142,8 +156,15 @@ class Navigation:
 		if ref is None:
 			self.stopService()
 			return 0
-		from Components.ServiceEventTracker import InfoBarCount
-		InfoBarInstance = InfoBarCount == 1 and InfoBar.instance
+
+		self.currentlyPlayingServiceReference = ref
+		self.currentlyPlayingServiceOrGroup = ref
+		
+		if InfoBarInstance:
+			InfoBarInstance.session.screen["Event_Now"].updateSource(ref)
+			InfoBarInstance.session.screen["Event_Next"].updateSource(ref)
+			InfoBarInstance.serviceStarted()
+
 		if not checkParentalControl or parentalControl.isServicePlayable(ref, boundFunction(self.playService, checkParentalControl=False, forceRestart=forceRestart, adjust=adjust)):
 			if ref.flags & eServiceReference.isGroup:
 				oldref = self.currentlyPlayingServiceReference or eServiceReference()
@@ -183,6 +204,15 @@ class Navigation:
 					self.skipServiceReferenceReset = True
 				self.currentlyPlayingServiceReference = playref
 				playref = streamrelay.streamrelayChecker(playref)
+
+				if callable(processIPTVService):
+					playref, old_ref, is_dynamic = processIPTVService(playref, self.playRealService)
+
+				if InfoBarInstance:
+					InfoBarInstance.session.screen["CurrentService"].newService(playref)
+					InfoBarInstance.session.screen["Event_Now"].updateSource(playref)
+					InfoBarInstance.session.screen["Event_Next"].updateSource(playref)
+
 				self.currentlyPlayingServiceOrGroup = ref
 				if InfoBarInstance and InfoBarInstance.servicelist.servicelist.setCurrent(ref, adjust):
 					self.currentlyPlayingServiceOrGroup = InfoBarInstance.servicelist.servicelist.getCurrent()
@@ -255,6 +285,8 @@ class Navigation:
 			if ref.flags & eServiceReference.isGroup:
 				ref = getBestPlayableServiceReference(ref, eServiceReference(), simulate)
 			ref = streamrelay.streamrelayChecker(ref)
+			if callable(processIPTVService):
+				ref, old_ref, is_dynamic = processIPTVService(ref, None)
 			service = ref and self.pnav and self.pnav.recordService(ref, simulate)
 			if service is None:
 				print("[Navigation] record returned non-zero")
@@ -300,3 +332,21 @@ class Navigation:
 
 	def stopUserServices(self):
 		self.stopService()
+	
+	def playRealService(self, nnref):
+		self.pnav.stopService()
+		self.pnav.playService(nnref)
+		self.currentlyPlayingServiceReference = nnref
+		from Components.ServiceEventTracker import InfoBarCount
+		InfoBarInstance = InfoBarCount == 1 and InfoBar.instance
+		if InfoBarInstance:
+			if nnref.toString().find("%3a//") > -1:
+				InfoBarInstance.session.screen["CurrentService"].newService(nnref)
+				InfoBarInstance.session.screen["Event_Now"].updateSource(nnref)
+				InfoBarInstance.session.screen["Event_Next"].updateSource(nnref)
+			else:
+				InfoBarInstance.session.screen["CurrentService"].newService(True)
+				InfoBarInstance.session.screen["Event_Now"].updateSource(nnref)
+				InfoBarInstance.session.screen["Event_Next"].updateSource(nnref)
+				
+			InfoBarInstance.serviceStarted()
