@@ -1233,7 +1233,7 @@ void eListboxPythonMultiContent::paint(gPainter &painter, eWindowStyle &style, c
 				int bwidth = pborderWidth ? PyLong_AsLong(pborderWidth) : 0;
 
 				int cornerRadius = pCornerRadius ? PyLong_AsLong(pCornerRadius) : 0;
-				int cornerEdges = pCornerEdges ? PyLong_AsLong(pCornerEdges) : 15;
+				int cornerEdges = pCornerEdges ? PyLong_AsLong(pCornerEdges) : 0;
 				if (cornerRadius || cornerEdges)
 					bwidth = 0; // border not supported for rounded edges
 
@@ -1255,6 +1255,7 @@ void eListboxPythonMultiContent::paint(gPainter &painter, eWindowStyle &style, c
 						painter.setBackgroundColor(gRGB(color));
 						painter.setRadius(cornerRadius, cornerEdges);
 						painter.drawRectangle(itemRect);
+						eDebug("[eListboxPythonMultiContent] SET TEXT BLOCK CORNER RADIUS!!!!!");
 					}
 					else 
 					{
