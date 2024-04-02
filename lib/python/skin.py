@@ -1,6 +1,6 @@
 from xml.etree.cElementTree import Element, ElementTree, fromstring
 
-from enigma import addFont, eLabel, ePixmap, ePoint, eRect, eSize, eWindow, eWindowStyleManager, eWindowStyleSkinned, getDesktop, gFont, getFontFaces, gMainDC, gRGB, BT_ALPHATEST, BT_ALPHABLEND, BT_HALIGN_CENTER, BT_HALIGN_LEFT, BT_HALIGN_RIGHT, BT_KEEP_ASPECT_RATIO, BT_SCALE, BT_VALIGN_BOTTOM, BT_VALIGN_CENTER, BT_VALIGN_TOP
+from enigma import addFont, eLabel, ePixmap, ePoint, eRect, eSize, eWidget, eWindow, eWindowStyleManager, eWindowStyleSkinned, getDesktop, gFont, getFontFaces, gMainDC, gRGB, BT_ALPHATEST, BT_ALPHABLEND, BT_HALIGN_CENTER, BT_HALIGN_LEFT, BT_HALIGN_RIGHT, BT_KEEP_ASPECT_RATIO, BT_SCALE, BT_VALIGN_BOTTOM, BT_VALIGN_CENTER, BT_VALIGN_TOP
 from os.path import basename, dirname, isfile
 
 from Components.config import ConfigSubsection, ConfigText, config
@@ -292,6 +292,28 @@ def parsePosition(s, scale, object=None, desktop=None, size=None):
 	return ePoint(*parseValuePair(s, scale, object, desktop, size))
 
 
+def parseRadius(value):
+	data = [x.strip() for x in value.split(";")]
+	if len(data) == 2:
+		edges = [x.strip() for x in data[1].split(",")]
+		edgesMask = {
+			"topLeft": eWidget.RADIUS_TOP_LEFT,
+			"topRight": eWidget.RADIUS_TOP_RIGHT,
+			"top": eWidget.RADIUS_TOP,
+			"bottomLeft": eWidget.RADIUS_BOTTOM_LEFT,
+			"bottomRight": eWidget.RADIUS_BOTTOM_RIGHT,
+			"bottom": eWidget.RADIUS_BOTTOM,
+			"left": eWidget.RADIUS_LEFT,
+			"right": eWidget.RADIUS_RIGHT,
+		}
+		edgeValue = 0
+		for e in edges:
+			edgeValue += edgesMask.get(e, 0)
+		return int(data[0]), edgeValue
+	else:
+		return int(data[0]), eWidget.RADIUS_ALL
+
+
 def parseSize(s, scale, object=None, desktop=None):
 	return eSize(*[max(0, x) for x in parseValuePair(s, scale, object, desktop)])
 
@@ -348,9 +370,9 @@ def parseParameter(s):
 		return colors[s].argb()
 	elif s.find(";") != -1:  # Font.
 		font, size = [x.strip() for x in s.split(";", 1)]
-		return [font, int(size)]
+		return [font, parseScale(size)]
 	else:  # Integer.
-		return int(s)
+		return parseScale(s)
 
 
 def parseScale(s):
@@ -497,6 +519,12 @@ class AttributeParser:
 	def secondfont(self, value):
 		self.guiObject.setSecondFont(parseFont(value, self.scaleTuple))
 
+	def widgetBorderColor(self, value):
+		self.guiObject.setWidgetBorderColor(parseColor(value))
+
+	def widgetBorderWidth(self, value):
+		self.guiObject.setWidgetBorderWidth(parseScale(value))
+
 	def zPosition(self, value):
 		self.guiObject.setZPosition(int(value))
 
@@ -505,6 +533,14 @@ class AttributeParser:
 
 	def itemWidth(self, value):
 		self.guiObject.setItemWidth(parseScale(value))
+
+	def itemCornerRadius(self, value):
+		radius, edgeValue = parseRadius(value)
+		self.guiObject.setItemCornerRadius(radius, edgeValue)
+
+	def itemCornerRadiusSelected(self, value):
+		radius, edgeValue = parseRadius(value)
+		self.guiObject.setItemCornerRadiusSelected(radius, edgeValue)
 
 	def pixmap(self, value):
 		if value.endswith(".svg"):  # if grafic is svg force alphatest to "blend"
@@ -666,6 +702,10 @@ class AttributeParser:
 
 	def borderWidth(self, value):
 		self.guiObject.setBorderWidth(parseScale(value))
+
+	def cornerRadius(self, value):
+		radius, edgeValue = parseRadius(value)
+		self.guiObject.setCornerRadius(radius, edgeValue)
 
 	def scrollbarSliderBorderWidth(self, value):
 		self.guiObject.setScrollbarBorderWidth(parseScale(value))
@@ -906,9 +946,9 @@ def loadSingleSkinData(desktop, screenID, domSkin, pathSkin, scope=SCOPE_CURRENT
 		for alias in tag.findall("alias"):
 			name = alias.attrib.get("name")
 			font = alias.attrib.get("font")
-			size = int(alias.attrib.get("size"))
-			height = int(alias.attrib.get("height", size))  # To be calculated some day.
-			width = int(alias.attrib.get("width", size))  # To be calculated some day.
+			size = parseScale(alias.attrib.get("size"))
+			height = parseScale(alias.attrib.get("height", size))  # To be calculated some day.
+			width = parseScale(alias.attrib.get("width", size))  # To be calculated some day.
 			if name and font and size:
 				fonts[name] = (font, size, height, width)
 				# print("[Skin] Add font alias: name='%s', font='%s', size=%d, height=%s, width=%d." % (name, font, size, height, width))
@@ -1245,10 +1285,11 @@ def readSkin(screen, skin, names, desktop):
 					raise SkinError("For connection '%s' a renderer must be defined with a 'render=' attribute" % wconnection)
 			for converter in widget.findall("convert"):
 				ctype = converter.get("type")
+				nostrip = converter.get("nostrip") and converter.get("nostrip").lower() in ("1", "enabled", "nostrip", "on", "true", "yes")
 				assert ctype, "[Skin] The 'convert' tag needs a 'type' attribute!"
 				# print("[Skin] DEBUG: Converter='%s'." % ctype)
 				try:
-					parms = converter.text.strip()
+					parms = converter.text if nostrip else converter.text.strip()
 				except Exception:
 					parms = ""
 				# print("[Skin] DEBUG: Params='%s'." % parms)

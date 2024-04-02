@@ -52,8 +52,6 @@ from RecordTimer import RecordTimerEntry, parseEvent, AFTEREVENT, findSafeRecord
 from Tools import Notifications
 from Tools.Directories import pathExists, fileExists
 from Tools.KeyBindings import getKeyDescription, getKeyBindingKeys
-from Tools.General import isIPTV
-from pickle import loads as pickle_loads
 
 import NavigationInstance
 
@@ -62,11 +60,11 @@ from keyids import KEYFLAGS, KEYIDS, KEYIDNAMES
 
 from time import time, localtime, strftime
 from bisect import insort
-import os
+from os import listdir, path as ospath
 from sys import maxsize
 import itertools
 import datetime
-import pickle
+from pickle import load as pickle_load, loads as pickle_loads, dump as pickle_dump, HIGHEST_PROTOCOL as pickle_HIGHEST_PROTOCOL
 from gettext import dgettext
 from re import match
 
@@ -105,9 +103,9 @@ def setResumePoint(session):
 				for k, v in list(resumePointCache.items()):
 					if v[0] < lru:
 						candidate = k
-						filepath = os.path.realpath(candidate.split(':')[-1])
+						filepath = ospath.realpath(candidate.split(':')[-1])
 						mountpoint = findMountPoint(filepath)
-						if os.path.ismount(mountpoint) and not os.path.exists(filepath):
+						if ospath.ismount(mountpoint) and not ospath.exists(filepath):
 							del resumePointCache[candidate]
 				saveResumePoints()
 
@@ -137,7 +135,7 @@ def saveResumePoints():
 	global resumePointCache, resumePointCacheLast
 	try:
 		f = open('/etc/enigma2/resumepoints.pkl', 'wb')
-		pickle.dump(resumePointCache, f, pickle.HIGHEST_PROTOCOL)
+		pickle_dump(resumePointCache, f, pickle_HIGHEST_PROTOCOL)
 		f.close()
 	except Exception as ex:
 		print("[InfoBarGenerics] Failed to write resumepoints:%s" % ex)
@@ -147,7 +145,7 @@ def saveResumePoints():
 def loadResumePoints():
 	try:
 		file = open('/etc/enigma2/resumepoints.pkl', 'rb')
-		PickleFile = pickle.load(file)
+		PickleFile = pickle_load(file)
 		file.close()
 		return PickleFile
 	except Exception as ex:
@@ -169,7 +167,7 @@ class whitelist:
 
 
 def reload_whitelist_vbi():
-	whitelist.vbi = [line.strip() for line in open('/etc/enigma2/whitelist_vbi', 'r').readlines()] if os.path.isfile('/etc/enigma2/whitelist_vbi') else []
+	whitelist.vbi = [line.strip() for line in open('/etc/enigma2/whitelist_vbi', 'r').readlines()] if ospath.isfile('/etc/enigma2/whitelist_vbi') else []
 
 
 reload_whitelist_vbi()
@@ -180,7 +178,7 @@ class InfoBarStreamRelay:
 	FILENAME = "/etc/enigma2/whitelist_streamrelay"
 
 	def __init__(self):
-		self.__srefs = self.__sanitizeData(open(self.FILENAME, 'r').readlines()) if os.path.isfile(self.FILENAME) else []
+		self.__srefs = self.__sanitizeData(open(self.FILENAME, 'r').readlines()) if ospath.isfile(self.FILENAME) else []
 
 	def __sanitizeData(self, data):
 		return list(set([line.strip() for line in data if line and isinstance(line, str) and match("^(?:[0-9A-F]+[:]){10}$", line.strip())])) if isinstance(data, list) else []
@@ -189,8 +187,12 @@ class InfoBarStreamRelay:
 		self.__srefs.sort(key=lambda ref: (int((x := ref.split(":"))[6], 16), int(x[5], 16), int(x[4], 16), int(x[3], 16)))
 		open(self.FILENAME, 'w').write('\n'.join(self.__srefs))
 
+	def splitref(self, ref):
+		ref = ref.split(":")
+		return ":".join(ref[:11]), len(ref) > 11 and ref[-1]
+
 	def toggle(self, nav, service):
-		if (servicestring := (service and service.toString())):
+		if (servicestring := (service and self.splitref(service.toString())[0])):
 			if servicestring in self.__srefs:
 				self.__srefs.remove(servicestring)
 			else:
@@ -209,19 +211,19 @@ class InfoBarStreamRelay:
 	data = property(getData, setData)
 
 	def streamrelayChecker(self, playref):
-		playrefstring = playref.toString()
+		playrefstring, renamestring = self.splitref(playref.toString())
 		if '%3a//' not in playrefstring and playrefstring in self.__srefs:
 			url = "http://%s:%s/" % (config.misc.softcam_streamrelay_url.getHTML(), config.misc.softcam_streamrelay_port.value)
 			if "127.0.0.1" in url:
 				playrefmod = ":".join([("%x" % (int(x[1], 16) + 1)).upper() if x[0] == 6 else x[1] for x in enumerate(playrefstring.split(':'))])
 			else:
 				playrefmod = playrefstring
-			playref = eServiceReference("%s%s%s:%s" % (playrefmod, url.replace(":", "%3a"), playrefstring.replace(":", "%3a"), ServiceReference(playref).getServiceName()))
+			playref = eServiceReference("%s%s%s:%s" % (playrefmod, url.replace(":", "%3a"), playrefstring.replace(":", "%3a"), renamestring or ServiceReference(playref).getServiceName()))
 			print(f"[{self.__class__.__name__}] Play service {playref.toString()} via streamrelay")
 		return playref
 
 	def checkService(self, service):
-		return service and service.toString() in self.__srefs
+		return service and self.splitref(service.toString())[0] in self.__srefs
 
 
 streamrelay = InfoBarStreamRelay()
@@ -234,7 +236,7 @@ def reload_subservice_groupslist(force=False):
 	if subservice_groupslist is None or force:
 		try:
 			groupedservices = "/etc/enigma2/groupedservices"
-			if not os.path.isfile(groupedservices):
+			if not ospath.isfile(groupedservices):
 				groupedservices = "/usr/share/enigma2/groupedservices"
 			subservice_groupslist = [list(g) for k, g in itertools.groupby([line.split('#')[0].strip() for line in open(groupedservices).readlines()], lambda x: not x) if not k]
 		except:
@@ -252,28 +254,41 @@ def getPossibleSubservicesForCurrentChannel(current_service):
 	return []
 
 
-def getActiveSubservicesForCurrentChannel(current_service):
-	if current_service:
-		possibleSubservices = getPossibleSubservicesForCurrentChannel(current_service)
-		activeSubservices = []
-		epgCache = eEPGCache.getInstance()
-		for subservice in possibleSubservices:
-			events = epgCache.lookupEvent(['BDTS', (subservice, 0, -1)])
-			if events and len(events) == 1:
-				event = events[0]
-				title = event[2]
-				if title and "Sendepause" not in title:
-					starttime = datetime.datetime.fromtimestamp(event[0]).strftime('%H:%M')
-					endtime = datetime.datetime.fromtimestamp(event[0] + event[1]).strftime('%H:%M')
-					servicename = eServiceReference(subservice).getServiceName()
-					schedule = str(starttime) + "-" + str(endtime)
-					activeSubservices.append((servicename + " " + schedule + " " + title, subservice))
-		return activeSubservices
+def getActiveSubservicesForCurrentChannel(service):
+	activeSubservices = []
+	if info := service and service.info():
+		sRef = info.getInfoString(iServiceInformation.sServiceref)
+		url = "http://%s:%s/" % (config.misc.softcam_streamrelay_url.getHTML(), config.misc.softcam_streamrelay_port.value)
+		splittedRef = sRef.split(url.replace(":", "%3a"))
+		if len(splittedRef) > 1:
+			sRef = splittedRef[1].split(":")[0].replace("%3a", ":")
+		current_service = ':'.join(sRef.split(':')[:11])
+		if current_service:
+			possibleSubservices = getPossibleSubservicesForCurrentChannel(current_service)
+			epgCache = eEPGCache.getInstance()
+			for subservice in possibleSubservices:
+				events = epgCache.lookupEvent(['BDTS', (subservice, 0, -1)])
+				if events and len(events) == 1:
+					event = events[0]
+					title = event[2]
+					if title and "Sendepause" not in title:
+						starttime = datetime.datetime.fromtimestamp(event[0]).strftime('%H:%M')
+						endtime = datetime.datetime.fromtimestamp(event[0] + event[1]).strftime('%H:%M')
+						current_show_name = "%s %s-%s" % (title, str(starttime), str(endtime))
+						activeSubservices.append((current_show_name, subservice))
+	if not activeSubservices:
+		subservices = service and service.subServices()
+		if subservices:
+			for idx in range(0, subservices.getNumberOfSubservices()):
+				subservice = subservices.getSubservice(idx)
+				print("     ---->", subservice.toString())
+				activeSubservices.append((subservice.getName(), subservice.toString()))
+	return activeSubservices
 
 
-def hasActiveSubservicesForCurrentChannel(current_service):
-	activeSubservices = getActiveSubservicesForCurrentChannel(current_service)
-	return bool(activeSubservices and len(activeSubservices) > 1)
+def hasActiveSubservicesForCurrentChannel(service):
+	activeSubservices = getActiveSubservicesForCurrentChannel(service)
+	return bool(activeSubservices and len(activeSubservices))
 
 
 class InfoBarDish:
@@ -390,7 +405,7 @@ class InfoBarScreenSaver:
 			ref = self.session.nav.getCurrentlyPlayingServiceOrGroup()
 			if ref and not (hasattr(self.session, "pipshown") and self.session.pipshown):
 				ref = ref.toString().split(":")
-				flag = ref[2] == "2" or os.path.splitext(ref[10])[1].lower() in AUDIO_EXTENSIONS
+				flag = ref[2] == "2" or ospath.splitext(ref[10])[1].lower() in AUDIO_EXTENSIONS
 		if time and flag:
 			self.screenSaverTimer.startLongTimer(time)
 		else:
@@ -725,14 +740,14 @@ class InfoBarShowHide(InfoBarScreenSaver):
 
 	def unDimming(self):
 		self.unDimmingTimer.stop()
-		self.doWriteAlpha(config.av.osd_alpha.value)
+		self.doWriteAlpha(config.misc.osd_alpha.value)
 
 	def doWriteAlpha(self, value):
 		if fileExists("/proc/stb/video/alpha"):
 			f = open("/proc/stb/video/alpha", "w")
 			f.write("%i" % (value))
 			f.close()
-			if value == config.av.osd_alpha.value:
+			if value == config.misc.osd_alpha.value:
 				self.lastResetAlpha = True
 			else:
 				self.lastResetAlpha = False
@@ -835,14 +850,14 @@ class InfoBarShowHide(InfoBarScreenSaver):
 	def doHide(self):
 		if self.__state != self.STATE_HIDDEN:
 			if self.dimmed > 0:
-				self.doWriteAlpha((config.av.osd_alpha.value * self.dimmed / config.usage.show_infobar_dimming_speed.value))
+				self.doWriteAlpha((config.misc.osd_alpha.value * self.dimmed / config.usage.show_infobar_dimming_speed.value))
 				self.DimmingTimer.start(5, True)
 			else:
 				self.DimmingTimer.stop()
 				self.hide()
 		elif self.__state == self.STATE_HIDDEN and self.secondInfoBarScreen and self.secondInfoBarScreen.shown:
 			if self.dimmed > 0:
-				self.doWriteAlpha((config.av.osd_alpha.value * self.dimmed / config.usage.show_infobar_dimming_speed.value))
+				self.doWriteAlpha((config.misc.osd_alpha.value * self.dimmed / config.usage.show_infobar_dimming_speed.value))
 				self.DimmingTimer.start(5, True)
 			else:
 				self.DimmingTimer.stop()
@@ -857,7 +872,7 @@ class InfoBarShowHide(InfoBarScreenSaver):
 			self.EventViewIsShown = False
 		# elif hasattr(self, "pvrStateDialog"):
 		# 	if self.dimmed > 0:
-		# 		self.doWriteAlpha((config.av.osd_alpha.value*self.dimmed/config.usage.show_infobar_dimming_speed.value))
+		# 		self.doWriteAlpha((config.misc.osd_alpha.value*self.dimmed/config.usage.show_infobar_dimming_speed.value))
 		# 		self.DimmingTimer.start(5, True)
 		# 	else:
 		# 		self.DimmingTimer.stop()
@@ -918,7 +933,7 @@ class InfoBarShowHide(InfoBarScreenSaver):
 
 	def unlockShow(self):
 		if config.usage.show_infobar_do_dimming.value and self.lastResetAlpha is False:
-			self.doWriteAlpha(config.av.osd_alpha.value)
+			self.doWriteAlpha(config.misc.osd_alpha.value)
 		try:
 			self.__locked -= 1
 		except:
@@ -971,9 +986,9 @@ class InfoBarShowHide(InfoBarScreenSaver):
 
 	def avChange(self):
 		service = self.session.nav.getCurrentService()
-		ref_p = self.session.nav.getCurrentlyPlayingServiceReference()
-		isStream = isIPTV(ref_p)
-		x = ref_p and ref_p.toString().split(":")
+		ref_p = self.session.nav.getCurrentServiceRef()
+		isStream = ref_p and ref_p.find("%3a//") > -1
+		x = ref_p and ref_p.split(":")
 		x_play = x and ":".join(x[:10]) or ""
 		if isStream:
 			try:
@@ -1310,6 +1325,7 @@ class InfoBarChannelSelection:
 		self.servicelist = self.session.instantiateDialog(ChannelSelection)
 		self.servicelist2 = self.session.instantiateDialog(PiPZapSelection)
 		self.tscallback = None
+		self.servicelist.onZapping.append(self.serviceStarted)
 
 		self["ChannelSelectActions"] = HelpableActionMap(self, "InfobarChannelSelection",
 			{
@@ -1332,6 +1348,9 @@ class InfoBarChannelSelection:
 				"ChannelMinusPressedLong": (self.zapUpPip, _("Switch the PiP to the previous channel")),
 			}, description=_("Channel selection"))
 		self.onClose.append(self.__onClose)
+
+	def newService(self, ref):
+		self["Service"].newService(ref)
 
 	def __onClose(self):
 		if self.servicelist:
@@ -2284,11 +2303,11 @@ class InfoBarSeek:
 			self.activityTimer.stop()
 			self.activity = 0
 			hdd = 0
-		if os.path.exists("/proc/stb/lcd/symbol_hdd"):
+		if ospath.exists("/proc/stb/lcd/symbol_hdd"):
 			file = open("/proc/stb/lcd/symbol_hdd", "w")
 			file.write('%d' % int(hdd))
 			file.close()
-		if os.path.exists("/proc/stb/lcd/symbol_hddprogress"):
+		if ospath.exists("/proc/stb/lcd/symbol_hddprogress"):
 			file = open("/proc/stb/lcd/symbol_hddprogress", "w")
 			file.write('%d' % int(self.activity))
 			file.close()
@@ -2713,7 +2732,7 @@ class InfoBarTimeshiftState(InfoBarPVRState):
 		self.pvrStateDialog.hide()
 
 	def __timeshiftEventName(self, state):
-		if os.path.exists("%spts_livebuffer_%s.meta" % (config.usage.timeshift_path.value, self.pts_currplaying)):
+		if ospath.exists("%spts_livebuffer_%s.meta" % (config.usage.timeshift_path.value, self.pts_currplaying)):
 			readmetafile = open("%spts_livebuffer_%s.meta" % (config.usage.timeshift_path.value, self.pts_currplaying), "r")
 			servicerefname = readmetafile.readline()[0:-1]  # noqa: F841 servicerefname assigned, not used
 			eventname = readmetafile.readline()[0:-1]
@@ -2836,7 +2855,7 @@ class InfoBarExtensions:
 	def getCCcamInfo(self):
 		softcams = []
 		if pathExists('/usr/softcams/'):
-			softcams = os.listdir('/usr/softcams/')
+			softcams = listdir('/usr/softcams/')
 		for softcam in softcams:
 			if softcam.lower().startswith('cccam') and config.cccaminfo.showInExtensions.value:
 				return [((boundFunction(self.getCCname), boundFunction(self.openCCcamInfo), lambda: True), None)] or []
@@ -2849,7 +2868,7 @@ class InfoBarExtensions:
 	def getOScamInfo(self):
 		softcams = []
 		if pathExists('/usr/softcams/'):
-			softcams = os.listdir('/usr/softcams/')
+			softcams = listdir('/usr/softcams/')
 		for softcam in softcams:
 			if softcam.lower().startswith(('oscam', 'ncam')) and config.oscaminfo.showInExtensions.value:
 				return [((boundFunction(self.getOSname), boundFunction(self.openOScamInfo), lambda: True), None)] or []
@@ -3359,7 +3378,7 @@ class InfoBarInstantRecord:
 			if limitEvent:
 				end = info["end"]
 		else:
-			if limitEvent:
+			if not limitEvent:
 				self.session.open(MessageBox, _("No event info found, recording indefinitely."), MessageBox.TYPE_INFO, simple=True)
 
 		if isinstance(serviceref, eServiceReference):
@@ -3452,7 +3471,7 @@ class InfoBarInstantRecord:
 			self.deleteRecording = True
 			self.stopAllCurrentRecordings(list)
 		elif answer[1] in ("indefinitely", "manualduration", "manualendtime", "event"):
-			self.startInstantRecording(limitEvent=answer[1] in ("event", "manualendtime") or False)
+			self.startInstantRecording(limitEvent=answer[1] in ("manualduration", "manualendtime", "event") or False)
 			if answer[1] == "manualduration":
 				self.changeDuration(len(self.recording) - 1)
 			elif answer[1] == "manualendtime":
@@ -3674,7 +3693,8 @@ class InfoBarSubserviceSelection:
 
 	def checkSubservicesAvail(self):
 		serviceRef = self.session.nav.getCurrentlyPlayingServiceReference()
-		if not serviceRef or not hasActiveSubservicesForCurrentChannel(serviceRef.toString()):
+		service = self.session.nav.getCurrentService()
+		if not serviceRef or not hasActiveSubservicesForCurrentChannel(service):
 			self["SubserviceQuickzapAction"].setEnabled(False)
 			self.bouquets = self.bsel = self.selectedSubservice = None
 
@@ -3704,9 +3724,14 @@ class InfoBarSubserviceSelection:
 	def subserviceSelection(self):
 		serviceRef = self.session.nav.getCurrentlyPlayingServiceReference()
 		if serviceRef:
-			subservices = getActiveSubservicesForCurrentChannel(serviceRef.toString())
-			if subservices and len(subservices) > 1 and serviceRef.toString() in [x[1] for x in subservices]:
-				selection = [x[1] for x in subservices].index(serviceRef.toString())
+			service = self.session.nav.getCurrentService()
+			subservices = getActiveSubservicesForCurrentChannel(service)
+			if subservices and len(subservices) > 1 and (serviceRef.toString() in [x[1] for x in subservices] or service.subServices()):
+				try:
+					selection = [x[1] for x in subservices].index(serviceRef.toString())
+				except:
+					selection = 0
+
 				self.bouquets = self.servicelist and self.servicelist.getBouquetList()
 				if self.bouquets and len(self.bouquets):
 					keys = ["red", "blue", "", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"] + [""] * (len(subservices) - 10)
@@ -3720,6 +3745,8 @@ class InfoBarSubserviceSelection:
 					keys = ["red", "", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"] + [""] * (len(subservices) - 10)
 					selection += 2
 				self.session.openWithCallback(self.subserviceSelected, ChoiceBox, title=_("Please select a sub service"), list=tlist, selection=selection, keys=keys, skin_name="SubserviceSelection")
+			else:
+				self.openTimerList()  # no sub services, so take default for Green
 
 	def subserviceSelected(self, service):
 		if service and len(service) > 1:
@@ -3815,7 +3842,7 @@ class VideoMode(Screen):
 
 		self["actions"] = NumberActionMap(["InfobarVmodeButtonActions"],
 			{
-			"vmodeSelection": self.selectVMode
+				"vmodeSelection": self.selectVMode
 			})  # noqa: E123
 
 		self.Timer = eTimer()

@@ -578,6 +578,7 @@ class MovieSelection(Screen, HelpableScreen, SelectionEventInfo, InfoBarBase, Pr
 
 		self.feedbackTimer = None
 		self.pathselectEnabled = False
+		self.shouldReload = False
 
 		self.numericalTextInput = NumericalTextInput.NumericalTextInput(mapping=NumericalTextInput.MAP_SEARCH_UPCASE)
 		self["chosenletter"] = Label("")
@@ -1107,14 +1108,12 @@ class MovieSelection(Screen, HelpableScreen, SelectionEventInfo, InfoBarBase, Pr
 		self["waitingtext"].hide()
 
 	def LivePlay(self):
-		if self.session.nav.getCurrentlyPlayingServiceReference():
-			if ':0:/' not in self.session.nav.getCurrentlyPlayingServiceReference().toString():
-				config.movielist.curentlyplayingservice.setValue(self.session.nav.getCurrentlyPlayingServiceReference().toString())
-		checkplaying = self.session.nav.getCurrentlyPlayingServiceReference()
-		if checkplaying:
-			checkplaying = checkplaying.toString()
-		if checkplaying is None or (config.movielist.curentlyplayingservice.value != checkplaying and ':0:/' not in self.session.nav.getCurrentlyPlayingServiceReference().toString()):
+		checkplaying = self.session.nav.getCurrentlyPlayingServiceReference() and self.session.nav.getCurrentlyPlayingServiceReference().toString()
+		if checkplaying and ':0:/' not in checkplaying:
+			config.movielist.curentlyplayingservice.value = checkplaying
+		if checkplaying is None or (config.movielist.curentlyplayingservice.value != checkplaying and ':0:/' not in checkplaying):
 			self.session.nav.playService(eServiceReference(config.movielist.curentlyplayingservice.value))
+
 		self.LivePlayTimer.stop()
 
 	def getCurrent(self):
@@ -1578,11 +1577,12 @@ class MovieSelection(Screen, HelpableScreen, SelectionEventInfo, InfoBarBase, Pr
 			return
 
 		self.saveconfig()
-		from Screens.InfoBar import InfoBar
-		infobar = InfoBar.instance
-		if self.session.nav.getCurrentlyPlayingServiceReference():
-			if not infobar.timeshiftEnabled() and ':0:/' not in self.session.nav.getCurrentlyPlayingServiceReference().toString():
-				self.session.nav.stopService()
+		# This is commented out because we don't see any obvious reason for stopping the service on exit
+		# from Screens.InfoBar import InfoBar
+		# infobar = InfoBar.instance
+		# if self.session.nav.getCurrentlyPlayingServiceReference():
+		# 	if not infobar.timeshiftEnabled() and ':0:/' not in self.session.nav.getCurrentlyPlayingServiceReference().toString():
+		# 	self.session.nav.stopService()
 		self.close(None)
 
 	def saveconfig(self):

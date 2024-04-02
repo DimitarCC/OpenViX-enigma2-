@@ -79,14 +79,7 @@ def spinnerSkin(skinName):
 class VIXSoftcamManager(Screen):
 	skin = ["""
 	<screen name="VIXSoftcamManager" position="center,center" size="%d,%d">
-		<ePixmap pixmap="skin_default/buttons/red.png" position="%d,%d" size="%d,%d" alphatest="blend" scale="1"/>
-		<ePixmap pixmap="skin_default/buttons/green.png" position="%d,%d" size="%d,%d" alphatest="blend" scale="1"/>
-		<ePixmap pixmap="skin_default/buttons/yellow.png" position="%d,%d" size="%d,%d" alphatest="blend" scale="1"/>
-		<ePixmap pixmap="skin_default/buttons/blue.png" position="%d,%d" size="%d,%d" alphatest="blend" scale="1"/>
-		<widget name="key_red" position="%d,%d" zPosition="1" size="%d,%d" font="Regular;%d" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="key_green" position="%d,%d" zPosition="1" size="%d,%d" font="Regular;%d" halign="center" valign="center" backgroundColor="#1f771f" transparent="1"/>
-		<widget name="key_yellow" position="%d,%d" zPosition="1" size="%d,%d" font="Regular;%d" halign="center" valign="center" backgroundColor="#a08500" transparent="1"/>
-		<widget name="key_blue" position="%d,%d" zPosition="1" size="%d,%d" font="Regular;%d" halign="center" valign="center" backgroundColor="#18188b" transparent="1"/>
+		<panel name="__DynamicColorButtonTemplate__"/>
 		<ePixmap pixmap="skin_default/buttons/key_menu.png" position="%d,%d" size="%d,%d" alphatest="blend" transparent="1" zPosition="3" scale="1" />
 		<ePixmap pixmap="skin_default/buttons/key_info.png" position="%d,%d" size="%d,%d" alphatest="blend" transparent="1" zPosition="3" scale="1" />
 		<widget name="lab1" position="%d,%d" size="%d,%d" font="Regular;%d" halign="right" zPosition="2" transparent="0"/>
@@ -98,14 +91,6 @@ class VIXSoftcamManager(Screen):
 		</applet>
 	</screen>""",
 		560, 400,  # screen
-		0, 0, 140, 40,  # colors
-		140, 0, 140, 40,
-		280, 0, 140, 40,
-		420, 0, 140, 40,
-		0, 0, 140, 40, 20,
-		140, 0, 140, 40, 20,
-		280, 0, 140, 40, 20,
-		420, 0, 140, 40, 20,
 		0, 45, 35, 25,  # menu key
 		40, 45, 35, 25,  # info key
 		40, 110, 170, 20, 22,  # lab1
@@ -398,7 +383,7 @@ class VIXStartCam(Screen):
 				if data.find(startselectedcam) >= 0:
 					filewrite = open("/tmp/SoftcamsScriptsRunning.tmp", "w")
 					fileread = open("/tmp/SoftcamsScriptsRunning")
-					filewrite.writelines([x for x in fileread.readlines() if startselectedcam not in x])
+					filewrite.writelines([cam for cam in fileread.readlines() if startselectedcam not in cam])
 					fileread.close()
 					filewrite.close()
 					rename("/tmp/SoftcamsScriptsRunning.tmp", "/tmp/SoftcamsScriptsRunning")
@@ -430,7 +415,7 @@ class VIXStartCam(Screen):
 					output.close()
 					fileread = open("/tmp/SoftcamsDisableCheck")
 					filewrite = open("/tmp/SoftcamsDisableCheck.tmp", "w")
-					filewrite.writelines([x for x in fileread.readlines() if startselectedcam not in x])
+					filewrite.writelines([cam for cam in fileread.readlines() if startselectedcam not in cam])
 					fileread.close()
 					filewrite.close()
 					rename("/tmp/SoftcamsDisableCheck.tmp", "/tmp/SoftcamsDisableCheck")
@@ -767,7 +752,7 @@ class SoftcamAutoPoller:
 							f = open(camconf, "r")
 							for line in f.readlines():
 								if line.find("httpport") != -1:
-									port = re.sub("\D", "", line)  # noqa: W605
+									port = re.sub(r"\D", "", line)
 							f.close()
 							print("[SoftcamManager] Checking if " + softcamcheck + " is frozen")
 							if port == "":
@@ -841,7 +826,7 @@ class SoftcamAutoPoller:
 										if parts[0].startswith("yes"):
 											allow = parts[0]
 								if line.find("WEBINFO LISTEN PORT") != -1:
-									port = re.sub("\D", "", line)  # noqa: W605
+									port = re.sub(r"\D", "", line)
 							f.close()
 							if allow.lower().find("yes") != -1:
 								print("[SoftcamManager] Checking if " + softcamcheck + " is frozen")

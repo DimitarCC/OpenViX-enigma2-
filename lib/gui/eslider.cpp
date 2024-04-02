@@ -73,7 +73,7 @@ int eSlider::event(int event, void *data, void *data2)
 
 		gPainter &painter = *(gPainter*)data2;
 
-		bool drawborder = (m_have_border_color && m_border_width);
+		bool drawborder = m_border_width;
 
 
 		if (m_backgroundpixmap)
@@ -123,12 +123,10 @@ int eSlider::event(int event, void *data, void *data2)
 					painter.setBackgroundColor(m_foreground_color);
 				painter.setRadius(cornerRadius, getCornerRadiusEdges());
 				eRect rect = eRect(m_currently_filled.extends);
-				if (m_orientation == orHorizontal) {
+				if (m_orientation == orHorizontal)
 					rect.setHeight(size().height()-m_border_width*2);
-				}
-				else {
+				else
 					rect.setWidth(size().width()-m_border_width*2);
-				}
 				painter.drawRectangle(rect);
 			}
 			else {

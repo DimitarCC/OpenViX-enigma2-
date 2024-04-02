@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from os import listdir, rename, remove, path as os_path
 import re
-from time import localtime, time, strftime
+from time import localtime, strftime, time
 
 from enigma import eActionMap, eServiceReference, eEPGCache, eServiceCenter, eRCInput, eTimer, ePoint, eDVBDB, iPlayableService, iServiceInformation, getPrevAsciiCode, eDVBLocalTimeHandler
 
@@ -298,12 +298,7 @@ class ChannelContextMenu(Screen):
 					if SystemInfo["PIPAvailable"]:
 						if not self.parentalControlEnabled or self.parentalControl.getProtectionLevel(current.toCompareString()) == -1:
 							_append_when_current_valid(current, menu, actions, (_("Play as picture in picture"), self.showServiceInPiP), level=0, key="blue")
-# 							if self.csel.dopipzap:
-# 								_append_when_current_valid(current, menu, actions, (_("Play in main window"), self.playMain), level=0, key="red")
-# 								else:
-# 									_append_when_current_valid(current, menu, actions, (_("Play as picture in picture"), self.showServiceInPiP), level=0, key="blue")
-# 					_append_when_current_valid(current, menu, actions, (_("Find currently played service"), self.findCurrentlyPlayed), level=0, key="4")
-# 				else:
+
 					if self.parentalControlEnabled:
 						if self.parentalControl.getProtectionLevel(csel.getCurrentSelection().toCompareString()) == -1:
 							_append_when_current_valid(current, menu, actions, (_("Add to parental protection"), boundFunction(self.addParentalProtection, current)), level=0, key="bullet")
@@ -720,13 +715,21 @@ class SelectionEventInfo:
 		self.servicelist.connectSelChanged(self.__selectionChanged)
 		self.timer = eTimer()
 		self.timer.callback.append(self.updateEventInfo)
-		self.onShown.append(self.__selectionChanged)
+		self.onShown.append(self.__onShow)
+
+	def __stopTimer(self):
+		self.timer.stop()
+
+	def __onShow(self):
+		self["Service"].newService(None)
+		self.__selectionChanged()
 
 	def __selectionChanged(self):
 		if self.execing:
 			self.timer.start(100, True)
 
 	def updateEventInfo(self):
+		self.__stopTimer()
 		cur = self.getCurrentSelection()
 		service = self["Service"]
 		try:
@@ -1337,7 +1340,7 @@ service_types_radio = '1:7:2:0:0:0:0:0:0:0:(type == 2) || (type == 10)'
 
 class ChannelSelectionBase(Screen, HelpableScreen):
 
-	orbposReStr = "\(satellitePosition *== *(\d+)"  # noqa: W605
+	orbposReStr = r"\(satellitePosition *== *(\d+)"  # noqa: W605
 	orbposRe = None  # Lazy compilation
 
 	def __init__(self, session):
@@ -2074,6 +2077,7 @@ class ChannelSelection(ChannelSelectionEdit, ChannelSelectionBase, ChannelSelect
 		self.lastChannelRootTimer.start(100, True)
 		self.pipzaptimer = eTimer()
 		self.onClose.append(self.__onClose)
+		self.onZapping = []
 
 	def __onClose(self):
 		# clear the instance value so the skin reloader works correctly

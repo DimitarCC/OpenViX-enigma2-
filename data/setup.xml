@@ -68,7 +68,7 @@
 		<item level="2" text="Show infobar on channel change" description="If set to 'yes' the infobar will be displayed when changing channels.">config.usage.show_infobar_on_zap</item>
 		<item level="1" text="Show infobar on skip forward/backward" description="If set to 'yes', the infobar will be displayed when Fast Forwarding or Rewinding during media playback.">config.usage.show_infobar_on_skip</item>
 		<item level="1" text="Show infobar on event change" description="If set to 'yes' the infobar will be displayed when a new event starts.">config.usage.show_infobar_on_event_change</item>
-		<item level="1" text="Show channel number in infobar" description="If set to 'yes' the channel number will be displayed in the infobar.">config.usage.show_infobar_channel_number</item>
+		<item level="1" text="Show channel number in infobar" description="If set to 'yes' the channel number will be displayed in the infobar and some other places (when supported by the skin).">config.usage.show_infobar_channel_number</item>
 		<item level="0" text="Show picon background color" description="This option allows you choose the background color of transparent picons.">config.usage.show_picon_bkgrn</item>
 		<item level="0" text="Show event genre information" description="This option allows you to choose whether or not to display genre information for the event.">config.usage.show_genre_info</item>
 		<item level="2" text="Show background in Radio mode" description="Show background when tuned to a radio channel.">config.misc.showradiopic</item>
@@ -108,6 +108,7 @@
 		<item level="1" text="Channel list cursor behavior" description="Configure the cursor behavior in the channel selection list. When opening the channel selection list you can remain on the current service or already select up/down and you are able to revert the B+/B- buttons.">config.usage.servicelist_cursor_behavior</item>
 		<item level="1" text="Enable multiple bouquets" description="Services may be grouped in bouquets. When enabled, you can use more than one bouquet.">config.usage.multibouquet</item>
 		<item level="1" text="Enable panic button" description="When enabled, pressing '0' will zap you to the first channel in your first bouquet and delete your zap-history.">config.usage.panicbutton</item>
+		<item level="1" text="Show available subservices" description="if set will display subservices else timers.">config.vixsettings.Subservice</item>
 		<item level="1" text="Hide number markers" description="When enabled, number markers will be hidden.">config.usage.hide_number_markers</item>
 		<item level="1" text="Jump first press in channel selection" description="This option allows you to choose what the first button press jumps to in channel list screen, (so pressing '2' jumps to 'A' or '2' first), when 'Quick Actions' preset actions are perfomed. ">config.usage.show_channel_jump_in_servicelist</item>
 		<item level="2" text="Show two lines per entry" description="Show the service information on two lines in the channel selection screen.">config.usage.servicelist_twolines</item>

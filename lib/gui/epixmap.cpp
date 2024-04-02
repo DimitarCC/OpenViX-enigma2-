@@ -92,6 +92,7 @@ int ePixmap::event(int event, void *data, void *data2)
 
 		gPainter &painter = *(gPainter*)data2;
 		int cornerRadius = getCornerRadius();
+
 		if (m_pixmap)
 		{
 			int flags = 0;
